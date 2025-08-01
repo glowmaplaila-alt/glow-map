@@ -1,0 +1,74 @@
+.presentacion-glowmap {
+  background-color: #fff9f5;
+  padding: 60px 20px;
+  color: #a0764f;
+  font-family: 'Cairo', sans-serif;
+}
+
+.presentacion-glowmap .container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.presentacion-glowmap h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.presentacion-glowmap .resaltado {
+  color: #e09a88;
+}
+
+.presentacion-glowmap .intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.presentacion-glowmap h3 {
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+.lista-publico{
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.lista-publico li{
+  padding: 8px 0;
+  font-size: 1rem;
+}
+
+.descripcion-plantillas {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.descripcion-plantillas li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.boton-explorar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-button {
+  background-color: #b77e48;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color:  #cf955f97;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowMind Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo7.css">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <script src="../js/glowmind.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="plantillas.html">Plantillas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" style="width: 100%; max-height: 100px; object-fit: cover;">
+    </a>
+    <div class="cta-buttons">
+      <a href="paginas/login.html" class="cta-button">Iniciar sesión</a>
+      <a href="paginas/registro.html" class="cta-button">Registrarse</a>
+    </div>
+  </nav>
+  <header>
+    <h1>GlowMind Space — Espacio Mental</h1>
+  </header>
+
+  <div class="container">
+    <h2>1. Intención del día</h2>
+    <input type="text" id="intencion" placeholder="¿Qué deseo para hoy?">
+
+    <h2>2. Deseos / Agradecimiento</h2>
+    <textarea id="deseos" placeholder="Anota una oración, un deseo, o algo que agradeces."></textarea>
+
+    <h2>3. Estado emocional</h2>
+    <div class="emotions">
+      <label><input type="checkbox" id="miedo"> Miedo</label>
+      <label><input type="checkbox" id="ansiedad"> Ansiedad</label>
+      <label><input type="checkbox" id="calma"> Calma</label>
+      <label><input type="checkbox" id="gratitud"> Gratitud</label>
+    </div>
+
+    <label for="tecnica">Técnica aplicada hoy:</label>
+    <select id="tecnica">
+      <option value="">-- Elige una --</option>
+      <option value="respiracion">Respiración consciente</option>
+      <option value="journaling">Escritura (journaling)</option>
+      <option value="movimiento">Movimiento libre</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <h2>4. Diario emocional</h2>
+    <textarea id="descarga" rows="5" placeholder="Exprésate libremente..."></textarea>
+
+    <h2>5. Recomendación del día 🌟</h2>
+    <div id="mensaje-dia">Cargando recomendación...</div>
+  </div>
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+
+  
+</body>
+</html>

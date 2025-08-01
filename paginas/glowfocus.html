@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowFocus - Tareas Flexibles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo4.css">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <script src="../js/glowfocus.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="plantillas.html">Plantillas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" style="width: 100%; max-height: 100px; object-fit: cover;">
+    </a>
+    <div class="cta-buttons">
+      <a href="paginas/login.html" class="cta-button">Iniciar sesión</a>
+      <a href="paginas/registro.html" class="cta-button">Registrarse</a>
+    </div>
+  </nav>
+  <header>
+    <h1>GlowFocus — Tareas Flexibles</h1>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>1. Tareas del día</h2>
+      <label for="necesarias">Tareas necesarias</label>
+      <textarea id="necesarias" placeholder="Ej: Terminar informe, preparar comida..."></textarea>
+
+      <label for="postergables">Tareas que puedo posponer</label>
+      <textarea id="postergables" placeholder="Ej: Lavar el coche, limpiar el armario..."></textarea>
+
+      <label for="agradables">Tareas agradables</label>
+      <textarea id="agradables" placeholder="Ej: Leer un libro, llamar a un amigo..."></textarea>
+    </div>
+
+    <div class="section">
+      <h2>2. Evaluación emocional</h2>
+      <label for="emociones">¿Cómo me siento después de completar mis tareas?</label>
+      <textarea id="emociones" placeholder="Comparte tus sensaciones, energía, logros..."></textarea>
+
+      <div class="emotions">
+        <label><input type="radio" name="estado" value="satisfecho"> Satisfecho</label>
+        <label><input type="radio" name="estado" value="neutro"> Neutro</label>
+        <label><input type="radio" name="estado" value="estresado"> Estresado</label>
+      </div>
+    </div>
+  </div>
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+</body>
+</html>

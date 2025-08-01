@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - GlowMap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo2.css">
+  <script src="../js/micodigo2.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <form action="procesar_login.php" method="POST">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Entrar">
+    </form>
+    <a class="register-link" href="registro.html">¿No tienes cuenta? Regístrate aquí</a>
+  </div>
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+</body>
+</html>

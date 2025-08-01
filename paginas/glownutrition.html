@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowNutrition Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo10.css">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <script src="../js/glownutrition.js"></script>
+</head>
+<body>
+  
+    <nav>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="plantillas.html">Plantillas</a>
+      <a href="contacto.html">Contacto</a>
+    </div>
+    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" style="width: 100%; max-height: 100px; object-fit: cover;">
+    </a>
+    <div class="cta-buttons">
+      <a href="paginas/login.html" class="cta-button">Iniciar sesión</a>
+      <a href="paginas/registro.html" class="cta-button">Registrarse</a>
+    </div>
+  </nav>
+  <header>
+    <h1>GlowNutrition Tracker — Alimentación Consciente</h1>
+  </header>
+
+  <div class="container">
+    <h2>1. Registro de comidas</h2>
+    <textarea id="registro-comidas" placeholder="Describe lo que has comido hoy"></textarea>
+
+    <h2>2. ¿Cómo te sentiste después de comer?</h2>
+    <textarea id="emocion-despues" placeholder="Ej. Ligero, hinchado, con energía..."></textarea>
+
+    <h2>3. Desafío de colores del plato</h2>
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="color-verde"> Verde (vegetales)</label>
+      <label><input type="checkbox" id="color-rojo"> Rojo (frutas, antioxidantes)</label>
+      <label><input type="checkbox" id="color-naranja"> Naranja (vitamina A)</label>
+      <label><input type="checkbox" id="color-blanco"> Blanco (fibra, proteínas)</label>
+      <label><input type="checkbox" id="color-morado"> Morado (uvas, col morada)</label>
+    </div>
+
+    <h2>4. Hidratación del día</h2>
+    <label for="vasos-agua">¿Cuántos vasos de agua has tomado hoy?</label>
+    <input type="number" id="vasos-agua" min="0" max="20">
+  </div>
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+
+  
+</body>
+</html>
