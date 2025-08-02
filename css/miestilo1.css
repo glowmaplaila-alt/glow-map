@@ -193,7 +193,7 @@ nav {
 
 .logo-nav {
   height: auto;
-  max-height: 80px;
+  max-height: 100px;
   width: auto;
   border-radius: 16px;
   object-fit: contain;
@@ -258,7 +258,7 @@ nav {
   }
 
   .logo-nav {
-    max-height: 60px;
+    max-height: 80px;
   }
 
   .cta-buttons {

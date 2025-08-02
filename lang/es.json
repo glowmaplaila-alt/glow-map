@@ -3,5 +3,29 @@
   "exploreTemplates": "Explora las plantillas",
   "login": "Iniciar sesión",
   "register": "Registrarse",
-  "about": "Sobre GlowMap"
+  "about": "Sobre GlowMap",
+  "welcome": "Bienvenido a ",
+  "introTxt": "En un mundo donde la productividad suele ser sinónimo de presión, GlowMap propone un enfoque diferente: organización amable, personal y consciente. Esta plataforma está diseñada para ayudarte a construir tu propia “hoja de ruta” hacia una vida organizada, sin perder de vista el bienestar personal.",
+  "titulo1":"¿A quién va dirigido?",
+  "parrafo1":"GlowMap está pensado para personas de todos los ámbitos: estudiantes, profesionales, amas de casa, deportistas, creativos, y cualquier persona que busque un equilibrio entre organización y bienestar emocional.",
+  "l1":"💼 Personas trabajadoras que buscan organizarse sin agobio.",
+  "l2":"🎓 Estudiantes que quieren planificar con calma.",
+  "l3":"🏡 Personas en el hogar que quieren rutinas sanas.",
+  "l4":"🧘‍♀️ Quienes priorizan su bienestar físico y mental.",
+  "l5":"💡 Creativos y autodidactas con ideas que ordenar.",
+  "titulo2":"¿Qué encontrarás en GlowMap?",
+  "parrafo2":"A través de plantillas visuales y flexibles, puedes planificar tareas, registrar hábitos saludables, seguir tu progreso físico y emocional, y desarrollar tus proyectos personales sin presión.",
+  "titulo3":"Resumen de las plantillas disponibles",
+  "l6":"Organiza tus tareas diarias según prioridad emocional y urgencia.",
+  "l7":"Diseña rutinas realistas para tus mañanas y noches.",
+  "l8":"Registra tus entrenamientos y cómo se siente tu cuerpo.",
+  "l9":"Conecta con tus emociones y enfócate en tu bienestar interior.",
+  "l10":"Lleva un registro simple de tus gastos e ingresos con consciencia.",
+  "l11":"Desarrolla tus proyectos por pasos claros y sin agobio.",
+  "l12":"Mejora tu alimentación con seguimiento diario y retos visuales.",
+  "l13":"Organiza tus estudios y prepárate para exámenes con calma.",
+  "footer":"Todos los derechos reservados"
+
+
+  
 }

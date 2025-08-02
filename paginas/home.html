@@ -14,7 +14,7 @@
   <nav>
     <button class="menu-toggle" id="menu-toggle">☰</button>
     <aside class="sidebar" id="sidebar">
-      <a href="home.html" data-i18n="home">Home</a>
+      <a href="home.html">Home</a>
       <a href="plantillas.html" >Plantillas</a>
       <a href="contacto.html" >Contacto</a>
     </aside>
@@ -26,52 +26,56 @@
       <a href="registro.html" class="cta-button">Registrarse</a>
     </div>
   </nav>
+  <select id="language-selector" class="language-selector">
+    <option value="es">Español</option>
+    <option value="en">English</option>
+  </select>
 <!-- Sección de presentación GlowMap -->
 <section class="presentacion-glowmap">
   <div class="container">
-    <h2>Bienvenido a <span class="resaltado">GlowMap</span></h2>
-    <p class="intro">
+    <h2 data-i18n="welcome">Bienvenido a <span class="resaltado">GlowMap</span></h2>
+    <p class="intro" data-i18n="introTxt">
       En un mundo donde la productividad suele ser sinónimo de presión, GlowMap propone un enfoque diferente: organización amable, personal y consciente. Esta plataforma está diseñada para ayudarte a construir tu propia “hoja de ruta” hacia una vida organizada, sin perder de vista el bienestar personal.
     </p>
 
-    <h3>¿A quién va dirigido?</h3>
-    <p>
+    <h3 data-i18n="titulo1">¿A quién va dirigido?</h3>
+    <p data-i18n="parrafo1">
       GlowMap está pensado para personas de todos los ámbitos: estudiantes, profesionales, amas de casa, deportistas, creativos, y cualquier persona que busque un equilibrio entre organización y bienestar emocional.
     </p>
     <ul class="lista-publico">
-      <li>💼 Personas trabajadoras que buscan organizarse sin agobio.</li>
-      <li>🎓 Estudiantes que quieren planificar con calma.</li>
-      <li>🏡 Personas en el hogar que quieren rutinas sanas.</li>
-      <li>🧘‍♀️ Quienes priorizan su bienestar físico y mental.</li>
-      <li>💡 Creativos y autodidactas con ideas que ordenar.</li>
+      <li data-i18n="l1">💼 Personas trabajadoras que buscan organizarse sin agobio.</li>
+      <li data-i18n="l2">🎓 Estudiantes que quieren planificar con calma.</li>
+      <li data-i18n="l3">🏡 Personas en el hogar que quieren rutinas sanas.</li>
+      <li data-i18n="l4">🧘‍♀️ Quienes priorizan su bienestar físico y mental.</li>
+      <li data-i18n="l5">💡 Creativos y autodidactas con ideas que ordenar.</li>
     </ul>
 
-    <h3>¿Qué encontrarás en GlowMap?</h3>
-    <p>
+    <h3 data-i18n="titulo2">¿Qué encontrarás en GlowMap?</h3>
+    <p data-i18n="parrafo2">
       A través de plantillas visuales y flexibles, puedes planificar tareas, registrar hábitos saludables, seguir tu progreso físico y emocional, y desarrollar tus proyectos personales sin presión.
     </p>
 
-    <h3>Resumen de las plantillas disponibles:</h3>
+    <h3 data-i18n="titulo3">Resumen de las plantillas disponibles:</h3>
     <ul class="descripcion-plantillas">
-      <li><strong>GlowFocus Template:</strong> Organiza tus tareas diarias según prioridad emocional y urgencia.</li>
-      <li><strong>GlowFlow Routine:</strong> Diseña rutinas realistas para tus mañanas y noches.</li>
-      <li><strong>GlowFitness Tracker:</strong> Registra tus entrenamientos y cómo se siente tu cuerpo.</li>
-      <li><strong>GlowMind Space:</strong> Conecta con tus emociones y enfócate en tu bienestar interior.</li>
-      <li><strong>GlowFinance Map:</strong> Lleva un registro simple de tus gastos e ingresos con consciencia.</li>
-      <li><strong>GlowProject Planner:</strong> Desarrolla tus proyectos por pasos claros y sin agobio.</li>
-      <li><strong>GlowNutrition Tracker:</strong> Mejora tu alimentación con seguimiento diario y retos visuales.</li>
-      <li><strong>GlowStudy Planner:</strong> Organiza tus estudios y prepárate para exámenes con calma.</li>
+      <li data-i18n="l6"><strong>GlowFocus Template:</strong> Organiza tus tareas diarias según prioridad emocional y urgencia.</li>
+      <li data-i18n="l7"><strong>GlowFlow Routine:</strong> Diseña rutinas realistas para tus mañanas y noches.</li>
+      <li data-i18n="l8"><strong>GlowFitness Tracker:</strong> Registra tus entrenamientos y cómo se siente tu cuerpo.</li>
+      <li data-i18n="l9"><strong>GlowMind Space:</strong> Conecta con tus emociones y enfócate en tu bienestar interior.</li>
+      <li data-i18n="l10"><strong>GlowFinance Map:</strong> Lleva un registro simple de tus gastos e ingresos con consciencia.</li>
+      <li data-i18n="l11"><strong>GlowProject Planner:</strong> Desarrolla tus proyectos por pasos claros y sin agobio.</li>
+      <li data-i18n="l12"><strong>GlowNutrition Tracker:</strong> Mejora tu alimentación con seguimiento diario y retos visuales.</li>
+      <li data-i18n="l13"><strong>GlowStudy Planner:</strong> Organiza tus estudios y prepárate para exámenes con calma.</li>
     </ul>
 
     <div class="boton-explorar">
-      <a href="plantillas.html" class="cta-button">Explorar las plantillas</a>
+      <a href="plantillas.html" class="cta-button" data-i18n="exploreTemplates">Explorar las plantillas</a>
     </div>
   </div>
 </section>
 
 
 
-  <footer>
+  <footer data-i18n="footer">
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
 <script>
@@ -94,6 +98,7 @@
     });
   });
 </script>
+<script src="../js/lang2.js"></script>
 
 </body>
 </html>
