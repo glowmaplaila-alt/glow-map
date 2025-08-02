@@ -15,29 +15,7 @@ body {
       z-index: 1001;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #f4e0d8;
-      padding: 10px 30px;
-      flex-wrap: wrap;
-    }
-    .logo-nav {
-      display: block;
-      height: auto;
-      max-height: 100px;
-      width: auto;
-      max-width: 100%;
-      border-radius: 16px;
-      object-fit: contain;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 20px;
-    }
-
+    
     .nav-links a {
       text-decoration: none;
       color: #cf965f;
@@ -180,5 +158,131 @@ html {
 
   .boton-centro {
     margin-top: 20px;
+  }
+}
+
+/* NAV principal */
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f4e0d8;
+  padding: 10px 30px;
+  height: 100px;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  background-color: #fff2e6;       /* color claro */
+  border: 2px solid #cf965f;
+  border-radius: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #cf965f;
+  padding: 6px 12px;
+  z-index: 3000;
+}
+
+/* Logo centrado */
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-nav {
+  height: auto;
+  max-height: 80px;
+  width: auto;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+/* CTA derecha */
+.cta-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Sidebar lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 250px;
+  height: 100%;
+  background-color: #f4e0d8;
+  padding: 60px 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 2000;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #cf965f;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    gap: 10px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 20px;     /* antes estaba a la izquierda */
+    top: 20px;
+    transform: none;
+  }
+
+  .logo-container {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .logo-nav {
+    max-height: 60px;
+  }
+
+  .cta-buttons {
+    flex-direction: row;           /* botones en línea */
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;                      /* separación pequeña */
+    flex-wrap: nowrap;
+  }
+
+  .cta-button {
+    padding: 6px 14px;             /* tamaño cómodo en móvil */
+    font-size: 14px;
+  }
+}
+@media (min-width: 769px) {
+  .menu-toggle {
+    position: relative;
+    margin-left: 100px;
+    z-index: 3001;
+  }
+
+  .sidebar.open + .menu-toggle {
+    margin-left: 260px; /* mueve el botón si el menú está abierto */
   }
 }
