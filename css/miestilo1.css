@@ -23,8 +23,14 @@ body {
       padding: 10px 30px;
       flex-wrap: wrap;
     }
-    .logo-nav{
-        border-radius: 16px;
+    .logo-nav {
+      display: block;
+      height: auto;
+      max-height: 100px;
+      width: auto;
+      max-width: 100%;
+      border-radius: 16px;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -150,8 +156,10 @@ html {
 
   .logo-nav {
     margin: 10px auto;
-    max-height: 80px;
     display: block;
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
   }
 
   .hero {
