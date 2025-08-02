@@ -12,12 +12,14 @@
 
 
   <nav>
-    <div class="nav-links">
-      <a href="home.html">Home</a>
-      <a href="plantillas.html">Plantillas</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" style="width: 100%; max-height: 100px; object-fit: cover;">
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <aside class="sidebar" id="sidebar">
+      <a href="home.html" data-i18n="home">Home</a>
+      <a href="plantillas.html" >Plantillas</a>
+      <a href="contacto.html" >Contacto</a>
+    </aside>
+    
+    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" >
     </a>
     <div class="cta-buttons">
       <a href="login.html" class="cta-button">Iniciar sesión</a>
@@ -72,5 +74,26 @@
   <footer>
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  // Cierra el sidebar cuando el mouse sale (solo útil en desktop)
+  sidebar.addEventListener('mouseleave', () => {
+    sidebar.classList.remove('open');
+  });
+
+  // Cierra el sidebar al hacer clic en cualquier enlace del menú
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  });
+</script>
+
 </body>
 </html>

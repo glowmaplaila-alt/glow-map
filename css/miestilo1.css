@@ -286,3 +286,23 @@ nav {
     margin-left: 260px; /* mueve el botón si el menú está abierto */
   }
 }
+.language-selector {
+  padding: 8px 12px;
+  border: 2px solid #cf965f;
+  border-radius: 6px;
+  background-color: #fff9f5;
+  color: #cf965f;
+  font-weight: bold;
+  font-family: 'Cairo', sans-serif;
+  cursor: pointer;
+  outline: none;
+  margin-left: 70%;
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    margin-top: 10px;
+    width: 30%;
+    text-align: center;
+  }
+}
