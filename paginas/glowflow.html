@@ -11,21 +11,36 @@
   
 </head>
 <body>
-  <nav>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+  <button id="open-menu" class="menu-toggle">☰</button>
+    
     <aside class="sidebar" id="sidebar">
-      <a href="home.html" data-i18n="home">Home</a>
+      <button id="close-menu" class="close-toggle">✖</button>
+      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
       <a href="plantillas.html" >Plantillas</a>
       <a href="contacto.html" >Contacto</a>
     </aside>
-    
-    <a href="../index.html"><img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap" >
-    </a>
-    <div class="cta-buttons">
-      <a href="login.html" class="cta-button">Iniciar sesión</a>
-      <a href="registro.html" class="cta-button">Registrarse</a>
+
+  <nav>
+  <div class="nav-wrapper">
+    <div class="nav-left"></div>
+
+    <div class="logo-container">
+      <a href="../index.html">
+        <img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap">
+      </a>
     </div>
-  </nav>
+
+    <div class="cta-buttons">
+      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+    </div>
+  </div>
+</nav>
+  <select id="language-selector" class="language-selector">
+    <option value="es">🇪🇸</option>
+    <option value="en">🇺🇸</option>
+    <option value="ar">🇲🇦</option>
+  </select>
   <header>
     <h1>GlowFlow — Rutina Diaria</h1>
   </header>

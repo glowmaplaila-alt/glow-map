@@ -121,6 +121,8 @@ html {
     flex-direction: column;
     align-items: center; /* centramos todo en la columna */
     gap: 10px;
+    position: relative;
+    
   }
 
   .nav-links,
@@ -133,11 +135,12 @@ html {
   }
 
   .logo-nav {
-    margin: 10px auto;
+    margin: 1px auto;
     display: block;
     max-height: 100px;
     width: auto;
     object-fit: contain;
+    margin-bottom: 5px;
   }
 
   .hero {
@@ -163,54 +166,68 @@ html {
 
 /* NAV principal */
 nav {
+  background-color: #f4e0d8;
+  padding: 10px 30px;
+  height: 150px;
   position: relative;
+}
+
+.nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f4e0d8;
-  padding: 10px 30px;
-  height: 100px;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
 }
 
+.nav-left {
+  flex: 1;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-nav {
+  max-height: 100px;
+  border-radius: 16px;
+  object-fit: contain;
+  
+}
+
+.cta-buttons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
 /* Botón hamburguesa */
-.menu-toggle {
-  background-color: #fff2e6;       /* color claro */
-  border: 2px solid #cf965f;
-  border-radius: 8px;
-  font-size: 24px;
+
+.menu-toggle,
+.close-toggle {
+  background: none;
+  border: none;
+  font-size: 28px;
   cursor: pointer;
   color: #cf965f;
   padding: 6px 12px;
   z-index: 3000;
 }
 
-/* Logo centrado */
-.logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-.logo-nav {
-  height: auto;
-  max-height: 100px;
-  width: auto;
-  border-radius: 16px;
-  object-fit: contain;
-}
-
-/* CTA derecha */
-.cta-buttons {
-  display: flex;
-  gap: 10px;
-}
 
 /* Sidebar lateral */
+/* Sidebar oculto por defecto */
 .sidebar {
   position: fixed;
   top: 0;
   left: -350px;
-  width: 250px;
+  width: 180px;
   height: 100%;
   background-color: #f4e0d8;
   padding: 60px 20px;
@@ -222,35 +239,117 @@ nav {
   z-index: 2000;
 }
 
+/* Sidebar visible cuando tiene clase .active */
+.sidebar.active {
+  left: 0;
+}
+
 .sidebar a {
   text-decoration: none;
   color: #cf965f;
   font-weight: bold;
   font-size: 18px;
 }
-
-.sidebar.open {
-  left: 0;
+.language-selector {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-/* Mobile */
+/* Botones de menú solo visibles en móvil */
 @media (max-width: 768px) {
-  nav {
+  .nav-wrapper {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    padding: 20px 10px;
     height: auto;
+    text-align: center;
+  }
+
+  .nav-left {
+    display: none; /* ya no la necesitamos en móvil */
+  }
+  @media (max-width: 768px) {
+  .language-selector {
+    font-size: 13px;
+    padding: 5px 8px;
+    width: auto;
+  }
+}
+
+  .logo-container {
+    margin-bottom: 0px; /* separación entre logo y botones */
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    position: relative;
   }
 
-  .menu-toggle {
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .menu-toggle,
+  .close-toggle {
     position: absolute;
-    right: 20px;     /* antes estaba a la izquierda */
-    top: 20px;
-    transform: none;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 3000;
   }
 
+  #close-menu {
+    display: none;
+  }
+
+  .sidebar.active #close-menu {
+    display: block;
+  }
+
+  .sidebar.active ~ #open-menu {
+    display: none;
+  }
+}
+
+/* En escritorio también queremos que el botón funcione, así que NO lo ocultamos */
+@media (min-width: 769px) {
+  .menu-toggle,
+  .close-toggle {
+    display: block;
+  }
+
+  #close-menu {
+    display: none;
+  }
+
+  .sidebar.active #close-menu {
+    display: block;
+  }
+
+  .sidebar.active ~ #open-menu {
+    display: none;
+  }
+}
+
+
+
+
+ 
   .logo-container {
     position: static;
     transform: none;
@@ -274,20 +373,10 @@ nav {
     padding: 6px 14px;             /* tamaño cómodo en móvil */
     font-size: 14px;
   }
-}
-@media (min-width: 769px) {
-  .menu-toggle {
-    position: relative;
-    margin-left: 100px;
-    z-index: 3001;
-  }
 
-  .sidebar.open + .menu-toggle {
-    margin-left: 260px; /* mueve el botón si el menú está abierto */
-  }
-}
+
 .language-selector {
-  padding: 8px 12px;
+  padding: 5px 8px;
   border: 2px solid #cf965f;
   border-radius: 6px;
   background-color: #fff9f5;
@@ -296,13 +385,13 @@ nav {
   font-family: 'Cairo', sans-serif;
   cursor: pointer;
   outline: none;
-  margin-left: 70%;
+  margin-left: 80%;
 }
 
 @media (max-width: 768px) {
   .language-selector {
     margin-top: 10px;
-    width: 30%;
+    
     text-align: center;
   }
 }
