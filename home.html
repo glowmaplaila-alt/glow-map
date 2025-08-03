@@ -1,0 +1,120 @@
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowMap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <link rel="stylesheet" href="../css/miestilo12.css">
+</head>
+<body>
+ 
+
+
+  <button id="open-menu" class="menu-toggle">☰</button>
+    
+    <aside class="sidebar" id="sidebar">
+      <button id="close-menu" class="close-toggle">✖</button>
+      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+      <a href="plantillas.html" >Plantillas</a>
+      <a href="contacto.html" >Contacto</a>
+    </aside>
+
+  <nav>
+  <div class="nav-wrapper">
+    <div class="nav-left"></div>
+
+    <div class="logo-container">
+      <a href="../index.html">
+        <img class="logo-nav" src="../imagenes/logo.png" alt="Logo de GlowMap">
+      </a>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+    </div>
+  </div>
+</nav>
+  <select id="language-selector" class="language-selector">
+    <option value="es">🇪🇸</option>
+    <option value="en">🇺🇸</option>
+    <option value="ar">🇲🇦</option>
+  </select>
+  <select id="language-selector" class="language-selector">
+    <option value="es">🇪🇸</option>
+    <option value="en">🇺🇸</option>
+    <option value="ar">🇲🇦</option>
+  </select>
+<!-- Sección de presentación GlowMap -->
+<section class="presentacion-glowmap">
+  <div class="container">
+    <h2 data-i18n="welcome">Bienvenido a <span class="resaltado">GlowMap</span></h2>
+    <p class="intro" data-i18n="introTxt">
+      En un mundo donde la productividad suele ser sinónimo de presión, GlowMap propone un enfoque diferente: organización amable, personal y consciente. Esta plataforma está diseñada para ayudarte a construir tu propia “hoja de ruta” hacia una vida organizada, sin perder de vista el bienestar personal.
+    </p>
+
+    <h3 data-i18n="titulo1">¿A quién va dirigido?</h3>
+    <p data-i18n="parrafo1">
+      GlowMap está pensado para personas de todos los ámbitos: estudiantes, profesionales, amas de casa, deportistas, creativos, y cualquier persona que busque un equilibrio entre organización y bienestar emocional.
+    </p>
+    <ul class="lista-publico">
+      <li data-i18n="l1">💼 Personas trabajadoras que buscan organizarse sin agobio.</li>
+      <li data-i18n="l2">🎓 Estudiantes que quieren planificar con calma.</li>
+      <li data-i18n="l3">🏡 Personas en el hogar que quieren rutinas sanas.</li>
+      <li data-i18n="l4">🧘‍♀️ Quienes priorizan su bienestar físico y mental.</li>
+      <li data-i18n="l5">💡 Creativos y autodidactas con ideas que ordenar.</li>
+    </ul>
+
+    <h3 data-i18n="titulo2">¿Qué encontrarás en GlowMap?</h3>
+    <p data-i18n="parrafo2">
+      A través de plantillas visuales y flexibles, puedes planificar tareas, registrar hábitos saludables, seguir tu progreso físico y emocional, y desarrollar tus proyectos personales sin presión.
+    </p>
+
+    <h3 data-i18n="titulo3">Resumen de las plantillas disponibles:</h3>
+    <ul class="descripcion-plantillas">
+      <li data-i18n="l6"><strong>GlowFocus Template:</strong> Organiza tus tareas diarias según prioridad emocional y urgencia.</li>
+      <li data-i18n="l7"><strong>GlowFlow Routine:</strong> Diseña rutinas realistas para tus mañanas y noches.</li>
+      <li data-i18n="l8"><strong>GlowFitness Tracker:</strong> Registra tus entrenamientos y cómo se siente tu cuerpo.</li>
+      <li data-i18n="l9"><strong>GlowMind Space:</strong> Conecta con tus emociones y enfócate en tu bienestar interior.</li>
+      <li data-i18n="l10"><strong>GlowFinance Map:</strong> Lleva un registro simple de tus gastos e ingresos con consciencia.</li>
+      <li data-i18n="l11"><strong>GlowProject Planner:</strong> Desarrolla tus proyectos por pasos claros y sin agobio.</li>
+      <li data-i18n="l12"><strong>GlowNutrition Tracker:</strong> Mejora tu alimentación con seguimiento diario y retos visuales.</li>
+      <li data-i18n="l13"><strong>GlowStudy Planner:</strong> Organiza tus estudios y prepárate para exámenes con calma.</li>
+    </ul>
+
+    <div class="boton-explorar">
+      <a href="plantillas.html" class="cta-button" data-i18n="exploreTemplates">Explorar las plantillas</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer data-i18n="footer">
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
+
+  menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+
+  // Cierra el sidebar cuando el mouse sale (solo útil en desktop)
+  sidebar.addEventListener('mouseleave', () => {
+    sidebar.classList.remove('open');
+  });
+
+  // Cierra el sidebar al hacer clic en cualquier enlace del menú
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  });
+</script>
+<script src="../js/lang2.js"></script>
+
+</body>
+</html>
