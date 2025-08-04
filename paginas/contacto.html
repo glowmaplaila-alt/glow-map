@@ -68,22 +68,19 @@
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
   <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
+   document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
 
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-  });
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      openBtn.style.display = 'none';  // Oculta ☰
+    });
 
-  // Cierra el sidebar cuando el mouse sale (solo útil en desktop)
-  sidebar.addEventListener('mouseleave', () => {
-    sidebar.classList.remove('open');
-  });
-
-  // Cierra el sidebar al hacer clic en cualquier enlace del menú
-  sidebar.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      sidebar.classList.remove('open');
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      openBtn.style.display = 'block'; // Muestra ☰
     });
   });
 </script>

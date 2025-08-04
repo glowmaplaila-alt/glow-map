@@ -5,7 +5,19 @@ body {
       color: #cf965f;
     }
 
-   
+   .boton-about{
+    margin-top: 0px;
+    background-color: #cf965f;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .boton-about:hover {
+      background-color: #b8804e74;
+    }
 
     .subtitle {
       margin-top: 10px;
@@ -38,12 +50,13 @@ body {
     }
 
     .cta-button:hover {
-      background-color: #b87f4e;
+      background-color: #b8804e74;
     }
 
     .hero {
       text-align: center;
       padding: 20px 15px;
+      
       
     }
 
@@ -300,6 +313,7 @@ nav {
     width: 100%;
     max-width: 250px;
   }
+  
 
   .menu-toggle,
   .close-toggle {

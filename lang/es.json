@@ -16,15 +16,23 @@
   "titulo2":"¿Qué encontrarás en GlowMap?",
   "parrafo2":"A través de plantillas visuales y flexibles, puedes planificar tareas, registrar hábitos saludables, seguir tu progreso físico y emocional, y desarrollar tus proyectos personales sin presión.",
   "titulo3":"Resumen de las plantillas disponibles",
-  "l6":"GlowFocus Template: Organiza tus tareas diarias según prioridad emocional y urgencia.",
-  "l7":"GlowFlow Routine: Diseña rutinas realistas para tus mañanas y noches.",
-  "l8":"GlowFitness Tracker: Registra tus entrenamientos y cómo se siente tu cuerpo.",
-  "l9":"GlowMind Space: Conecta con tus emociones y enfócate en tu bienestar interior.",
-  "l10":"GlowFinance Map: Lleva un registro simple de tus gastos e ingresos con consciencia.",
-  "l11":"GlowProject Planner: Desarrolla tus proyectos por pasos claros y sin agobio.",
-  "l12":"GlowNutrition Tracker: Mejora tu alimentación con seguimiento diario y retos visuales.",
-  "l13":"GlowStudy Planner: Organiza tus estudios y prepárate para exámenes con calma.",
-  "footer":"Todos los derechos reservados"
+  "l6":"Organiza tus tareas diarias según prioridad emocional y urgencia.",
+  "l7":"Diseña rutinas realistas para tus mañanas y noches.",
+  "l8":"Registra tus entrenamientos y cómo se siente tu cuerpo.",
+  "l9":"Conecta con tus emociones y enfócate en tu bienestar interior.",
+  "l10":"Lleva un registro simple de tus gastos e ingresos con consciencia.",
+  "l11":"Desarrolla tus proyectos por pasos claros y sin agobio.",
+  "l12":"Mejora tu alimentación con seguimiento diario y retos visuales.",
+  "l13":"Organiza tus estudios y prepárate para exámenes con calma.",
+  "footer":"Todos los derechos reservados",
+  "s1":"GlowFocus Template",
+  "s2":"GlowFlow Routine",
+  "s3":"GlowFitness Tracker",
+  "s4":"GlowMind Space",
+  "s5":"GlowFinance Map",
+  "s6":"GlowProject Planner",
+  "s7":"GlowNutrition Tracker",
+  "s8":"GlowStudy Planner"
 
 
   
