@@ -404,7 +404,7 @@ nav {
 
 @media (max-width: 768px) {
   .language-selector {
-    margin-top: 10px;
+    margin-top: 0px;
     
     text-align: center;
   }
