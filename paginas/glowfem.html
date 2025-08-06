@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowFem — Cuidado Cíclico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo7.css">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <script src="../js/glowfem.js"></script>
+</head>
+<body>
+  <button id="open-menu" class="menu-toggle">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle">✖</button>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html">Plantillas</a>
+    <a href="contacto.html">Contacto</a>
+  </aside>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+        <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>GlowFem — Cuidado Cíclico</h1>
+  </header>
+
+  <div class="container">
+    <h2>1. Fase del ciclo</h2>
+    <select id="fase-ciclo">
+      <option value="">-- Elige tu fase --</option>
+      <option value="menstrual">Menstrual ✨</option>
+      <option value="folicular">Folicular 🌿</option>
+      <option value="ovulatoria">Ovulatoria 🌸</option>
+      <option value="lutea">Lútea 🌻</option>
+    </select>
+
+    <h2>2. Energía y emociones</h2>
+    <textarea id="emociones" placeholder="¿Cómo te sientes hoy física y emocionalmente?"></textarea>
+
+    <h2>3. Cuidados personales</h2>
+    <textarea id="cuidados" placeholder="¿Qué necesitas para cuidarte hoy?"></textarea>
+
+    <h2>4. Rituales o hábitos</h2>
+    <textarea id="rituales" placeholder="Ritual suave, infusión, descanso, movimiento..."></textarea>
+
+    <h2>5. Intención cíclica</h2>
+    <input type="text" id="intencion-fem" placeholder="Una frase que resuma tu intención hoy">
+  </div>
+
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('open-menu');
+      const closeBtn = document.getElementById('close-menu');
+      const sidebar = document.getElementById('sidebar');
+
+      openBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        openBtn.style.display = 'none';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        openBtn.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>

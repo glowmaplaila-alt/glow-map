@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowTrip Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo7.css">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <script src="../js/glowmind.js"></script>
+</head>
+<body>
+  <button id="open-menu" class="menu-toggle">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle">✖</button>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html">Plantillas</a>
+    <a href="contacto.html">Contacto</a>
+  </aside>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
+      <div class="cta-buttons">
+        <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+        <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>GlowTrip Planner — Tu viaje soñado</h1>
+  </header>
+
+  <div class="container">
+    <h2>1. Destino y fechas</h2>
+    <input type="text" id="destino" placeholder="Destino del viaje">
+    <input type="text" id="fechas" placeholder="Fechas del viaje">
+
+    <h2>2. Lista de preparativos</h2>
+    <textarea id="preparativos" rows="4" placeholder="¿Qué necesitas llevar o hacer antes del viaje?"></textarea>
+
+    <h2>3. Itinerario</h2>
+    <textarea id="itinerario" rows="5" placeholder="Planifica tu día a día, lugares a visitar, actividades..."></textarea>
+
+    <h2>4. Presupuesto estimado</h2>
+    <input type="text" id="presupuesto" placeholder="Presupuesto aproximado">
+
+    <h2>5. Notas importantes</h2>
+    <textarea id="notas" rows="4" placeholder="Documentación, vacunas, contactos de emergencia..."></textarea>
+
+    <h2>6. Inspírate ✨</h2>
+    <div id="mensaje-dia">Cargando idea para tu viaje...</div>
+  </div>
+
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+  </div>
+
+  <footer>
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('open-menu');
+      const closeBtn = document.getElementById('close-menu');
+      const sidebar = document.getElementById('sidebar');
+
+      openBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        openBtn.style.display = 'none';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        openBtn.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
