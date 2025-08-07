@@ -4,38 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GlowFocus - Tareas Flexibles</title>
+
+  <!-- Fuentes y estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/miestilo4.css">
   <link rel="stylesheet" href="../css/miestilo1.css">
-  <script src="../js/glowfocus.js"></script>
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
 </head>
 <body>
   <button id="open-menu" class="menu-toggle">☰</button>
-    
-    <aside class="sidebar" id="sidebar">
-      <button id="close-menu" class="close-toggle">✖</button>
-      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-      <a href="plantillas.html" >Plantillas</a>
-      <a href="contacto.html" >Contacto</a>
-    </aside>
+
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle">✖</button>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html">Plantillas</a>
+    <a href="contacto.html">Contacto</a>
+  </aside>
 
   <nav>
-  <div class="nav-wrapper">
-    <div class="nav-left"></div>
-
-    <div class="logo-container">
-      <a href="../index.html">
-        <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-      </a>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
+      <div class="cta-buttons">
+        <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+        <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="cta-buttons">
-      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-    </div>
-  </div>
-</nav>
-  
   <header>
     <h1>GlowFocus — Tareas Flexibles</h1>
   </header>
@@ -65,29 +67,28 @@
       </div>
     </div>
   </div>
+
+  <div class="boton-centro">
+    <button class="cta-button" onclick="guardarGlowFocus()">Guardar</button>
+  </div>
+
+  <div class="container">
+    <h2>Calendario de Tareas</h2>
+    <div id="calendar"></div>
+  </div>
+
   <div class="boton-centro">
     <a href="../index.html" class="boton-volver">Volver al inicio</a>
   </div>
+
   <footer>
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
 
-  <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const openBtn = document.getElementById('open-menu');
-    const closeBtn = document.getElementById('close-menu');
-    const sidebar = document.getElementById('sidebar');
+  <!-- FullCalendar JS CORRECTO -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
 
-    openBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      openBtn.style.display = 'none';  // Oculta ☰
-    });
-
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      openBtn.style.display = 'block'; // Muestra ☰
-    });
-  });
-</script>
+  <!-- Script principal -->
+  <script src="../js/glowfocus.js"></script>
 </body>
 </html>

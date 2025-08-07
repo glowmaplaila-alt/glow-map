@@ -409,3 +409,68 @@ nav {
     text-align: center;
   }
 }
+
+
+/* Contenedor del calendario */
+#calendar {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  color: #cf965f;
+  font-family: 'Cairo', sans-serif;
+}
+
+/* Encabezado del calendario */
+.fc-toolbar-title {
+  font-size: 1.5rem;
+  color: #cf965f;
+  font-weight: bold;
+}
+
+/* Botones del calendario */
+.fc-button {
+  background-color: #cf965f !important;
+  border: none !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 6px !important;
+  padding: 6px 12px !important;
+}
+
+.fc-button:hover {
+  background-color: #b8804e !important;
+}
+
+.fc-button:disabled {
+  background-color: #e0c5b0 !important;
+  color: #fff !important;
+}
+
+/* Día del calendario */
+.fc-daygrid-day-number {
+  color: #cf965f;
+  font-weight: bold;
+}
+
+/* Evento del calendario */
+.fc-event {
+  background-color: #cf965f !important;
+  border: none !important;
+  font-size: 0.9rem;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+/* Hover de evento */
+.fc-event:hover {
+  background-color: #b77e48 !important;
+}
+
+/* Encabezados de días */
+.fc-col-header-cell-cushion {
+  color: #b5805a;
+  font-weight: bold;
+}

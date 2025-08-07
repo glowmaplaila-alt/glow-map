@@ -1,43 +1,69 @@
-window.addEventListener("load", function () {
-  const storageKeys = [
-    "hora-manana",
-    "acciones-manana",
-    "sentir-manana",
-    "hora-noche",
-    "acciones-noche",
-    "sentir-noche",
-    "habito-agua",
-    "habito-ejercicio",
-    "habito-sinmovil",
-    "habito-agradecer",
-    "resumen-dia",
-    "estado-dia"
-  ];
+document.addEventListener('DOMContentLoaded', function () {
+  // Verificar si FullCalendar está definido
+  if (typeof FullCalendar === 'undefined') {
+    console.error('❌ FullCalendar no está definido. Asegúrate de cargarlo antes que este script.');
+    return;
+  }
 
-  // Cargar datos guardados
-  storageKeys.forEach((key) => {
-    const el = document.getElementById(key);
-    if (el) {
-      if (el.type === "checkbox") {
-        el.checked = localStorage.getItem(key) === "true";
-      } else if (el.type === "radio") {
-        if (localStorage.getItem(key) === el.value) el.checked = true;
-      } else {
-        el.value = localStorage.getItem(key) || "";
-      }
-    }
-  });
+  const calendarEl = document.getElementById('calendar');
 
-  // Guardar datos al cambiar
-  document.querySelectorAll("input, textarea").forEach((el) => {
-    el.addEventListener("input", function () {
-      if (el.type === "checkbox") {
-        localStorage.setItem(el.id, el.checked);
-      } else if (el.type === "radio") {
-        if (el.checked) localStorage.setItem("estado-dia", el.value);
-      } else {
-        localStorage.setItem(el.id, el.value);
-      }
+  if (calendarEl) {
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'es',
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      events: cargarEventosGlowFlow()
     });
-  });
+
+    calendar.render();
+  } else {
+    console.warn('⚠️ No se encontró el elemento con id="calendar"');
+  }
 });
+
+function guardarGlowFlow() {
+  const datos = {
+    horaManana: document.getElementById('hora-manana').value,
+    accionesManana: document.getElementById('acciones-manana').value,
+    sentirManana: document.getElementById('sentir-manana').value,
+    horaNoche: document.getElementById('hora-noche').value,
+    accionesNoche: document.getElementById('acciones-noche').value,
+    sentirNoche: document.getElementById('sentir-noche').value,
+    resumenDia: document.getElementById('resumen-dia').value,
+    estadoDia: document.querySelector('input[name="estado-dia"]:checked')?.value || '',
+    habitoAgua: document.getElementById('habito-agua').checked,
+    habitoEjercicio: document.getElementById('habito-ejercicio').checked,
+    habitoSinMovil: document.getElementById('habito-sinmovil').checked,
+    habitoAgradecer: document.getElementById('habito-agradecer').checked
+  };
+
+  const fechaActual = new Date().toISOString().split('T')[0];
+  localStorage.setItem('glowflow-' + fechaActual, JSON.stringify(datos));
+
+  alert('¡Rutina guardada para hoy!');
+  location.reload(); // Para que el calendario se actualice inmediatamente
+}
+
+function cargarEventosGlowFlow() {
+  const eventos = [];
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const clave = localStorage.key(i);
+    if (clave.startsWith('glowflow-')) {
+      const fecha = clave.split('glowflow-')[1];
+      eventos.push({
+        title: 'Rutina guardada',
+        start: fecha,
+        allDay: true
+      });
+    }
+  }
+
+  return eventos;
+}
+
+

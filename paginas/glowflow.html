@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GlowFlow Routine - Rutina diaria</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/miestilo5.css">
-  <link rel="stylesheet" href="../css/miestilo1.css">
-  <script src="../js/glowflow.js"></script>
-  
+
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/miestilo5.css" />
+  <link rel="stylesheet" href="../css/miestilo1.css" />
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
+
 </head>
+
 <body>
   <button id="open-menu" class="menu-toggle">☰</button>
-    
-    <aside class="sidebar" id="sidebar">
-      <button id="close-menu" class="close-toggle">✖</button>
-      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-      <a href="plantillas.html" >Plantillas</a>
-      <a href="contacto.html" >Contacto</a>
-    </aside>
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle">✖</button>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html">Plantillas</a>
+    <a href="contacto.html">Contacto</a>
+  </aside>
 
   <nav>
-  <div class="nav-wrapper">
-    <div class="nav-left"></div>
-
-    <div class="logo-container">
-      <a href="../index.html">
-        <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-      </a>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap" />
+        </a>
+      </div>
+      <div class="cta-buttons">
+        <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+        <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="cta-buttons">
-      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-    </div>
-  </div>
-</nav>
-  
   <header>
     <h1>GlowFlow — Rutina Diaria</h1>
   </header>
@@ -45,7 +47,7 @@
     <div class="section">
       <h2>Rutina de la Mañana</h2>
       <label for="hora-manana">Hora de despertar</label>
-      <input type="time" id="hora-manana">
+      <input type="time" id="hora-manana" />
 
       <label for="acciones-manana">Acciones realizadas</label>
       <textarea id="acciones-manana" placeholder="Ej: Bebí agua, hice estiramientos, respiré profundo..."></textarea>
@@ -57,7 +59,7 @@
     <div class="section">
       <h2>Rutina de la Noche</h2>
       <label for="hora-noche">Hora de dormir</label>
-      <input type="time" id="hora-noche">
+      <input type="time" id="hora-noche" />
 
       <label for="acciones-noche">¿Tuviste tiempo para ti?</label>
       <textarea id="acciones-noche" placeholder="Ej: Leí, medité, escribí un diario..."></textarea>
@@ -69,10 +71,10 @@
     <div class="section">
       <h2>Seguimiento de Hábitos</h2>
       <div class="checkboxes">
-        <label><input type="checkbox" id="habito-agua"> Bebí suficiente agua</label>
-        <label><input type="checkbox" id="habito-ejercicio"> Hice ejercicio</label>
-        <label><input type="checkbox" id="habito-sinmovil"> Menos tiempo con el móvil</label>
-        <label><input type="checkbox" id="habito-agradecer"> Practiqué gratitud</label>
+        <label><input type="checkbox" id="habito-agua" /> Bebí suficiente agua</label>
+        <label><input type="checkbox" id="habito-ejercicio" /> Hice ejercicio</label>
+        <label><input type="checkbox" id="habito-sinmovil" /> Menos tiempo con el móvil</label>
+        <label><input type="checkbox" id="habito-agradecer" /> Practiqué gratitud</label>
       </div>
     </div>
 
@@ -82,35 +84,30 @@
       <textarea id="resumen-dia" placeholder="Reflexión corta del día..."></textarea>
 
       <div class="emotions">
-        <label><input type="radio" name="estado-dia" value="renovado"> Renovado</label>
-        <label><input type="radio" name="estado-dia" value="neutro"> Neutro</label>
-        <label><input type="radio" name="estado-dia" value="agotado"> Agotado</label>
+        <label><input type="radio" name="estado-dia" value="renovado" /> Renovado</label>
+        <label><input type="radio" name="estado-dia" value="neutro" /> Neutro</label>
+        <label><input type="radio" name="estado-dia" value="agotado" /> Agotado</label>
       </div>
     </div>
   </div>
+
+  <div class="boton-centro">
+    <button class="cta-button" onclick="guardarGlowFlow()">Guardar</button>
+  </div>
+
+  <div class="container">
+    <h2>Calendario de Rutinas</h2>
+    <div id="calendar"></div>
+  </div>
+
   <div class="boton-centro">
     <a href="../index.html" class="boton-volver">Volver al inicio</a>
   </div>
-  <footer>
-    &copy; 2025 GlowMap — Todos los derechos reservados
-  </footer>
-<script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const openBtn = document.getElementById('open-menu');
-    const closeBtn = document.getElementById('close-menu');
-    const sidebar = document.getElementById('sidebar');
 
-    openBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      openBtn.style.display = 'none';  // Oculta ☰
-    });
+  <footer>&copy; 2025 GlowMap — Todos los derechos reservados</footer>
 
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      openBtn.style.display = 'block'; // Muestra ☰
-    });
-  });
-</script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<script src="../js/glowflow.js"></script>
+
 </body>
 </html>
