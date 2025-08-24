@@ -28,11 +28,15 @@
       }
     }
   });
-  document.addEventListener('DOMContentLoaded', () => {
-      const openBtn = document.getElementById('open-menu');
-      const closeBtn = document.getElementById('close-menu');
-      const sidebar = document.getElementById('sidebar');
 
+  // Cuando cargue el DOM
+  document.addEventListener('DOMContentLoaded', () => {
+    // --- Sidebar ---
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+
+    if (openBtn && closeBtn && sidebar) {
       openBtn.addEventListener('click', () => {
         sidebar.classList.add('active');
         openBtn.style.display = 'none';
@@ -42,47 +46,75 @@
         sidebar.classList.remove('active');
         openBtn.style.display = 'block';
       });
+    }
 
-      // Inicializar el calendario
-      const calendarEl = document.getElementById('calendar');
+    // --- Calendario ---
+    if (typeof FullCalendar === 'undefined') {
+      console.error('❌ FullCalendar no está definido. Asegúrate de cargarlo antes que este script.');
+      return;
+    }
+
+    const calendarEl = document.getElementById('calendar');
+    if (calendarEl) {
       const calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
+        locale: 'es',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
         events: cargarEventosGlowFocus(),
         eventClick: function (info) {
           const datos = JSON.parse(localStorage.getItem(info.event.id));
-          alert(`Tareas necesarias: ${datos.necesarias}\nEmociones: ${datos.emociones}\nEstado: ${datos.estado}`);
+          if (datos) {
+            alert(
+              `Tareas necesarias: ${datos.necesarias}\n` +
+              `Tareas postergables: ${datos.postergables}\n` +
+              `Tareas agradables: ${datos.agradables}\n` +
+              `Emociones: ${datos.emociones}\n` +
+              `Estado: ${datos.estado}`
+            );
+          }
         }
       });
       calendar.render();
-    });
-
-    function guardarGlowFocus() {
-      const tareas = {
-        necesarias: document.getElementById('necesarias').value,
-        postergables: document.getElementById('postergables').value,
-        agradables: document.getElementById('agradables').value,
-        emociones: document.getElementById('emociones').value,
-        estado: document.querySelector('input[name="estado"]:checked')?.value || 'no definido',
-        fecha: new Date().toISOString().split('T')[0]
-      };
-      const clave = 'glowFocus-' + tareas.fecha;
-      localStorage.setItem(clave, JSON.stringify(tareas));
-      alert('Tareas guardadas con éxito.');
-      location.reload();
+    } else {
+      console.warn('⚠️ No se encontró el elemento con id="calendar"');
     }
+  });
 
-    function cargarEventosGlowFocus() {
-      let eventos = [];
-      for (let i = 0; i < localStorage.length; i++) {
-        const clave = localStorage.key(i);
-        if (clave.startsWith('glowFocus-')) {
-          const datos = JSON.parse(localStorage.getItem(clave));
-          eventos.push({
-            id: clave,
-            title: 'GlowFocus',
-            start: datos.fecha,
-          });
-        }
+  // --- Funciones de guardado y carga ---
+  function guardarGlowFocus() {
+    const tareas = {
+      necesarias: document.getElementById('necesarias').value,
+      postergables: document.getElementById('postergables').value,
+      agradables: document.getElementById('agradables').value,
+      emociones: document.getElementById('emociones').value,
+      estado: document.querySelector('input[name="estado"]:checked')?.value || 'no definido',
+      fecha: new Date().toISOString().split('T')[0]
+    };
+    const clave = 'glowFocus-' + tareas.fecha;
+    localStorage.setItem(clave, JSON.stringify(tareas));
+    alert('Tareas guardadas con éxito.');
+    location.reload();
+  }
+
+  function cargarEventosGlowFocus() {
+    let eventos = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const clave = localStorage.key(i);
+      if (clave.startsWith('glowFocus-')) {
+        const datos = JSON.parse(localStorage.getItem(clave));
+        eventos.push({
+          id: clave,
+          title: 'GlowFocus',
+          start: datos.fecha,
+        });
       }
-      return eventos;
     }
+    return eventos;
+  }
+
+
+ 

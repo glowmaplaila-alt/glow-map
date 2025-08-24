@@ -5,20 +5,29 @@ body {
       color: #cf965f;
     }
     a{ text-decoration: none;}
-   .boton-about{
-    margin-top: 0px;
-    background-color: #cf965f;
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .boton-about:hover {
-      background-color: #b8804e74;
+   
+
+        /* Botón About */
+    .boton-about {
+      margin-top: 20px;
+      background-color: #cf965f;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+      transition: all 0.3s ease;
     }
 
+    .boton-about:hover {
+      background-color: #b8804e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+
+
+    
     .subtitle {
       margin-top: 10px;
       font-size: 20px;
@@ -52,12 +61,25 @@ body {
     .cta-button:hover {
       background-color: #b8804e74;
     }
+    .fc .fc-toolbar.fc-header-toolbar {
+        margin-bottom: 10px; /* menos espacio debajo de la barra */
+      }
 
+    .fc .fc-button {
+        padding: 2px 6px !important;
+        font-size: 0.8rem !important;
+      }
+
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 20px 15px;
-      
-      
+      padding: 40px 20px;
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 249, 245, 0.7); /* Fondo sutil */
+      border-radius: 12px;
     }
     .logo-slogan {
       margin-top: 0px;
@@ -136,6 +158,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Quita scroll y deja que el calendario se ajuste */
+.fc-scroller {
+  overflow-y: hidden !important;
+}
+
+/* Asegura que el calendario ocupe todo el ancho disponible */
+#calendar {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+
 @media (max-width: 768px) {
 
   nav {
@@ -167,21 +202,48 @@ html {
     padding: 20px 15px;
   }
 
+  .templates-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 12px; /* menos espacio entre ellas */
+  }
+
   .template-card img {
-    height: 220px;
+    height: 150px; /* más pequeña la imagen */
   }
 
   .template-card {
-    min-height: 300px;
+    min-height: auto; /* quitamos altura fija */
+  }
+  .template-card h3 {
+    font-size: 0.9rem;   /* más pequeño en móvil */
+    padding: 8px;        /* menos espacio */
+    line-height: 1.2;    /* altura de línea más compacta */
+  }
+  #calendar {
+    font-size: 12px;     /* texto más pequeño */
   }
 
-  .templates-grid {
-    gap: 16px;
+  .fc-toolbar {
+    flex-wrap: wrap;     /* toolbar se ajusta a varias filas */
+    gap: 5px;
   }
+
+  .fc-toolbar-chunk {
+    margin-bottom: 5px;
+  }
+
+  /* Botones más pequeños */
+  .fc .fc-button {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
 
   .boton-centro {
     margin-top: 20px;
   }
+
+
 }
 
 /* NAV principal */
@@ -212,7 +274,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 120px;
 }
 
 .logo-nav {
@@ -272,6 +334,22 @@ nav {
   font-weight: bold;
   font-size: 18px;
 }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: 999;
+  display: none;
+}
+
+.sidebar.active + #overlay {
+  display: block;
+}
+
 .language-selector {
   position: absolute;
   top: 15px;
