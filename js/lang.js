@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadLanguage(lang) {
     console.log("Cargando idioma:", lang);
 
-    fetch(`/lang/${lang}.json`) // ✅ ruta absoluta desde la raíz
+    fetch(`lang/${lang}.json`) // ✅ ruta absoluta desde la raíz
       .then(response => {
         if (!response.ok) throw new Error("No se pudo cargar el archivo de idioma");
         return response.json();
