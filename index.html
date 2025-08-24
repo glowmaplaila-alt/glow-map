@@ -18,21 +18,22 @@
   </aside>
   <div id="overlay"></div>
   <nav>
-  <div class="nav-wrapper">
-    <div class="nav-left"></div>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
 
-    <div class="logo-container">
-      <a href="index.html">
-        <img class="logo-nav" src="imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-      </a>
-    </div>
+      <div class="logo-container">
+        <a href="index.html">
+          <img class="logo-nav" src="imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
 
-    <div class="cta-buttons">
-      <a href="paginas/login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-      <a href="paginas/registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      
     </div>
-  </div>
-</nav>
+  </nav>
+      <div class="cta-buttons">
+        <a href="paginas/login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+        <a href="paginas/registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+      </div>
 
   
 <br>
@@ -40,6 +41,7 @@
     <option value="es">🇪🇸</option>
     <option value="en">🇺🇸</option>
     <option value="ar">🇲🇦</option>
+    <option value="fr">🇫🇷</option>
   </select>
 
 
@@ -56,44 +58,44 @@
     <div class="templates-grid">
       <a class="template-card" href="paginas/glowfocus.html">
         <img src="imagenes/index1.JPG" alt="GlowFocus Template">
-        <h3>Tareas flexibles</h3>
+        <h3 data-i18n="Tareas flexibles">Tareas flexibles</h3>
       </a>
       <a class="template-card" href="paginas/glowflow.html">
         <img src="imagenes/index2.JPG" alt="GlowFlow Routine">
-        <h3 >Rutina de mañana y noche</h3>
+        <h3 data-i18n="Rutina de mañana y noche">Rutina de mañana y noche</h3>
       </a>
       <a class="template-card" href="paginas/glowfitness.html">
         <img src="imagenes/index3.JPG" alt="GlowFitness Tracker">
-        <h3 >Seguimiento de ejercicios</h3>
+        <h3 data-i18n="Seguimiento de ejercicios">Seguimiento de ejercicios</h3>
       </a>
       <a class="template-card" href="paginas/glowmind.html">
         <img src="imagenes/index4.JPG" alt="GlowMind Space">
-        <h3 >Espacio mental</h3>
+        <h3 data-i18n="Espacio mental">Espacio mental</h3>
       </a>
       <a class="template-card" href="paginas/glowfinance.html">
         <img src="imagenes/index5.JPG" alt="GlowFinance Map">
-        <h3 >Conciencia financiera</h3>
+        <h3 data-i18n="Conciencia financiera">Conciencia financiera</h3>
       </a>
       <a class="template-card" href="paginas/glowproject.html">
         <img src="imagenes/index6.JPG" alt="GlowProject Planner">
-        <h3 >Proyectos creativos</h3>
+        <h3 data-i18n="Proyectos creativos">Proyectos creativos</h3>
       </a>
       <a class="template-card" href="paginas/glownutrition.html">
         <img src="imagenes/index7.JPG" alt="GlowNutrition Tracker">
-        <h3 >Seguimiento de nutrición</h3>
+        <h3 data-i18n="Seguimiento de nutrición">Seguimiento de nutrición</h3>
       </a>
       <a class="template-card" href="paginas/glowstudy.html">
         <img src="imagenes/index8.JPG" alt="GlowStudy Planner">
-        <h3 >Planificación de estudio</h3>
+        <h3 data-i18n="Planificación de estudio">Planificación de estudio</h3>
       </a>
       <a class="template-card" href="paginas/glowtrip.html">
         <img src="imagenes/index9.JPG" alt="GlowTrip Planner">
-        <h3>Organización de viajes</h3>
+        <h3 data-i18n="Organización de viajes">Organización de viajes</h3>
       </a>
 
       <a class="template-card" href="paginas/glowfem.html">
         <img src="imagenes/index10.JPG" alt="GlowFem Tracker">
-        <h3>Bienestar femenino</h3>
+        <h3 data-i18n="Bienestar femenino">Bienestar femenino</h3>
       </a>
     </div>
   </section>
@@ -102,24 +104,34 @@
   </div>
 
   <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const openBtn = document.getElementById('open-menu');
-    const closeBtn = document.getElementById('close-menu');
-    const sidebar = document.getElementById('sidebar');
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById('open-menu');
+  const closeBtn = document.getElementById('close-menu');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
 
-    openBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      openBtn.style.display = 'none';  // Oculta ☰
-    });
+  function openMenu() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    openBtn.style.display = 'none';  // Oculta ☰
+    document.body.style.overflow = 'hidden'; // Bloquea scroll
+  }
 
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      openBtn.style.display = 'block'; // Muestra ☰
-    });
-  });
+  function closeMenu() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    openBtn.style.display = 'block'; // Muestra ☰
+    document.body.style.overflow = ''; // Restaura scroll
+  }
+
+  // Eventos
+  openBtn.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu); // Cierra al hacer clic fuera
+});
 </script>
 
-  <footer>
+  <footer data-i18n="footer">
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
   <script src="js/lang.js"></script>

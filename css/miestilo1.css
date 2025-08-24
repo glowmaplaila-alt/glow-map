@@ -4,7 +4,8 @@ body {
       background-color: #fff9f5;
       color: #cf965f;
     }
-    a{ text-decoration: none;}
+    a{ text-decoration: none;
+    color: #cf965f;}
    
 
         /* Botón About */
@@ -179,6 +180,7 @@ html {
     gap: 10px;
     position: relative;
     
+    
   }
 
   .nav-links,
@@ -245,96 +247,94 @@ html {
 
 
 }
+/* ===================== NAV FIJO ===================== */
 
-/* NAV principal */
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
   background-color: #e5cfc0a0;
   padding: 10px 30px;
-  height: 150px;
-  position: relative;
+  z-index: 2000;
 }
 
 .nav-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.nav-left {
-  flex: 1;
-}
-
+/* truco: logo absoluto en el centro */
 .logo-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .logo-nav {
-  height: 100px; /* Aumentamos altura */
+  height: 100px;
   max-height: 140px;
   width: auto;
   object-fit: contain;
 }
 
+/* botones fuera del nav */
 .cta-buttons {
-  flex: 1;
+  margin-top: 160px; /* espacio debajo del nav */
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
 }
-/* Botón hamburguesa */
-
-.menu-toggle,
-.close-toggle {
+/* Botón abrir menu */
+.menu-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
   color: #cf965f;
-  padding: 6px 12px;
-  z-index: 3000;
+  z-index: 5000; /* encima del contenido */
 }
 
+/* Botón cerrar solo dentro del sidebar */
+.close-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #cf965f;
+  z-index: 5001;
+}
 
-
-/* Sidebar lateral */
-/* Sidebar oculto por defecto */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -350px;
+  left: -350px; /* fuera de pantalla */
   width: 180px;
   height: 100%;
   background-color: #f4e0d8;
-  padding: 60px 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  padding: 60px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   transition: left 0.3s ease;
-  z-index: 9999;
+  z-index: 4000;
 }
 
-/* Sidebar visible cuando tiene clase .active */
 .sidebar.active {
   left: 0;
 }
 
-.sidebar a {
-  text-decoration: none;
-  color: #cf965f;
-  font-weight: bold;
-  font-size: 18px;
-}
-
+/* Overlay */
 #overlay {
   position: fixed;
   top: 0;
@@ -342,18 +342,27 @@ nav {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.2);
-  z-index: 999;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 3500;
 }
 
-.sidebar.active + #overlay {
-  display: block;
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
+
+/* ===================== ESPACIO PARA EL CONTENIDO ===================== */
+body {
+  padding-top: 150px;      /* espacio para el nav fijo */
+}
+
 
 .language-selector {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 1px;
+  right: 1px;
   padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -361,77 +370,55 @@ nav {
   cursor: pointer;
   font-size: 14px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 9000;
 }
 
-/* Botones de menú solo visibles en móvil */
+/* Ajustes para móvil */
 @media (max-width: 768px) {
-  .nav-wrapper {
-    flex-direction: column;
-    align-items: center;
+  nav {
+    height: 141px; /* más alto para que quepa el logo enorme */
+    display: flex;
     justify-content: center;
-    padding: 20px 10px;
-    height: auto;
-    text-align: center;
+    align-items: center;
   }
 
-  .nav-left {
-    display: none; /* ya no la necesitamos en móvil */
-  }
-  @media (max-width: 768px) {
-  .language-selector {
-    font-size: 13px;
-    padding: 5px 8px;
-    width: auto;
-  }
-}
-
-  .logo-container {
-    margin-bottom: 0px; /* separación entre logo y botones */
+  .logo-container img {
+    height: 100px; /* LOGO MUY GRANDE en móvil */
   }
 
+  /* Botones debajo del nav y centrados */
   .cta-buttons {
+    position: static; /* no fijos en móvil */
+    margin-top: 0px; /* espacio debajo del nav (ajustado al nuevo tamaño del logo) */
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .cta-button {
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
   }
-  
 
+  /* Idioma compacto en móvil */
+  .language-selector {
+    font-size: 14px;
+    padding: 6px 10px;
+    width: auto;
+  }
+
+  /* Sidebar / botones menú */
   .menu-toggle,
   .close-toggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 3000;
-  }
-
-  #close-menu {
-    display: none;
-  }
-
-  .sidebar.active #close-menu {
-    display: block;
-  }
-
-  .sidebar.active ~ #open-menu {
-    display: none;
-  }
-}
-
-/* En escritorio también queremos que el botón funcione, así que NO lo ocultamos */
-@media (min-width: 769px) {
-  .menu-toggle,
-  .close-toggle {
-    display: block;
   }
 
   #close-menu {
