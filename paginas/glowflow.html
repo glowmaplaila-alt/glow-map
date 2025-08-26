@@ -12,16 +12,15 @@
 
   <!-- FullCalendar CSS -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css" rel="stylesheet" />
-
 </head>
 
 <body>
-  <button id="open-menu" class="menu-toggle">☰</button>
+  <button id="open-menu" class="menu-toggle" data-i18n="menu_open">☰</button>
   <aside class="sidebar" id="sidebar">
-    <button id="close-menu" class="close-toggle">✖</button>
+    <button id="close-menu" class="close-toggle" data-i18n="menu_close">✖</button>
     <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-    <a href="plantillas.html">Plantillas</a>
-    <a href="contacto.html">Contacto</a>
+    <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+    <a href="contacto.html" data-i18n="contact">Contacto</a>
   </aside>
 
   <nav>
@@ -32,83 +31,168 @@
           <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap" />
         </a>
       </div>
-      
     </div>
   </nav>
+
   <div class="cta-buttons">
-        <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-        <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-      </div>
+    <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+    <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+  </div>
+
+  <select id="language-selector" class="language-selector">
+    <option value="es" data-i18n="lang_es">🇪🇸</option>
+    <option value="en" data-i18n="lang_en">🇺🇸</option>
+    <option value="ar" data-i18n="lang_ar">🇲🇦</option>
+    <option value="fr" data-i18n="lang_fr">🇫🇷</option>
+    <option value="de" data-i18n="lang_de">🇩🇪</option>
+  </select>
 
   <header>
-    <h1>GlowFlow — Rutina Diaria</h1>
+    <h1 data-i18n="header_title">GlowFlow — Rutina Diaria</h1>
+    <div class="frase-diaria">
+      <p id="cita-diaria" data-i18n="daily_quote">"Cada día es una nueva oportunidad para brillar ✨"</p>
+    </div>
   </header>
 
   <div class="container">
     <div class="section">
-      <h2>Rutina de la Mañana</h2>
-      <label for="hora-manana">Hora de despertar</label>
+      <h2 data-i18n="morning_routine">Rutina de la Mañana</h2>
+      <label for="hora-manana" data-i18n="wake_time">Hora de despertar</label>
       <input type="time" id="hora-manana" />
 
-      <label for="acciones-manana">Acciones realizadas</label>
-      <textarea id="acciones-manana" placeholder="Ej: Bebí agua, hice estiramientos, respiré profundo..."></textarea>
+      <label for="acciones-manana" data-i18n="morning_actions">Acciones realizadas</label>
+      <textarea id="acciones-manana" placeholder="Ej: Bebí agua, hice estiramientos, respiré profundo..." data-i18n-placeholder="morning_actions_placeholder"></textarea>
 
-      <label for="sentir-manana">¿Cómo me sentí al iniciar el día?</label>
-      <textarea id="sentir-manana" placeholder="Describe tu energía, motivación, claridad mental..."></textarea>
+      <label for="sentir-manana" data-i18n="morning_feeling">¿Cómo me sentí al iniciar el día?</label>
+      <textarea id="sentir-manana" placeholder="Describe tu energía, motivación, claridad mental..." data-i18n-placeholder="morning_feeling_placeholder"></textarea>
     </div>
 
     <div class="section">
-      <h2>Rutina de la Noche</h2>
-      <label for="hora-noche">Hora de dormir</label>
+      <h2 data-i18n="night_routine">Rutina de la Noche</h2>
+      <label for="hora-noche" data-i18n="sleep_time">Hora de dormir</label>
       <input type="time" id="hora-noche" />
 
-      <label for="acciones-noche">¿Tuviste tiempo para ti?</label>
-      <textarea id="acciones-noche" placeholder="Ej: Leí, medité, escribí un diario..."></textarea>
+      <label for="acciones-noche" data-i18n="night_actions">¿Tuviste tiempo para ti?</label>
+      <textarea id="acciones-noche" placeholder="Ej: Leí, medité, escribí un diario..." data-i18n-placeholder="night_actions_placeholder"></textarea>
 
-      <label for="sentir-noche">¿Cómo me sentí al cerrar el día?</label>
-      <textarea id="sentir-noche" placeholder="Cansancio, gratitud, reflexión..."></textarea>
+      <label for="sentir-noche" data-i18n="night_feeling">¿Cómo me sentí al cerrar el día?</label>
+      <textarea id="sentir-noche" placeholder="Cansancio, gratitud, reflexión..." data-i18n-placeholder="night_feeling_placeholder"></textarea>
     </div>
 
     <div class="section">
-      <h2>Seguimiento de Hábitos</h2>
+      <h2 data-i18n="habit_tracking">Seguimiento de Hábitos</h2>
       <div class="checkboxes">
-        <label><input type="checkbox" id="habito-agua" /> Bebí suficiente agua</label>
-        <label><input type="checkbox" id="habito-ejercicio" /> Hice ejercicio</label>
-        <label><input type="checkbox" id="habito-sinmovil" /> Menos tiempo con el móvil</label>
-        <label><input type="checkbox" id="habito-agradecer" /> Practiqué gratitud</label>
+        <label><input type="checkbox" id="habito-agua" /> <span data-i18n="habit_water">Bebí suficiente agua</span></label>
+        <label><input type="checkbox" id="habito-ejercicio" /> <span data-i18n="habit_exercise">Hice ejercicio</span></label>
+        <label><input type="checkbox" id="habito-sinmovil" /> <span data-i18n="habit_no_phone">Menos tiempo con el móvil</span></label>
+        <label><input type="checkbox" id="habito-agradecer" /> <span data-i18n="habit_gratitude">Practiqué gratitud</span></label>
+      </div>
+
+      <div class="habitos-progreso">
+        <h3 data-i18n="habit_progress">Progreso de hábitos hoy</h3>
+        <div class="barra-progreso" style="width: 0%;" id="barra-habitos"></div>
+      </div>
+
+      <div class="recompensas">
+        <p data-i18n="glowpoints_text">⭐ GlowPoints: <span id="glowpoints">0</span></p>
       </div>
     </div>
 
     <div class="section">
-      <h2>Evaluación General</h2>
-      <label for="resumen-dia">¿Cómo fue tu día en general?</label>
-      <textarea id="resumen-dia" placeholder="Reflexión corta del día..."></textarea>
+      <h2 data-i18n="daily_evaluation">Evaluación General</h2>
+      <label for="resumen-dia" data-i18n="day_summary">¿Cómo fue tu día en general?</label>
+      <textarea id="resumen-dia" placeholder="Reflexión corta del día..." data-i18n-placeholder="day_summary_placeholder"></textarea>
 
       <div class="emotions">
-        <label><input type="radio" name="estado-dia" value="renovado" /> Renovado</label>
-        <label><input type="radio" name="estado-dia" value="neutro" /> Neutro</label>
-        <label><input type="radio" name="estado-dia" value="agotado" /> Agotado</label>
+        <label><input type="radio" name="estado-dia" value="renovado" /> 😄 <span data-i18n="feeling_renewed">Renovado</span></label>
+        <label><input type="radio" name="estado-dia" value="neutro" /> 😐 <span data-i18n="feeling_neutral">Neutro</span></label>
+        <label><input type="radio" name="estado-dia" value="agotado" /> 😴 <span data-i18n="feeling_exhausted">Agotado</span></label>
       </div>
     </div>
+
+    <div class="section">
+      <h2 data-i18n="quick_notes">Notas rápidas</h2>
+      <textarea id="nota-rapida" placeholder="Ideas, recordatorios, pensamientos..." data-i18n-placeholder="quick_notes_placeholder"></textarea>
+    </div>
+  </div>
+
+  <div class="texto-explicativo">
+    <center data-i18n="explanatory_text">
+      Cada día que guardes tus tareas recibirás una Estrella Glow⭐. Completa 5 días para terminar tu semana GlowFocus. Todas tus tareas quedan registradas en el calendario📅.
+    </center>
   </div>
 
   <div class="boton-centro">
-    <button class="cta-button" onclick="guardarGlowFlow()">Guardar</button>
+    <button class="cta-button" onclick="guardarGlowFlow()" data-i18n="save_button">Guardar</button>
+  </div>
+
+  <div id="estrellas-animadas"></div>
+
+  <div class="progreso-horizontal">
+    <div class="recompensas-container">
+      <h3 data-i18n="your_stars">⭐ Tus Estrellas Glow</h3>
+      <div id="estrellas"></div>
+      <p id="mensaje-recompensa" data-i18n="progress_message"></p>
+    </div>
+
+    <div class="progreso-circular-container">
+      <h3 data-i18n="weekly_progress">📅 Progreso semanal</h3>
+      <svg class="progreso-circular" width="140" height="140">
+        <circle class="fondo" cx="70" cy="70" r="60" />
+        <circle id="progreso-circulo" class="progreso" cx="70" cy="70" r="60" />
+        <text id="progreso-circular-texto" x="50%" y="50%" text-anchor="middle" dy=".3em">0%</text>
+      </svg>
+    </div>
   </div>
 
   <div class="container">
-    <h2>Calendario de Rutinas</h2>
+    <h2 data-i18n="calendar_title">Calendario de Rutinas</h2>
     <div id="calendar"></div>
   </div>
 
   <div class="boton-centro">
-    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+    <a href="../index.html" class="boton-volver" data-i18n="back_home">Volver al inicio</a>
   </div>
 
-  <footer>&copy; 2025 GlowMap — Todos los derechos reservados</footer>
+  <footer data-i18n="footer">&copy; 2025 GlowMap — Todos los derechos reservados</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-<script src="../js/glowflow.js"></script>
+  <script src="../js/glowflow.js"></script>
+  <script src="../js/lang2.js"></script>
+</body>
+  <script>
+    // Script simple para GlowPoints y barra de progreso
+    const checkboxes = document.querySelectorAll('.checkboxes input[type="checkbox"]');
+    const barraHabitos = document.getElementById('barra-habitos');
+    const glowpoints = document.getElementById('glowpoints');
 
+    function actualizarProgreso() {
+      let completados = 0;
+      checkboxes.forEach(cb => { if(cb.checked) completados++; });
+      const porcentaje = (completados / checkboxes.length) * 100;
+      barraHabitos.style.width = porcentaje + '%';
+      glowpoints.textContent = completados * 10; // 10 puntos por hábito
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', actualizarProgreso));
+  </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      openBtn.style.display = 'none';  // Oculta ☰
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      openBtn.style.display = 'block'; // Muestra ☰
+    });
+  });
+</script>
 </body>
 </html>
+

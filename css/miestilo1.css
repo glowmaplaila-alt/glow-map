@@ -539,3 +539,217 @@ body {
   color: #b5805a;
   font-weight: bold;
 }
+
+@media (max-width: 480px) {
+  .fc .fc-daygrid-day-frame {
+    min-height: 1px; /* ajusta la altura */
+    font-size: 0.75rem; /* texto más pequeño */
+  }
+
+  .fc .fc-daygrid-day {
+    padding: 0px;
+  }
+  #calendar {
+  height: 550px;
+  
+}
+}
+
+
+
+    .recompensas-container {
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff8f0;
+  border: 2px solid #f5d4a5;
+  border-radius: 20px;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.estrellas {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.estrellas span {
+  color: #ddd; /* gris cuando está apagada */
+  transition: color 0.3s;
+}
+
+.estrellas span.active {
+  color: gold; /* estrella iluminada */
+}
+
+#mensaje-recompensa {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #cf965f;
+}
+
+.progreso-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 25px;
+  background: #eee;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px 0;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progreso {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f9c76c, #cf965f);
+  border-radius: 15px;
+  transition: width 0.6s ease-in-out;
+}
+
+#progreso-texto {
+  font-weight: bold;
+  color: #444;
+}
+
+.progreso-circular-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.progreso-circular {
+  transform: rotate(-90deg); /* Empezar arriba */
+}
+
+.progreso-circular circle {
+  fill: none;
+  stroke-width: 15;
+}
+
+.progreso-circular .fondo {
+  stroke: #eee;
+}
+
+.progreso-circular .progreso {
+  stroke: url(#gradGlow);
+  stroke-linecap: round;
+  stroke-dasharray: 377; /* 2 * π * r (2*3.14*60 ≈ 377) */
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.6s ease-in-out;
+  stroke: #cf965f; /* color dorado */
+}
+
+.progreso-circular text {
+  font-size: 20px;
+  font-weight: bold;
+  fill: #444;
+  transform: rotate(90deg);
+}
+
+@keyframes brillar {
+  0% { transform: scale(1); color: gold; text-shadow: 0 0 5px #f9c76c; }
+  50% { transform: scale(1.4); color: #ffe066; text-shadow: 0 0 15px #ffcc66; }
+  100% { transform: scale(1); color: gold; text-shadow: 0 0 5px #f9c76c; }
+}
+
+.estrellas span.active.animar {
+  animation: brillar 0.8s ease-in-out;
+}
+
+@keyframes brillarCirculo {
+  0% { stroke: #cf965f; filter: drop-shadow(0 0 5px #f9c76c); }
+  50% { stroke: #ffe066; filter: drop-shadow(0 0 15px #ffcc66); }
+  100% { stroke: #cf965f; filter: drop-shadow(0 0 5px #f9c76c); }
+}
+
+.progreso-circular .animar-circulo {
+  animation: brillarCirculo 0.8s ease-in-out;
+}
+
+#estrellas-animadas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* para no bloquear clicks */
+  overflow: visible;
+  z-index: 9999;
+}
+
+.estrella-flotante {
+  position: absolute;
+  font-size: 20px;
+  color: gold;
+  opacity: 0.9;
+  animation: caerEstrella 1s linear forwards;
+}
+
+@keyframes caerEstrella {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(50px) scale(1.5); opacity: 0.9; }
+  100% { transform: translateY(150px) scale(0.5); opacity: 0; }
+}
+
+#estrellas-animadas {
+  position: fixed; /* sigue la ventana aunque haga scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 9999;
+}
+
+@keyframes subirGirar {
+  0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: translateY(-50px) rotate(180deg) scale(1.4); opacity: 0.9; }
+  100% { transform: translateY(-150px) rotate(360deg) scale(0.5); opacity: 0; }
+}
+
+.estrella-flotante {
+  position: fixed; /* para que siga la ventana */
+  pointer-events: none;
+  color: gold;
+  opacity: 0.9;
+  animation: subirGirar 1s ease-out forwards;
+}
+
+@keyframes orbitar {
+  0% { transform: rotate(0deg) translateX(70px) rotate(0deg); opacity: 1; }
+  50% { transform: rotate(180deg) translateX(70px) rotate(180deg); opacity: 0.9; }
+  100% { transform: rotate(360deg) translateX(70px) rotate(360deg); opacity: 0; }
+}
+
+.estrella-orbita {
+  position: absolute;
+  color: gold;
+  font-size: 18px;
+  pointer-events: none;
+  animation: orbitar 1.2s ease-out forwards;
+  transform-origin: center center; /* alrededor del centro del círculo */
+}
+.progreso-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-size: small;
+  margin: 8px 0;
+  gap: 0px; /* espacio entre elementos */
+}
+
+.recompensas-container,
+.progreso-container,
+.progreso-circular-container {
+  margin: 0px;
+  padding: 0; /* quitar padding del cuadro */
+  border: none; /* quitar borde */
+  box-shadow: none; /* quitar sombra */
+}
