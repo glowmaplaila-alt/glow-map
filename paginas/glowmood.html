@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="page_title_mood">GlowMood — Mapa de Emociones</title>
+  <link rel="stylesheet" href="../css/miestilo1.css">
+  <link rel="stylesheet" href="../css/miestilo14.css">
+
+
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+ 
+</head>
+<body>
+    <button id="open-menu" class="menu-toggle" data-i18n="menu_open">☰</button>
+
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle" data-i18n="menu_close">✖</button>
+    <a href="../index.html" data-i18n="index">Inicio</a>
+    <a href="home.html" data-i18n="about">Sobre GlowMap</a>
+    <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+    <a href="contacto.html" data-i18n="contact">Contacto</a>
+  </aside>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="cta-buttons">
+    <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+    <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+  </div>
+  <select id="language-selector" class="language-selector">
+    <option value="es">🇪🇸</option>
+    <option value="en">🇺🇸</option>
+    <option value="ar">🇲🇦</option>
+    <option value="fr">🇫🇷</option>
+    <option value="de">🇩🇪</option>
+  </select>
+  <header>
+    <h1 data-i18n="main_title_mood"> GlowMood — Mapa de Emociones</h1>
+  </header>
+
+  <div class="container">
+    <!-- 1. Interfaz diaria -->
+    <div class="section" id="daily">
+      <h2 data-i18n="daily_title">1. Interfaz diaria (registro del día)</h2>
+
+      <div class="daily-head">
+        <div class="date-badge" id="todayLabel" data-i18n="today_label">Lunes, 1 de septiembre de 2025</div>
+        <div class="small" data-i18n="daily_hint">Selecciona tus emociones y su intensidad (1–5)</div>
+      </div>
+
+      <label data-i18n="select_emotions">Selecciona emociones</label>
+      <div class="emotions-grid" id="emotionsGrid">
+        <!-- Se llena por JS -->
+      </div>
+
+      <div class="sliders" id="slidersBox"></div>
+      <div class="auto-message" id="autoMessage" data-i18n="auto_message_hint">
+        Selecciona una emoción para ver un mensaje.
+      </div>
+
+      <label for="freeNote" data-i18n="free_note_label">¿Cómo te sentiste hoy? ✍️</label>
+      <textarea id="freeNote" class="note" placeholder="Escribe libremente..." data-i18n-placeholder="free_note_placeholder"></textarea>
+
+      <div class="actions">
+        <button class="btn btn-ghost" id="clearBtn" data-i18n="clear_day">Limpiar</button>
+        <button class="btn btn-primary" id="saveBtn" data-i18n="save_day">Guardar día</button>
+      </div>
+    </div>
+
+    <!-- 2. Mapa semanal -->
+    <div class="section" id="weekly">
+      <h2 data-i18n="weekly_title">2. Mapa semanal (resumen)</h2>
+
+      <div class="weekly-layout">
+        <div class="card">
+          <canvas id="weeklyChart" height="220" aria-label="Gráfico semanal"></canvas>
+        </div>
+        <div class="card">
+          <div class="small" data-i18n="timeline_title">Línea de tiempo (emoción predominante por día)</div>
+          <div class="timeline" id="timeline"></div>
+          <div class="smart-note" id="smartNote"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Mapa mensual -->
+    <div class="section" id="monthly">
+      <h2 data-i18n="monthly_title">3. Mapa mensual (seguimiento)</h2>
+      <div class="card">
+        <div class="small" id="monthLabel">Septiembre 2025</div>
+        <div class="heatmap" id="heatmap"></div>
+        <div class="legend" id="legend"></div>
+
+        <div class="kpi">
+          <div class="kpi-card">
+            <div><strong data-i18n="balance_index">Índice de equilibrio</strong></div>
+            <div id="balanceValue">—</div>
+            <div class="small" data-i18n="balance_hint">Diversidad saludable de emociones (0–100)</div>
+          </div>
+          <div class="kpi-card">
+            <div><strong data-i18n="monthly_summary">Resumen del mes</strong></div>
+            <div id="monthlySummary">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Valor añadido -->
+    <div class="section" id="value">
+      <h2 data-i18n="value_title">4. Valor añadido</h2>
+      <div class="card">
+        <p data-i18n="value_text">
+          El Mapa de Emociones se puede vincular con otras plantillas de GlowMap (metas y tareas).
+          Si se detecta que el miedo predomina en un proyecto, verás un consejo:
+          “Empieza con un pequeño paso, el miedo disminuirá cuando avances.”
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align:center;padding:18px;color:var(--ink)">
+    <span data-i18n="footer_text">&copy; 2025 GlowMap — Todos los derechos reservados</span>
+  </footer>
+
+  <script>
+    // ------------ Configuración de emociones ------------
+    const EMOTIONS = [
+      {key:'alegria',  name:'Alegría',  emoji:'🌞', color:'#f4b400', msg:'Recuerda celebrar el momento.'},
+      {key:'tristeza', name:'Tristeza', emoji:'🌧️', color:'#5b7bb4', msg:'La tristeza es una ventana hacia la sabiduría, permite que ablande tu corazón.'},
+      {key:'miedo',    name:'Miedo',    emoji:'🌪️', color:'#7e57c2', msg:'El miedo te protege, pero no dejes que te controle.'},
+      {key:'enojo',    name:'Enojo',    emoji:'🔥', color:'#e53935', msg:'El enojo es energía, dirígela hacia el cambio y no hacia la destrucción.'},
+      {key:'amor',     name:'Amor',     emoji:'🌹', color:'#d81b60', msg:'El amor te une a los demás y a ti mismo.'},
+      {key:'paz',      name:'Paz',      emoji:'🕊️', color:'#26a69a', msg:'La paz es la base que lo contiene todo.'},
+    ];
+
+    // ------------ Utilidades de fecha ------------
+    const TZ_OFFSET_MIN = (new Date()).getTimezoneOffset(); // no forzamos tz
+    function formatLongDate(d){
+      const fmt = new Intl.DateTimeFormat('es-ES', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+      let s = fmt.format(d);
+      return s.charAt(0).toUpperCase()+s.slice(1);
+    }
+    function ymd(d){
+      return d.toISOString().slice(0,10);
+    }
+    function startOfWeek(d){
+      const x = new Date(d); const day = (x.getDay()+6)%7; // lunes=0
+      x.setDate(x.getDate()-day); x.setHours(0,0,0,0);
+      return x;
+    }
+    function monthInfo(d){
+      const y=d.getFullYear(), m=d.getMonth();
+      const first=new Date(y,m,1), last=new Date(y,m+1,0);
+      return {y,m,first,last,days:last.getDate()};
+    }
+
+    // ------------ Estado UI ------------
+    const today = new Date();
+    document.getElementById('todayLabel').textContent = formatLongDate(today);
+
+    const emotionsGrid = document.getElementById('emotionsGrid');
+    const slidersBox   = document.getElementById('slidersBox');
+    const autoMessage  = document.getElementById('autoMessage');
+    const freeNote     = document.getElementById('freeNote');
+    const clearBtn     = document.getElementById('clearBtn');
+    const saveBtn      = document.getElementById('saveBtn');
+
+    // Render tarjetas de emoción
+    EMOTIONS.forEach(e=>{
+      const card = document.createElement('div');
+      card.className = 'emotion-card';
+      card.dataset.key = e.key;
+      card.innerHTML = `
+        <div class="emotion-emoji">${e.emoji}</div>
+        <div class="emotion-name">${e.name}</div>
+      `;
+      card.addEventListener('click',()=>toggleEmotion(e, card));
+      emotionsGrid.appendChild(card);
+    });
+
+    // Sliders por emoción (se crean bajo demanda)
+    const selected = new Map(); // key -> intensity (1-5)
+
+    function toggleEmotion(e, card){
+      const isActive = card.classList.toggle('active');
+      if(isActive){
+        selected.set(e.key, 3);
+        addSlider(e, 3);
+        showAutoMessage(e);
+      }else{
+        selected.delete(e.key);
+        removeSlider(e.key);
+        updateAutoMessageAfterRemoval();
+      }
+    }
+
+    function addSlider(e, value){
+      const host = document.createElement('div');
+      host.className = 'sliders active';
+      host.id = `slider_${e.key}`;
+      host.innerHTML = `
+        <div class="slider-row">
+          <span style="width:28px;text-align:center">${e.emoji}</span>
+          <span style="min-width:80px">${e.name}</span>
+          <input type="range" min="1" max="5" value="${value}" />
+          <span class="val"> ${value}</span>
+        </div>
+      `;
+      const range = host.querySelector('input');
+      const val   = host.querySelector('.val');
+      range.addEventListener('input',()=>{
+        val.textContent = ' ' + range.value;
+        selected.set(e.key, Number(range.value));
+      });
+      slidersBox.appendChild(host);
+    }
+    function removeSlider(key){
+      const el = document.getElementById(`slider_${key}`);
+      if(el) el.remove();
+    }
+
+    function showAutoMessage(e){
+      autoMessage.textContent = e.msg;
+    }
+    function updateAutoMessageAfterRemoval(){
+      if(selected.size===0){
+        autoMessage.textContent = 'Selecciona una emoción para ver un mensaje.';
+      }else{
+        // mostrar el último seleccionado que quede
+        const lastKey = Array.from(selected.keys()).pop();
+        const e = EMOTIONS.find(x=>x.key===lastKey);
+        if(e) autoMessage.textContent = e.msg;
+      }
+    }
+
+    clearBtn.addEventListener('click', ()=>{
+      selected.clear();
+      slidersBox.innerHTML='';
+      autoMessage.textContent='Selecciona una emoción para ver un mensaje.';
+      document.querySelectorAll('.emotion-card.active').forEach(c=>c.classList.remove('active'));
+      freeNote.value='';
+    });
+
+    // ------------ Persistencia ------------
+    const STORAGE_KEY = 'glowmood.days'; // objeto: { 'YYYY-MM-DD': {emotions:{key:intensity}, note:string} }
+    function loadStore(){
+      try{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+      catch{ return {}; }
+    }
+    function saveStore(obj){
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+    }
+
+    saveBtn.addEventListener('click', ()=>{
+      if(selected.size===0 && !freeNote.value.trim()){
+        alert('Añade al menos una emoción o escribe una nota.');
+        return;
+      }
+      const store = loadStore();
+      const key = ymd(today);
+      store[key] = { 
+        date:key, 
+        emotions:Object.fromEntries(selected.entries()), 
+        note: freeNote.value.trim() 
+      };
+      saveStore(store);
+      // refrescar resúmenes
+      buildWeekly();
+      buildMonthly();
+      alert('Día guardado en tu Mapa de Emociones. ⭐');
+    });
+
+    // ------------ Semanal ------------
+    let weeklyChart;
+    function buildWeekly(){
+      const store = loadStore();
+      const start = startOfWeek(today); // lunes
+      const days = [...Array(7)].map((_,i)=>{
+        const d = new Date(start); d.setDate(start.getDate()+i);
+        const key = ymd(d);
+        return store[key] || null;
+      });
+
+      // Conteo por emoción (ponderado por intensidad)
+      const counts = {};
+      EMOTIONS.forEach(e=>counts[e.key]=0);
+      days.forEach(rec=>{
+        if(!rec) return;
+        for(const [k,intensity] of Object.entries(rec.emotions||{})){
+          counts[k] += intensity; // ponderación simple
+        }
+      });
+
+      // Gráfico
+      const labels = EMOTIONS.map(e=>e.name);
+      const data = EMOTIONS.map(e=>counts[e.key]||0);
+      const colors = EMOTIONS.map(e=>e.color);
+
+      const ctx = document.getElementById('weeklyChart').getContext('2d');
+      if(weeklyChart) weeklyChart.destroy();
+      weeklyChart = new Chart(ctx,{
+        type:'bar',
+        data:{ labels, datasets:[{ label:'Intensidad semanal', data, backgroundColor:colors }] },
+        options:{ responsive:true, maintainAspectRatio:false, scales:{ y:{ beginAtZero:true, ticks:{ precision:0 } } } }
+      });
+
+      // Timeline (emoción predominante por día)
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML='';
+      const weekdays = ['L','M','X','J','V','S','D'];
+      days.forEach((rec, idx)=>{
+        const pill = document.createElement('div');
+        pill.className='day-pill';
+        const label = weekdays[idx];
+        if(rec && rec.emotions && Object.keys(rec.emotions).length){
+          const top = Object.entries(rec.emotions).sort((a,b)=>b[1]-a[1])[0][0];
+          const e = EMOTIONS.find(x=>x.key===top);
+          pill.innerHTML = `<div class="emoji">${e.emoji}</div><div>${label}</div>`;
+          pill.style.borderColor = e.color;
+        }else{
+          pill.innerHTML = `<div class="emoji">—</div><div>${label}</div>`;
+        }
+        timeline.appendChild(pill);
+      });
+
+      // Nota inteligente
+      const smart = document.getElementById('smartNote');
+      const maxPair = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0];
+      if(!maxPair || maxPair[1]===0){
+        smart.textContent = 'Aún no hay datos esta semana.';
+      }else{
+        const domKey = maxPair[0];
+        switch(domKey){
+          case 'tristeza':
+            smart.textContent = 'He notado que la tristeza se repitió esta semana, quizá necesites un tiempo de descanso.';
+            break;
+          case 'alegria':
+            smart.textContent = 'La alegría predominó, ¡genial! Intenta compartir tu energía con los demás.';
+            break;
+          default:
+            smart.textContent = `Predomina ${EMOTIONS.find(e=>e.key===domKey).name.toLowerCase()}. Observa cómo influye en tus días.`;
+        }
+      }
+    }
+
+    // ------------ Mensual (Heatmap + Balance) ------------
+    function buildMonthly(){
+      const store = loadStore();
+      const {y,m,first,last,days} = monthInfo(today);
+      const monthLabel = document.getElementById('monthLabel');
+      monthLabel.textContent = new Intl.DateTimeFormat('es-ES',{month:'long', year:'numeric'}).format(today);
+
+      const heatmap = document.getElementById('heatmap');
+      heatmap.innerHTML='';
+      const firstWeekday = (first.getDay()+6)%7; // lunes=0
+      // cabecera ficticia para alinear inicio de mes
+      for(let i=0;i<firstWeekday;i++){
+        const filler=document.createElement('div');filler.className='cell';filler.style.background='#fff';filler.style.borderStyle='dashed';heatmap.appendChild(filler);
+      }
+
+      // stats para balance
+      const totalCounts = {};
+      EMOTIONS.forEach(e=>totalCounts[e.key]=0);
+      let daysWithData=0;
+
+      for(let d=1; d<=days; d++){
+        const cell = document.createElement('div');
+        cell.className='cell';
+        const date = new Date(y,m,d);
+        const key = ymd(date);
+        const rec = store[key];
+
+        if(rec && rec.emotions && Object.keys(rec.emotions).length){
+          daysWithData++;
+          let topKey=null, topVal=-1;
+          for(const [k,val] of Object.entries(rec.emotions)){
+            totalCounts[k]+=val;
+            if(val>topVal){ topVal=val; topKey=k; }
+          }
+          const e = EMOTIONS.find(x=>x.key===topKey);
+          cell.style.background = e.color;
+          cell.textContent = d;
+          cell.title = `${formatLongDate(date)} • Predomina ${e.name}`;
+        }else{
+          cell.style.background = '#ddd';
+          cell.style.color='#333';
+          cell.textContent = d;
+          cell.title = `${formatLongDate(date)} • Sin datos`;
+        }
+        heatmap.appendChild(cell);
+      }
+
+      // Leyenda
+      const legend = document.getElementById('legend');
+      legend.innerHTML='';
+      EMOTIONS.forEach(e=>{
+        const chip=document.createElement('div');
+        chip.className='chip';
+        const dot=document.createElement('span');
+        dot.style.display='inline-block';
+        dot.style.width='12px'; dot.style.height='12px'; dot.style.borderRadius='50%';
+        dot.style.background=e.color;
+        chip.appendChild(dot);
+        chip.insertAdjacentHTML('beforeend', `<span>${e.emoji} ${e.name}</span>`);
+        legend.appendChild(chip);
+      });
+
+      // Índice de equilibrio (0–100): diversidad ponderada simple
+      const sum = Object.values(totalCounts).reduce((a,b)=>a+b,0);
+      let balance = 0;
+      if(sum>0){
+        const proportions = Object.values(totalCounts).map(v=>v/sum);
+        // índice de Simpson (diversidad): 1 - sum(p^2). Normalizamos a 0..1
+        const simpson = 1 - proportions.reduce((acc,p)=>acc + p*p, 0);
+        balance = Math.round(simpson*100);
+      }
+      document.getElementById('balanceValue').textContent = daysWithData ? balance : '—';
+
+      // Resumen mensual
+      const monthlySummary = document.getElementById('monthlySummary');
+      if(sum===0){
+        monthlySummary.textContent = 'Aún no hay datos este mes.';
+      }else{
+        const top = Object.entries(totalCounts).sort((a,b)=>b[1]-a[1])[0][0];
+        const e = EMOTIONS.find(x=>x.key===top);
+        monthlySummary.textContent =
+          `Tus emociones este mes fueron como una obra de arte… mezcladas entre ${EMOTIONS.find(x=>x.key==='alegria').name.toLowerCase()} y ${EMOTIONS.find(x=>x.key==='amor').name.toLowerCase()}, con toques de ${EMOTIONS.find(x=>x.key==='tristeza').name.toLowerCase()} que le dieron profundidad. Predominó ${e.name.toLowerCase()}.`;
+      }
+    }
+
+    // ------------ Inicialización ------------
+    (function init(){
+      // Fecha visible
+      document.getElementById('todayLabel').textContent = formatLongDate(today);
+      // Construir resúmenes iniciales
+      buildWeekly();
+      buildMonthly();
+    })();
+  </script>
+</body>
+</html>

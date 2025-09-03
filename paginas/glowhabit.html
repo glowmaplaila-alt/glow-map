@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowHabit Builder</title>
+  <link rel="icon" href="../imagenes/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/miestilo1.css">
+</head>
+<body>
+  <button id="open-menu" class="menu-toggle">☰</button>
+  <aside class="sidebar" id="sidebar">
+      <button id="close-menu" class="close-toggle">✖</button>
+      <a href="../index.html" data-i18n="index">Inicio</a>
+      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+      <a href="plantillas.html">Plantillas</a>
+      <a href="contacto.html">Contacto</a>
+  </aside>
+  <div id="overlay"></div>
+
+  <nav>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1 data-i18n="glowhabitTitle">GlowHabit Builder</h1>
+    <p data-i18n="glowhabitDesc">
+      Crea y mantén hábitos positivos con seguimiento visual y recordatorios motivadores.
+    </p>
+  </div>
+
+  <section class="content-section">
+    <h2 data-i18n="glowhabitHow">Cómo usar esta plantilla</h2>
+    <ul class="descripcion-plantillas">
+      <li data-i18n="glowhabitStep1">
+        <strong>Define tus hábitos:</strong> Anota los comportamientos que quieres incorporar.
+      </li>
+      <li data-i18n="glowhabitStep2">
+        <strong>Establece frecuencia:</strong> Decide si son diarios, semanales o mensuales.
+      </li>
+      <li data-i18n="glowhabitStep3">
+        <strong>Haz seguimiento:</strong> Marca tu progreso y observa patrones.
+      </li>
+      <li data-i18n="glowhabitStep4">
+        <strong>Mantén motivación:</strong> Celebra tus logros y ajusta cuando lo necesites.
+      </li>
+    </ul>
+  </section>
+
+  <div class="boton-centro">
+    <a href="plantillas.html" class="boton-volver" data-i18n="back">Volver a plantillas</a>
+  </div>
+
+  <footer data-i18n="footer">
+    &copy; 2025 GlowMap — Todos los derechos reservados
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    function openMenu() {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+      openBtn.style.display = 'none';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      openBtn.style.display = 'block';
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+  });
+  </script>
+
+  <script src="../js/lang.js"></script>
+</body>
+</html>

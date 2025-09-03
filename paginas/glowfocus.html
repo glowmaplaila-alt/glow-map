@@ -16,108 +16,131 @@
 <body>
   <button id="open-menu" class="menu-toggle" data-i18n="menu_open">☰</button>
 
-  <aside class="sidebar" id="sidebar">
-    <button id="close-menu" class="close-toggle" data-i18n="menu_close">✖</button>
-    <a href="home.html" data-i18n="about">Sobre GlowMap</a>
-    <a href="plantillas.html" data-i18n="templates">Plantillas</a>
-    <a href="contacto.html" data-i18n="contact">Contacto</a>
-  </aside>
+    <aside class="sidebar" id="sidebar">
+      <button id="close-menu" class="close-toggle" data-i18n="menu_close">✖</button>
+      <a href="../index.html" data-i18n="index">Inicio</a>
+      <a href="../index.html" data-i18n="index">Inicio</a>
+      <a href="home.html" data-i18n="about">Sobre GlowMap</a>
+      <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+      <a href="contacto.html" data-i18n="contact">Contacto</a>
+    </aside>
 
-  <nav>
-    <div class="nav-wrapper">
-      <div class="nav-left"></div>
-      <div class="logo-container">
-        <a href="../index.html">
-          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-        </a>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="nav-left"></div>
+        <div class="logo-container">
+          <a href="../index.html">
+            <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap" data-i18n-alt="logo_alt">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="cta-buttons">
+      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
+    </div>
+
+    <select id="language-selector" class="language-selector">
+      <option value="es" data-i18n="lang_es">🇪🇸</option>
+      <option value="en" data-i18n="lang_en">🇺🇸</option>
+      <option value="ar" data-i18n="lang_ar">🇲🇦</option>
+      <option value="fr" data-i18n="lang_fr">🇫🇷</option>
+      <option value="de" data-i18n="lang_de">🇩🇪</option>
+    </select>
+
+    <header>
+      <h1 data-i18n="main_title">GlowFocus — Tareas Flexibles</h1>
+    </header>
+
+    <div class="container">
+      <div class="section">
+        <h2 data-i18n="tasks_title">1. Tareas del día</h2>
+
+        <!-- Tareas necesarias -->
+        <label for="necesarias" data-i18n="tasks_required">Tareas necesarias</label>
+        <div id="necesarias" class="task-list">
+          <div class="task-item">
+            <div class="check"></div>
+            <input type="text" placeholder="Ej: Terminar informe, preparar comida..." data-i18n-placeholder="tasks_required_placeholder">
+          </div>
+        </div>
+
+        <!-- Tareas que se pueden posponer -->
+        <label for="postergables" data-i18n="tasks_postpone">Tareas que puedo posponer</label>
+        <div id="postergables" class="task-list">
+          <div class="task-item">
+            <div class="check"></div>
+            <input type="text" placeholder="Ej: Lavar el coche, limpiar el armario..." data-i18n-placeholder="tasks_postpone_placeholder">
+          </div>
+        </div>
+
+        <!-- Tareas agradables -->
+        <label for="agradables" data-i18n="tasks_fun">Tareas agradables</label>
+        <div id="agradables" class="task-list">
+          <div class="task-item">
+            <div class="check"></div>
+            <input type="text" placeholder="Ej: Leer un libro, llamar a un amigo..." data-i18n-placeholder="tasks_fun_placeholder">
+          </div>
+        </div>
+      </div>
+
+      <!-- Evaluación emocional -->
+      <div class="section">
+        <h2 data-i18n="emotions_title">2. Evaluación emocional</h2>
+        <label for="emociones" data-i18n="emotions_question">¿Cómo me siento después de completar mis tareas?</label>
+        <textarea id="emociones" placeholder="Comparte tus sensaciones, energía, logros..." data-i18n-placeholder="emotions_placeholder"></textarea>
+
+        <div class="emotions">
+          <label><input type="radio" name="estado" value="satisfecho"> <span data-i18n="emotion_happy">Satisfecho</span></label>
+          <label><input type="radio" name="estado" value="neutro"> <span data-i18n="emotion_neutral">Neutro</span></label>
+          <label><input type="radio" name="estado" value="estresado"> <span data-i18n="emotion_stressed">Estresado</span></label>
+        </div>
       </div>
     </div>
-  </nav>
-  
-  <div class="cta-buttons">
-    <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-    <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-  </div>
-  <select id="language-selector" class="language-selector">
-    <option value="es">🇪🇸</option>
-    <option value="en">🇺🇸</option>
-    <option value="ar">🇲🇦</option>
-    <option value="fr">🇫🇷</option>
-    <option value="de">🇩🇪</option>
-  </select>
 
-  <header>
-    <h1 data-i18n="main_title">GlowFocus — Tareas Flexibles</h1>
-  </header>
-
-  <div class="container">
-    <div class="section">
-      <h2 data-i18n="tasks_title">1. Tareas del día</h2>
-      <label for="necesarias" data-i18n="tasks_required">Tareas necesarias</label>
-      <textarea id="necesarias" placeholder="Ej: Terminar informe, preparar comida..." data-i18n-placeholder="tasks_required_placeholder"></textarea>
-
-      <label for="postergables" data-i18n="tasks_postpone">Tareas que puedo posponer</label>
-      <textarea id="postergables" placeholder="Ej: Lavar el coche, limpiar el armario..." data-i18n-placeholder="tasks_postpone_placeholder"></textarea>
-
-      <label for="agradables" data-i18n="tasks_fun">Tareas agradables</label>
-      <textarea id="agradables" placeholder="Ej: Leer un libro, llamar a un amigo..." data-i18n-placeholder="tasks_fun_placeholder"></textarea>
+    <!-- Texto explicativo -->
+    <div class="texto-explicativo">
+      <center data-i18n="explanatory_text">
+        Cada día que guardes tus tareas recibirás una Estrella Glow⭐. Completa 5 días para terminar tu semana GlowFocus.  
+        Todas tus tareas quedan registradas en el calendario📅.
+      </center>
     </div>
 
-    <div class="section">
-      <h2 data-i18n="emotions_title">2. Evaluación emocional</h2>
-      <label for="emociones" data-i18n="emotions_question">¿Cómo me siento después de completar mis tareas?</label>
-      <textarea id="emociones" placeholder="Comparte tus sensaciones, energía, logros..." data-i18n-placeholder="emotions_placeholder"></textarea>
+    <!-- Botón Guardar -->
+    <div class="boton-centro">
+      <button class="cta-button" onclick="guardarGlowFocus()" data-i18n="save_button">Guardar</button>
+    </div>
 
-      <div class="emotions">
-        <label><input type="radio" name="estado" value="satisfecho"> <span data-i18n="emotion_happy">Satisfecho</span></label>
-        <label><input type="radio" name="estado" value="neutro"> <span data-i18n="emotion_neutral">Neutro</span></label>
-        <label><input type="radio" name="estado" value="estresado"> <span data-i18n="emotion_stressed">Estresado</span></label>
+    <!-- Sección progreso y recompensas -->
+    <div class="progreso-horizontal">
+
+      <!-- Estrellas -->
+      <div class="recompensas-container">
+        <h3 data-i18n="your_stars">⭐ Tus Estrellas Glow</h3>
+        <div id="estrellas" class="estrellas"></div>
+        <p id="mensaje-recompensa" data-i18n="reward_message"></p>
+      </div>
+
+      <!-- Círculo de progreso -->
+      <div class="progreso-circular-container">
+        <h3 data-i18n="weekly_progress">📅 Progreso semanal</h3>
+        <svg class="progreso-circular" width="140" height="140">
+          <circle class="fondo" cx="70" cy="70" r="60" />
+          <circle id="progreso-circulo" class="progreso" cx="70" cy="70" r="60" />
+          <text id="progreso-circular-texto" x="50%" y="50%" text-anchor="middle" dy=".3em" data-i18n="progress_text">0%</text>
+        </svg>
       </div>
     </div>
-  </div>
-    
-  <!-- Texto explicativo -->
-  <div class="texto-explicativo">
-    <center data-i18n="explanatory_text">
-      Cada día que guardes tus tareas recibirás una Estrella Glow⭐. Completa 5 días para terminar tu semana GlowFocus.  
-      Todas tus tareas quedan registradas en el calendario📅.
-    </center>
-  </div>
 
-  <!-- Botón Guardar -->
-  <div class="boton-centro">
-    <button class="cta-button" onclick="guardarGlowFocus()" data-i18n="save_button">Guardar</button>
-  </div>
-
-  <!-- Sección progreso y recompensas -->
-  <div class="progreso-horizontal">
-
-    <!-- Estrellas -->
-    <div class="recompensas-container">
-      <h3 data-i18n="your_stars">⭐ Tus Estrellas Glow</h3>
-      <div id="estrellas" class="estrellas"></div>
-      <p id="mensaje-recompensa"></p>
+    <div class="container">
+      <h2 data-i18n="calendar_title">Calendario de Tareas</h2>
+      <div id="calendar"></div>
     </div>
 
-    <!-- Círculo de progreso -->
-    <div class="progreso-circular-container">
-      <h3 data-i18n="weekly_progress">📅 Progreso semanal</h3>
-      <svg class="progreso-circular" width="140" height="140">
-        <circle class="fondo" cx="70" cy="70" r="60" />
-        <circle id="progreso-circulo" class="progreso" cx="70" cy="70" r="60" />
-        <text id="progreso-circular-texto" x="50%" y="50%" text-anchor="middle" dy=".3em">0%</text>
-      </svg>
+    <div class="boton-centro">
+      <a href="../index.html" class="boton-volver" data-i18n="back_home">Volver al inicio</a>
     </div>
-  </div>
-
-  <div class="container">
-    <h2 data-i18n="calendar_title">Calendario de Tareas</h2>
-    <div id="calendar"></div>
-  </div>
-
-  <div class="boton-centro">
-    <a href="../index.html" class="boton-volver" data-i18n="back_home">Volver al inicio</a>
-  </div>
 
   <footer>
     <span data-i18n="footer_text">&copy; 2025 GlowMap — Todos los derechos reservados</span>

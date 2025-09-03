@@ -4,6 +4,7 @@
   "register": "Registrieren",
   "heroText": "Beginnen Sie Ihren Weg zu einer reibungslosen und bewussten Organisation mit den GlowMap-Vorlagen, die für Sie entwickelt wurden.",
   "about": "Über GlowMap",
+  "index": "Startseite",
   "exploreTemplates": "Vorlagen entdecken",
   
   "Tareas flexibles": "Flexible Aufgaben",
@@ -17,7 +18,7 @@
   "Organización de viajes": "Reiseorganisation",
   "Bienestar femenino": "Weibliches Wohlbefinden",
   "welcome": "Willkommen bei GlowMap",
-  "introTxt": "Können Sie sich eine stressfreie, ruhige Organisation vorstellen, die auf Sie zugeschnitten ist? Bei GlowMap gestalten wir Produktivität neu, damit sie keine Belastung mehr ist, sondern ein Werkzeug für Wohlbefinden und Klarheit. GlowMap ist nicht nur eine Plattform, um Ihr Leben zu organisieren. Es ist ein bewusster Raum, der Sie sanft durch Ihren Alltag begleitet. Mit interaktiven, einfachen und flexiblen Vorlagen helfen wir Ihnen, Ihre Ideen, Emotionen und Ziele ohne Druck oder Perfektionismus zu organisieren. Unser Ziel ist, dass Sie Komfort in der Ordnung, Freude am Planen und in jedem gewöhnlichen Tag ein tiefes Gefühl der Erfüllung finden.",
+  "introTxt": "GlowMap vereint Ziele und Emotionen an einem Ort. Plane deine Zeit, zeichne deine täglichen Emotionen auf und lass deine Gefühle dich führen. Organisiere deinen Tag… und dein Herz.",
   "titulo1": "Für wen ist GlowMap geeignet?",
   "titulo0": "Vision",
   "parrafo0": "Wir träumen von einer Welt, in der Menschen in ihrem eigenen Tempo leben, Produktivität ein Werkzeug der Ruhe ist, Ordnung eine Sprache, die inneres Gleichgewicht wiederherstellt, und in der kleine Alltagsdetails ein echtes Gefühl von Wohlbefinden und Zufriedenheit hervorrufen.",
@@ -30,26 +31,41 @@
   "titulo2": "Was finden Sie auf GlowMap?",
   "parrafo2": "Mit visuellen und flexiblen Vorlagen können Sie Aufgaben planen, gesunde Gewohnheiten aufzeichnen, Ihre körperlichen und emotionalen Fortschritte verfolgen und Ihre persönlichen Projekte ohne Druck entwickeln.",
   "titulo3": "Zusammenfassung der verfügbaren Vorlagen",
-  "l6": "Organisieren Sie Ihre täglichen Aufgaben nach emotionaler Priorität und Dringlichkeit.",
-  "l7": "Erstellen Sie realistische Routinen für Morgen und Abend.",
-  "l8": "Halten Sie Ihre Trainings fest und wie sich Ihr Körper fühlt.",
-  "l9": "Verbinden Sie sich mit Ihren Emotionen und konzentrieren Sie sich auf Ihr inneres Wohlbefinden.",
-  "l10": "Führen Sie ein einfaches Tracking Ihrer Ausgaben und Einnahmen bewusst.",
-  "l11": "Entwickeln Sie Ihre Projekte Schritt für Schritt ohne Stress.",
-  "l12": "Verbessern Sie Ihre Ernährung mit täglichem Tracking und visuellen Herausforderungen.",
-  "l13": "Organisieren Sie Ihr Studium und bereiten Sie Prüfungen ruhig vor.",
-  "s1": "GlowFocus-Vorlage",
-  "s2": "GlowFlow-Routine",
-  "s3": "GlowFitness-Tracking",
-  "s4": "GlowMind-Raum",
-  "s5": "GlowFinance-Karte",
-  "s6": "GlowProject-Planer",
-  "s7": "GlowNutrition-Tracking",
-  "s8": "GlowStudy-Planer",
-  "s9": "GlowTrip-Planer",
-  "l14": "Planen Sie Ihre Reisen klar, stressfrei und mit Absicht.",
-  "s10": "GlowFem-Tracking",
-  "l15": "Verfolgen Sie Ihren Zyklus, Ihre Emotionen und Ihr weibliches Wohlbefinden respektvoll.",
+  "s1": "GlowFocus Template:",
+  "l6": "Organisiere deine täglichen Aufgaben nach emotionaler Priorität und Dringlichkeit.",
+
+  "s2": "GlowFlow Routine:",
+  "l7": "Erstelle realistische Routinen für deine Morgen- und Abendstunden.",
+
+  "s3": "GlowFitness Tracker:",
+  "l8": "Protokolliere deine Workouts und wie sich dein Körper anfühlt.",
+
+  "s4": "GlowNutrition Tracker:",
+  "l9": "Verbessere deine Ernährung mit täglicher Erfassung und visuellen Herausforderungen.",
+
+  "s5": "GlowMind Space:",
+  "l10": "Verbinde dich mit deinen Gefühlen und fokussiere dich auf dein inneres Wohlbefinden.",
+
+  "s6": "GlowMood Map:",
+  "l11": "Erfasse und analysiere deine Emotionen nach Tag, Woche und Monat.",
+
+  "s7": "GlowProject Planner:",
+  "l12": "Entwickle deine Projekte Schritt für Schritt und ohne Stress.",
+
+  "s8": "GlowStudy Planner:",
+  "l13": "Organisiere dein Studium und bereite dich gelassen auf Prüfungen vor.",
+
+  "s9": "GlowFinance Map:",
+  "l14": "Führe eine einfache, achtsame Aufzeichnung deiner Ausgaben und Einnahmen.",
+
+  "s10": "GlowHabit Builder:",
+  "l15": "Erstelle, verfolge und stärke tägliche Gewohnheiten mit Erinnerungen und Achtsamkeit.",
+
+  "s11": "GlowTrip Planner:",
+  "l16": "Plane deine Reisen klar, stressfrei und mit Intention.",
+
+  "s12": "GlowFem Tracker:",
+  "l17": "Verfolge deinen Zyklus, deine Emotionen und dein weibliches Wohlbefinden respektvoll.",
   "page_title": "GlowFocus - Flexible Aufgaben",
     "templates": "Vorlagen",
     "contact": "Kontakt",

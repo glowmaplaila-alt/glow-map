@@ -2,6 +2,39 @@
   const campos = ['necesarias', 'postergables', 'agradables', 'emociones'];
   const radios = document.getElementsByName('estado');
 
+  document.addEventListener('DOMContentLoaded', () => {
+  function activateTaskEvents(taskItem) {
+    const check = taskItem.querySelector('.check');
+    const input = taskItem.querySelector('input');
+
+    // ✔ Marcar tarea hecha
+    check.addEventListener('click', () => {
+      taskItem.classList.toggle('done');
+      check.classList.toggle('done');
+      check.textContent = check.classList.contains('done') ? "✔" : "";
+    });
+
+    // ➕ Crear nueva tarea al presionar Enter
+    input.addEventListener('keydown', (e) => {
+      if (e.key === "Enter" && input.value.trim() !== "") {
+        e.preventDefault();
+        const newTask = taskItem.cloneNode(true);
+        newTask.classList.remove('done');
+        newTask.querySelector('input').value = "";
+        newTask.querySelector('.check').classList.remove('done');
+        newTask.querySelector('.check').textContent = "";
+        taskItem.parentElement.appendChild(newTask);
+        activateTaskEvents(newTask);
+        newTask.querySelector('input').focus();
+      }
+    });
+  }
+
+  // Inicializar eventos en todas las listas
+  document.querySelectorAll('.task-item').forEach(activateTaskEvents);
+});
+
+
   // Cargar valores guardados
   campos.forEach(id => {
     const saved = localStorage.getItem(id);

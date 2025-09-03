@@ -6,6 +6,7 @@ body {
     }
     a{ text-decoration: none;
     color: #cf965f;}
+    header h1{margin:0;color:var(--accent);font-weight:700}
    
 
         /* Botón About */
@@ -381,6 +382,14 @@ body {
     justify-content: center;
     align-items: center;
   }
+  header {
+    padding: 12px 6px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
 
   .logo-container img {
     height: 100px; /* LOGO MUY GRANDE en móvil */

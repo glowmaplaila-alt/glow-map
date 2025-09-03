@@ -1,0 +1,247 @@
+:root{
+      --primary:#cf965f;
+      --primary-soft:#f3d6c8;
+      --bg:#fff9f5;
+      --card:#ffffff;
+      --muted:#e6d6c8;
+      --accent:#e09a88;
+      --ink:#5f4636;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:'Cairo',sans-serif;
+      background-color:var(--bg);
+      color:var(--primary);
+      margin:0;
+    }
+    header{
+      background-color:#f5e3d39a;
+      padding:20px;
+      text-align:center;
+    }
+    header h1{margin:0;color:var(--accent);font-weight:700}
+    .container{
+      max-width:1000px;
+      margin:24px auto;
+      padding:20px;
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,.05);
+    }
+    h2{
+      color:var(--primary);
+      border-bottom:1px solid var(--primary-soft);
+      padding-bottom:6px;
+      margin-top:0;
+    }
+    .section{margin-bottom:32px}
+
+    /* Daily UI */
+    .daily-head{
+      display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px;
+      color:var(--ink);
+    }
+    .date-badge{
+      background:#fff7f4;border:1px solid var(--muted);
+      padding:6px 10px;border-radius:8px;color:var(--ink)
+    }
+    .emotions-grid{
+      display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+      gap:10px;margin-top:10px
+    }
+    .emotion-card{
+      display:flex;align-items:center;gap:10px;
+      border:1px solid var(--muted);background:#fff7f4;
+      padding:10px;border-radius:10px;cursor:pointer;user-select:none;
+      transition:transform .08s ease, border-color .15s ease;
+    }
+    .emotion-card:hover{transform:translateY(-1px)}
+    .emotion-card.active{border-color:var(--primary)}
+    .emotion-emoji{font-size:22px}
+    .emotion-name{color:var(--ink);font-weight:600}
+    .sliders{margin-top:8px;padding-left:8px;display:none}
+    .sliders.active{display:block}
+    .slider-row{
+      display:flex;align-items:center;gap:8px;margin:6px 0;color:var(--ink)
+    }
+    .slider-row input[type="range"]{flex:1}
+    .auto-message{
+      margin-top:8px;background:#fff7f4;border:1px dashed var(--muted);
+      padding:10px;border-radius:10px;color:var(--ink)
+    }
+    textarea.note{
+      width:100%;min-height:90px;padding:10px;border-radius:8px;border:1px solid var(--muted);
+      background:#fff7f4;resize:vertical;color:var(--ink)
+    }
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+    .btn{
+      border:none;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:600
+    }
+    .btn-primary{background:var(--primary);color:white}
+    .btn-ghost{background:#fff7f4;color:var(--primary);border:1px solid var(--muted)}
+
+    /* Weekly */
+    .weekly-layout{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:16px
+    }
+    .card{
+      background:#fff7f4;border:1px solid var(--muted);border-radius:12px;padding:12px
+    }
+    .timeline{
+      display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:8px
+    }
+    .day-pill{
+      display:flex;flex-direction:column;align-items:center;gap:4px;
+      background:#fff;border:1px solid var(--muted);border-radius:10px;padding:8px;
+      color:var(--ink)
+    }
+    .day-pill .emoji{font-size:22px}
+    .smart-note{margin-top:10px;color:var(--ink)}
+    .small{font-size:.9rem;color:var(--ink)}
+
+    /* Monthly Heatmap */
+    .heatmap{
+      display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px
+    }
+    .cell{
+      aspect-ratio:1/1;border-radius:8px;border:1px solid var(--muted);
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-weight:700
+    }
+    .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;color:var(--ink)}
+    .legend .chip{
+      display:flex;align-items:center;gap:6px;border:1px solid var(--muted);
+      background:#fff;border-radius:999px;padding:4px 8px
+    }
+    .kpi{
+      display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;color:var(--ink)
+    }
+    .kpi .kpi-card{
+      background:#fff;border:1px solid var(--muted);border-radius:10px;padding:10px;min-width:220px
+    }
+
+    /* Responsive */
+    @media (max-width:840px){
+      .weekly-layout{grid-template-columns:1fr}
+    }
+
+    /* ================== MOBILE FIRST – GlowMood ================== */
+  @media (max-width: 480px) {
+
+  /* Contenedor principal */
+  .container {
+    margin: 12px;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: none;           /* menos sombra en pantallas pequeñas */
+  }
+
+  header {
+    padding: 12px 6px;
+  }
+  header h1 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  /* Daily UI */
+  .daily-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 0.9rem;
+  }
+  .date-badge {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+  .emotions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  .emotion-card {
+    padding: 8px;
+    gap: 6px;
+  }
+  .emotion-emoji {
+    font-size: 20px;
+  }
+  .emotion-name {
+    font-size: 0.9rem;
+  }
+  .slider-row span {
+    font-size: 0.85rem;
+  }
+
+  textarea.note {
+    min-height: 70px;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Weekly layout: pasa a 1 columna */
+  .weekly-layout {
+    display: block;
+  }
+  .weekly-layout .card {
+    margin-bottom: 12px;
+  }
+  #weeklyChart {
+    height: 180px !important;
+  }
+
+  .timeline {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
+  }
+  .day-pill {
+    padding: 6px 2px;
+    font-size: 0.8rem;
+  }
+  .day-pill .emoji {
+    font-size: 18px;
+  }
+
+  /* Monthly heatmap */
+  .heatmap {
+    gap: 4px;
+  }
+  .cell {
+    font-size: 0.7rem;
+  }
+  .legend {
+    gap: 6px;
+    font-size: 0.8rem;
+  }
+  .legend .chip {
+    padding: 2px 6px;
+  }
+
+  .kpi {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .kpi .kpi-card {
+    min-width: auto;
+    padding: 8px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.8rem;
+    padding: 12px 4px;
+  }
+}
