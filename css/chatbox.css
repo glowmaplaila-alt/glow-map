@@ -1,0 +1,153 @@
+:root{
+  --primary:#cf965f;
+  --primary-soft:#f3d6c8;
+  --bg:#fff9f5;
+  --card:#ffffff;
+  --muted:#e6d6c8;
+  --accent:#e09a88;
+  --ink:#5f4636;
+}
+
+#chat-widget{
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  font-family: sans-serif;
+  background: var(--card);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: none;
+}
+
+#chat-header{
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+#chat-header button{
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#chat-body{
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+}
+
+.message{
+  padding: 8px 12px;
+  margin: 6px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.message.bot{
+  background: var(--primary-soft);
+  color: var(--ink);
+}
+
+.message.user{
+  align-self: flex-end;
+  background: var(--accent);
+  color: #fff;
+}
+
+#chat-messages{
+  flex: 1;
+  overflow-y: auto;
+}
+
+#chat-input-area{
+  display: flex;
+  padding: 6px;
+  background: var(--muted);
+}
+
+#chat-input{
+  flex: 1;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+#send-btn{
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#chat-open-btn{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Botón flotante del chat */
+#chat-open-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  
+  /* animación */
+  animation: bounce 1s 2;
+  animation-delay: 5s; /* espera 5 segundos antes de empezar */
+}
+
+@media (max-width: 600px) {
+  #chat-widget {
+    bottom: 120px;   /* lo sube 40px */
+  }
+
+  #chat-open-btn {
+    bottom: 60px;    /* subimos también el botón si quieres */
+  }
+}

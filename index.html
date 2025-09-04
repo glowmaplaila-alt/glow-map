@@ -6,6 +6,7 @@
   <link rel="icon" href="imagenes/favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/miestilo1.css">
+  <link rel="stylesheet" href="css/chatbox.css">
   
 </head>
 <body>
@@ -116,6 +117,27 @@
   <div class="boton-centro">
     <a href="paginas/home.html" class="boton-volver" data-i18n="about">Sobre GlowMap</a>
   </div>
+  <!-- CHAT BOX -->
+<div id="chat-widget" class="chat-closed">
+  <div id="chat-header">
+    💬 Asistente GlowMap
+    <button id="chat-toggle">−</button>
+  </div>
+  <div id="chat-body">
+    <div class="message bot">
+      Estoy aquí para ayudarte ❤️<br>
+      Dime qué necesitas y te mostraré la plantilla que mejor se adapta a ti.
+    </div>
+    <div id="chat-messages"></div>
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
+      <button id="send-btn">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Botón flotante para abrir -->
+<button id="chat-open-btn">💬</button>
 
   <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -149,5 +171,6 @@ document.addEventListener('DOMContentLoaded', () => {
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
   <script src="js/lang.js"></script>
+  <script src="js/chatbox.js"></script>
 </body>
 </html>
