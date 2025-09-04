@@ -53,6 +53,8 @@
 
   "s12": "GlowFem Tracker:",
   "l17": "Sigue tu ciclo, emociones y bienestar femenino de forma respetuosa.",
+  "Constructor de hábitos":"Constructor de hábitos",
+  "Mapa de emociones":"Mapa de emociones",
 
   "footer":"Todos los derechos reservados",
   
@@ -120,7 +122,27 @@
     "feeling_exhausted": "Agotado",
     "quick_notes": "Notas rápidas",
     "quick_notes_placeholder": "Ideas, recordatorios, pensamientos...",
-    "progress_message": ""
+    "progress_message": "",
+
+    
+  "main_title_mood": "GlowMood — Mapa de Emociones",
+  "daily_title": "1. Interfaz diaria (registro del día)",
+  "today_label": "Lunes, 1 de septiembre de 2025",
+  "daily_hint": "Selecciona tus emociones y su intensidad (1–5)",
+  "select_emotions": "Selecciona emociones",
+  "auto_message_hint": "Selecciona una emoción para ver un mensaje.",
+  "free_note_label": "¿Cómo te sentiste hoy? ✍️",
+  "free_note_placeholder": "Escribe libremente...",
+  "clear_day": "Limpiar",
+  "save_day": "Guardar día",
+  "weekly_title": "2. Mapa semanal (resumen)",
+  "timeline_title": "Línea de tiempo (emoción predominante por día)",
+  "monthly_title": "3. Mapa mensual (seguimiento)",
+  "balance_index": "Índice de equilibrio",
+  "balance_hint": "Diversidad saludable de emociones (0–100)",
+  "monthly_summary": "Resumen del mes",
+  "value_title": "4. Valor añadido",
+  "value_text": "El Mapa de Emociones se puede vincular con otras plantillas de GlowMap (metas y tareas). Si se detecta que el miedo predomina en un proyecto, verás un consejo: “Empieza con un pequeño paso, el miedo disminuirá cuando avances.”"
     
 
 

@@ -136,6 +136,8 @@
     <span data-i18n="footer_text">&copy; 2025 GlowMap — Todos los derechos reservados</span>
   </footer>
 
+  <script src="../js/lang2.js"></script>
+
   <script>
     // ------------ Configuración de emociones ------------
     const EMOTIONS = [
@@ -451,5 +453,25 @@
       buildMonthly();
     })();
   </script>
+   <!-- Script principal -->
+  <script src="../js/glowfocus.js"></script>
+  <script src="../js/lang2.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      openBtn.style.display = 'none';  // Oculta ☰
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      openBtn.style.display = 'block'; // Muestra ☰
+    });
+  });
+</script>
 </body>
 </html>

@@ -66,6 +66,8 @@
 
   "s12": "GlowFem Tracker:",
   "l17": "Verfolge deinen Zyklus, deine Emotionen und dein weibliches Wohlbefinden respektvoll.",
+  "Constructor de hábitos":"Gewohnheiten-Ersteller",
+  "Mapa de emociones":"Gefühlskarte",
   "page_title": "GlowFocus - Flexible Aufgaben",
     "templates": "Vorlagen",
     "contact": "Kontakt",
@@ -128,6 +130,26 @@
     "quick_notes": "Kurze Notizen",
     "quick_notes_placeholder": "Ideen, Erinnerungen, Gedanken...",
     "progress_message": "",
+
+    "main_title_mood": "GlowMood — Emotionskarte",
+  "daily_title": "1. Tägliche Oberfläche (Tagesprotokoll)",
+  "today_label": "Montag, 1. September 2025",
+  "daily_hint": "Wähle deine Emotionen und deren Intensität (1–5)",
+  "select_emotions": "Emotionen auswählen",
+  "auto_message_hint": "Wähle eine Emotion, um eine Nachricht zu sehen.",
+  "free_note_label": "Wie hast du dich heute gefühlt? ✍️",
+  "free_note_placeholder": "Schreibe frei...",
+  "clear_day": "Löschen",
+  "save_day": "Tag speichern",
+  "weekly_title": "2. Wöchentliche Karte (Übersicht)",
+  "timeline_title": "Zeitachse (vorherrschende Emotion pro Tag)",
+  "monthly_title": "3. Monatliche Karte (Verfolgung)",
+  "balance_index": "Gleichgewichtsindex",
+  "balance_hint": "Gesunde Vielfalt an Emotionen (0–100)",
+  "monthly_summary": "Monatsübersicht",
+  "value_title": "4. Mehrwert",
+  "value_text": "Die Emotionskarte kann mit anderen GlowMap-Vorlagen (Ziele und Aufgaben) verknüpft werden. Wenn Angst in einem Projekt vorherrscht, erscheint ein Hinweis: „Beginne mit einem kleinen Schritt, die Angst nimmt ab, sobald du fortschreitest.“",
+  
 
   "footer": "© 2025 GlowMap — Alle Rechte vorbehalten"
 }

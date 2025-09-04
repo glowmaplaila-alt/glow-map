@@ -55,6 +55,8 @@
 
   "s12": "GlowFem Tracker:",
   "l17": "Track your cycle, emotions, and feminine well-being respectfully.",
+  "Constructor de hábitos":"Habit Builder",
+  "Mapa de emociones":"Emotion Map",
   "footer":"© 2025 GlowMap —All rights reserved.",
   
   "page_title": "GlowFocus - Flexible Tasks",
@@ -119,6 +121,29 @@
     "quick_notes": "Quick Notes",
     "quick_notes_placeholder": "Ideas, reminders, thoughts...",
     "progress_message": "",
+
+    "main_title_mood": "GlowMood — Emotion Map",
+  "daily_title": "1. Daily interface (day log)",
+  "today_label": "Monday, September 1, 2025",
+  "daily_hint": "Select your emotions and their intensity (1–5)",
+  "select_emotions": "Select emotions",
+  "auto_message_hint": "Select an emotion to see a message.",
+  "free_note_label": "How did you feel today? ✍️",
+  "free_note_placeholder": "Write freely...",
+  "clear_day": "Clear",
+  "save_day": "Save day",
+  "weekly_title": "2. Weekly map (summary)",
+  "timeline_title": "Timeline (dominant emotion per day)",
+  "monthly_title": "3. Monthly map (tracking)",
+  "balance_index": "Balance index",
+  "balance_hint": "Healthy diversity of emotions (0–100)",
+  "monthly_summary": "Monthly summary",
+  "value_title": "4. Added value",
+  "value_text": "The Emotion Map can be linked with other GlowMap templates (goals and tasks). If fear predominates in a project, you will see advice: “Start with a small step, fear will diminish as you progress.”",
+ 
+
+
+
     "footer_text": "© 2025 GlowMap — All rights reserved"
 
 }

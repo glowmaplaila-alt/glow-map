@@ -54,6 +54,8 @@
 
   "s12": "GlowFem Tracker:",
   "l17": "تابع دورتك ومشاعرك وصحتك النسائية باحترام.",
+  "Constructor de hábitos":"بناء العادات",
+  "Mapa de emociones":"خريطة المشاعر",
   "footer":"© 2025 GlowMap —جميع الحقوق محفوظة.",
   
   "Tareas flexibles": "مهام مرنة",
@@ -131,7 +133,26 @@
     "feeling_exhausted": "متعب",
     "quick_notes": "ملاحظات سريعة",
     "quick_notes_placeholder": "أفكار، تذكيرات، خواطر...",
-    "progress_message": ""
+    "progress_message": "",
+
+    "main_title_mood": "جلو مود — خريطة المشاعر",
+  "daily_title": "١. واجهة يومية (تسجيل اليوم)",
+  "today_label": "الاثنين، ١ سبتمبر ٢٠٢٥",
+  "daily_hint": "اختر مشاعرك وشدتها (١–٥)",
+  "select_emotions": "اختر المشاعر",
+  "auto_message_hint": "اختر شعورًا لعرض رسالة.",
+  "free_note_label": "كيف كان شعورك اليوم؟ ✍️",
+  "free_note_placeholder": "اكتب بحرية...",
+  "clear_day": "مسح",
+  "save_day": "حفظ اليوم",
+  "weekly_title": "٢. خريطة أسبوعية (ملخص)",
+  "timeline_title": "الجدول الزمني (العاطفة السائدة لكل يوم)",
+  "monthly_title": "٣. خريطة شهرية (متابعة)",
+  "balance_index": "مؤشر التوازن",
+  "balance_hint": "تنوع صحي للمشاعر (٠–١٠٠)",
+  "monthly_summary": "ملخص الشهر",
+  "value_title": "٤. قيمة مضافة",
+  "value_text": "يمكن ربط خريطة المشاعر بقوالب GlowMap الأخرى (الأهداف والمهام). إذا تم اكتشاف أن الخوف يهيمن على مشروع ما، ستظهر نصيحة: «ابدأ بخطوة صغيرة، سيتراجع الخوف مع تقدمك.»"
 
 
 

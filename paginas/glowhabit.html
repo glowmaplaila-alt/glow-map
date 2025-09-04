@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlowHabit Builder</title>
+  <link rel="stylesheet" href="../css/miestilo1.css">
   <link rel="icon" href="../imagenes/favicon.svg" type="image/svg+xml">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/miestilo1.css">
@@ -14,8 +15,8 @@
       <button id="close-menu" class="close-toggle">✖</button>
       <a href="../index.html" data-i18n="index">Inicio</a>
       <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-      <a href="plantillas.html">Plantillas</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+      <a href="contacto.html" data-i18n="contact">Contacto</a>
   </aside>
   <div id="overlay"></div>
 
@@ -89,6 +90,26 @@
     overlay.addEventListener('click', closeMenu);
   });
   </script>
+   <!-- Script principal -->
+  <script src="../js/glowfocus.js"></script>
+  <script src="../js/lang2.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const openBtn = document.getElementById('open-menu');
+    const closeBtn = document.getElementById('close-menu');
+    const sidebar = document.getElementById('sidebar');
+
+    openBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      openBtn.style.display = 'none';  // Oculta ☰
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      openBtn.style.display = 'block'; // Muestra ☰
+    });
+  });
+</script>
 
   <script src="../js/lang.js"></script>
 </body>

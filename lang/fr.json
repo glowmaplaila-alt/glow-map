@@ -66,6 +66,8 @@
 
   "s12": "GlowFem Tracker:",
   "l17": "Suivez votre cycle, vos émotions et votre bien-être féminin avec respect.",
+  "Constructor de hábitos":"Constructeur d’habitudes",
+  "Mapa de emociones":"Carte des émotions",
   "page_title": "GlowFocus - Tâches Flexibles",
     "templates": "Modèles",
     "contact": "Contact",
@@ -128,6 +130,27 @@
     "quick_notes": "Notes rapides",
     "quick_notes_placeholder": "Idées, rappels, pensées...",
     "progress_message": "",
+    
+    
+  "main_title_mood": "GlowMood — Carte des émotions",
+  "daily_title": "1. Interface quotidienne (journal du jour)",
+  "today_label": "Lundi 1 septembre 2025",
+  "daily_hint": "Sélectionnez vos émotions et leur intensité (1–5)",
+  "select_emotions": "Sélectionner des émotions",
+  "auto_message_hint": "Sélectionnez une émotion pour voir un message.",
+  "free_note_label": "Comment vous êtes-vous senti aujourd’hui ? ✍️",
+  "free_note_placeholder": "Écrivez librement...",
+  "clear_day": "Effacer",
+  "save_day": "Enregistrer la journée",
+  "weekly_title": "2. Carte hebdomadaire (résumé)",
+  "timeline_title": "Chronologie (émotion dominante par jour)",
+  "monthly_title": "3. Carte mensuelle (suivi)",
+  "balance_index": "Indice d’équilibre",
+  "balance_hint": "Diversité émotionnelle saine (0–100)",
+  "monthly_summary": "Résumé du mois",
+  "value_title": "4. Valeur ajoutée",
+  "value_text": "La carte des émotions peut être liée à d’autres modèles GlowMap (objectifs et tâches). Si la peur prédomine dans un projet, un conseil apparaît : « Commencez par un petit pas, la peur diminuera en avançant. »",
+  
 
 
   "footer": "© 2025 GlowMap — Tous droits réservés"
