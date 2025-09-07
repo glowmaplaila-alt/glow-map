@@ -167,11 +167,6 @@ html {
   overflow-y: hidden !important;
 }
 
-/* Asegura que el calendario ocupe todo el ancho disponible */
-#calendar {
-  max-width: 100%;
-  overflow-x: auto;
-}
 
 
 @media (max-width: 768px) {
@@ -373,6 +368,8 @@ body {
   font-size: 14px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 9000;
+  width: auto !important; /* sobrescribe width: 100% */
+  min-width: 20px;       /* opcional, ancho mínimo */
 }
 
 /* Ajustes para móvil */
@@ -486,7 +483,6 @@ body {
 }
 
 
-/* Contenedor del calendario */
 #calendar {
   max-width: 900px;
   margin: 40px auto;
@@ -496,6 +492,9 @@ body {
   padding: 20px;
   color: #cf965f;
   font-family: 'Cairo', sans-serif;
+  overflow-x: auto;       /* scroll horizontal solo si es necesario */
+  overflow-y: hidden;     /* evita scroll vertical */
+  height: calc(5 * 100px); /* ejemplo: 5 filas de semanas aprox */
 }
 
 /* Encabezado del calendario */

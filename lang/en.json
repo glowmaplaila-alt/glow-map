@@ -120,7 +120,7 @@
     "feeling_exhausted": "Exhausted",
     "quick_notes": "Quick Notes",
     "quick_notes_placeholder": "Ideas, reminders, thoughts...",
-    "progress_message": "",
+    
 
     "main_title_mood": "GlowMood — Emotion Map",
   "daily_title": "1. Daily interface (day log)",
@@ -141,6 +141,50 @@
   "value_title": "4. Added value",
   "value_text": "The Emotion Map can be linked with other GlowMap templates (goals and tasks). If fear predominates in a project, you will see advice: “Start with a small step, fear will diminish as you progress.”",
  
+
+
+  "header_title3": "GlowFitness — Exercise Tracking",
+  "registro_entrenamiento": "1. Workout Log",
+  "hint": "Select the exercises you will do today and fill in sets, reps, and weight.",
+  "tren_superior": "Upper Body",
+  "pecho_press_banca": "Chest – Bench Press",
+  "pecho_press_inclinado": "Chest – Incline Press",
+  "espalda_dominadas": "Back – Pull-ups",
+  "espalda_remo": "Back – Row",
+  "hombros_press_militar": "Shoulders – Military Press",
+  "hombros_elevaciones_laterales": "Shoulders – Lateral Raises",
+  "biceps": "Biceps",
+  "triceps": "Triceps",
+  "tren_inferior": "Lower Body",
+  "cuadriceps_sentadillas": "Quadriceps – Squats",
+  "cuadriceps_prensa": "Quadriceps – Leg Press",
+  "isquiotibiales_peso_muerto": "Hamstrings – Romanian Deadlift",
+  "isquiotibiales_curl": "Hamstrings – Lying Leg Curl",
+  "gluteos_hip_thrust": "Glutes – Hip Thrust",
+  "gluteos_lunges": "Glutes – Lunges",
+  "objetivos_mes": "2. Monthly Goals",
+  "fuerza": "Strength 💪",
+  "flexibilidad": "Flexibility 🤸",
+  "cardio": "Cardio 🏃",
+  "evaluacion_post_entreno": "3. Post-Workout Evaluation",
+  "como_te_sentiste": "How did you feel after working out?",
+  "comentario_placeholder": "Describe your energy, mood, etc.",
+  "estado_energetico": "Energetic ⚡",
+  "estado_normal": "Normal 🙂",
+  "estado_cansado": "Tired 😴",
+  "guardar_entreno": "Save Workout",
+  "calendario_entrenamientos": "4. Workout Calendar",
+  
+  "progress_message": {
+    "parcial": "You have completed {completados} of {total} exercises.",
+    "completo": "Workout completed! 🌟"
+  },
+  
+  "volver_inicio": "Back to Home",
+  
+  "series": "Sets",
+  "reps": "Reps",
+  "peso_kg": "Weight (kg)",
 
 
 

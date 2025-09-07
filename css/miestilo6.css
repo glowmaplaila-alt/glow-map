@@ -56,3 +56,153 @@ body {
       margin-right: 15px;
       margin-top: 10px;
     }
+      #guardar-entreno {
+    background-color: #cf965f;       /* color principal GlowMap */
+    color: #fff;                     /* texto blanco */
+    font-size: 16px;                 /* tamaño de letra cómodo */
+    font-weight: bold;
+    padding: 10px 20px;              /* espacio interno */
+    border: none;                    /* sin borde por defecto */
+    border-radius: 12px;             /* esquinas redondeadas */
+    cursor: pointer;                 /* puntero al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+    transition: all 0.3s ease;       /* transición suave al hover */
+  }
+
+  #guardar-entreno:hover {
+    background-color: #e09a88;       /* tono más claro al pasar el mouse */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);     /* efecto de “levantar” */
+  }
+
+  #guardar-entreno:active {
+    background-color: #b37852;       /* tono más oscuro al hacer click */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);      /* efecto de presionar */
+  }
+
+    #workout-tracker {
+  max-width: 700px;
+  margin: 10px auto;
+  font-family: sans-serif;
+  padding: 0 10px;
+}
+
+.day {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  background: #f9f9f9;
+}
+
+.day h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* --------- Ejercicios --------- */
+.exercise {
+  display: flex;
+  flex-direction: column;    /* apilamos .info y .inputs */
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.exercise:last-child { border-bottom: none; }
+
+/* Checkbox + Nombre */
+.exercise .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exercise .info label {
+  font-size: 0.95rem;
+}
+
+
+.inputs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.inputs input {
+  width: 70px;
+  padding: 4px;
+  font-size: 0.85rem;
+}
+
+.exercise.completed label {
+  text-decoration: line-through;
+  color: #777;
+}
+.hint {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 4px 0 10px 0;
+  font-style: italic;
+}
+
+#estrellas {
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+}
+
+.estrella {
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.estrella.activa {
+  color: gold;
+}
+.progreso-circular {
+  transform: rotate(-90deg);
+}
+
+.progreso-circular .fondo {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 12;
+}
+
+.progreso-circular .progreso {
+  fill: none;
+  stroke: #4caf50;
+  stroke-width: 12;
+  stroke-dasharray: 377; /* 2πr = 2*3.14*60 */
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 0.5s;
+}
+
+
+/* --------- Responsive --------- */
+@media (max-width: 480px) {
+  .exercise {
+    flex-direction: column;        /* Pila vertical: nombre arriba, inputs abajo */
+    align-items: flex-start;
+  }
+
+  .inputs {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .inputs input {
+    flex: 1;
+    min-width: 65px;
+  }
+
+  .exercise label {
+    flex: none;
+    width: 100%;
+  }
+}

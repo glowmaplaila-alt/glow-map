@@ -122,7 +122,7 @@
     "feeling_exhausted": "Agotado",
     "quick_notes": "Notas rápidas",
     "quick_notes_placeholder": "Ideas, recordatorios, pensamientos...",
-    "progress_message": "",
+    
 
     
   "main_title_mood": "GlowMood — Mapa de Emociones",
@@ -142,10 +142,52 @@
   "balance_hint": "Diversidad saludable de emociones (0–100)",
   "monthly_summary": "Resumen del mes",
   "value_title": "4. Valor añadido",
-  "value_text": "El Mapa de Emociones se puede vincular con otras plantillas de GlowMap (metas y tareas). Si se detecta que el miedo predomina en un proyecto, verás un consejo: “Empieza con un pequeño paso, el miedo disminuirá cuando avances.”"
+  "value_text": "El Mapa de Emociones se puede vincular con otras plantillas de GlowMap (metas y tareas). Si se detecta que el miedo predomina en un proyecto, verás un consejo: “Empieza con un pequeño paso, el miedo disminuirá cuando avances.”",
     
 
-
+  
+  "header_title3": "GlowFitness — Seguimiento de Ejercicio",
+  "registro_entrenamiento": "1. Registro del entrenamiento",
+  "hint": "Elige los ejercicios que vas a realizar hoy y completa series, repeticiones y peso.",
+  "tren_superior": "Tren Superior",
+  "pecho_press_banca": "Pecho – Press banca",
+  "pecho_press_inclinado": "Pecho – Press inclinado",
+  "espalda_dominadas": "Espalda – Dominadas",
+  "espalda_remo": "Espalda – Remo",
+  "hombros_press_militar": "Hombros – Press militar",
+  "hombros_elevaciones_laterales": "Hombros – Elevaciones laterales",
+  "biceps": "Bíceps",
+  "triceps": "Tríceps",
+  "tren_inferior": "Tren Inferior",
+  "cuadriceps_sentadillas": "Cuádriceps – Sentadillas",
+  "cuadriceps_prensa": "Cuádriceps – Prensa de piernas",
+  "isquiotibiales_peso_muerto": "Isquiotibiales – Peso muerto rumano",
+  "isquiotibiales_curl": "Isquiotibiales – Curl femoral tumbado",
+  "gluteos_hip_thrust": "Glúteos – Hip thrust",
+  "gluteos_lunges": "Glúteos – Zancadas / Lunges",
+  "objetivos_mes": "2. Objetivos del mes",
+  "fuerza": "Fuerza 💪",
+  "flexibilidad": "Flexibilidad 🤸",
+  "cardio": "Cardio 🏃",
+  "evaluacion_post_entreno": "3. Evaluación post-ejercicio",
+  "como_te_sentiste": "¿Cómo te sentiste después de entrenar?",
+  "comentario_placeholder": "Describe tu energía, estado de ánimo, etc.",
+  "estado_energetico": "Energético ⚡",
+  "estado_normal": "Normal 🙂",
+  "estado_cansado": "Cansado 😴",
+  "guardar_entreno": "Guardar entrenamiento",
+  "calendario_entrenamientos": "4. Calendario de entrenamientos",
+  
+  "progress_message": {
+    "parcial": "Has completado {completados} de {total} ejercicios.",
+    "completo": "¡Rutina completada! 🌟"
+  },
+  
+  "volver_inicio": "Volver al inicio",
+  
+  "series": "Series",
+  "reps": "Reps",
+  "peso_kg": "Peso (kg)"
 
   
 }

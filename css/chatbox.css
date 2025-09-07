@@ -142,12 +142,13 @@
   animation-delay: 5s; /* espera 5 segundos antes de empezar */
 }
 
+
 @media (max-width: 600px) {
   #chat-widget {
-    bottom: 120px;   /* lo sube 40px */
+    bottom: 80px;   /* lo sube 40px */
   }
 
   #chat-open-btn {
-    bottom: 60px;    /* subimos también el botón si quieres */
+    bottom: 40px;    /* subimos también el botón si quieres */
   }
 }

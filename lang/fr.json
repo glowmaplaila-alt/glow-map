@@ -129,7 +129,7 @@
     "feeling_exhausted": "Épuisé",
     "quick_notes": "Notes rapides",
     "quick_notes_placeholder": "Idées, rappels, pensées...",
-    "progress_message": "",
+    
     
     
   "main_title_mood": "GlowMood — Carte des émotions",
@@ -151,7 +151,48 @@
   "value_title": "4. Valeur ajoutée",
   "value_text": "La carte des émotions peut être liée à d’autres modèles GlowMap (objectifs et tâches). Si la peur prédomine dans un projet, un conseil apparaît : « Commencez par un petit pas, la peur diminuera en avançant. »",
   
-
+   "header_title3": "GlowFitness — Suivi des exercices",
+  "registro_entrenamiento": "1. Journal d'entraînement",
+  "hint": "Sélectionnez les exercices que vous ferez aujourd'hui et remplissez les séries, répétitions et poids.",
+  "tren_superior": "Haut du corps",
+  "pecho_press_banca": "Poitrine – Développé couché",
+  "pecho_press_inclinado": "Poitrine – Développé incliné",
+  "espalda_dominadas": "Dos – Tractions",
+  "espalda_remo": "Dos – Rowing",
+  "hombros_press_militar": "Épaules – Développé militaire",
+  "hombros_elevaciones_laterales": "Épaules – Élévations latérales",
+  "biceps": "Biceps",
+  "triceps": "Triceps",
+  "tren_inferior": "Bas du corps",
+  "cuadriceps_sentadillas": "Quadriceps – Squats",
+  "cuadriceps_prensa": "Quadriceps – Presse à jambes",
+  "isquiotibiales_peso_muerto": "Ischio-jambiers – Soulevé de terre roumain",
+  "isquiotibiales_curl": "Ischio-jambiers – Curl allongé",
+  "gluteos_hip_thrust": "Fessiers – Hip Thrust",
+  "gluteos_lunges": "Fessiers – Fentes",
+  "objetivos_mes": "2. Objectifs du mois",
+  "fuerza": "Force 💪",
+  "flexibilidad": "Flexibilité 🤸",
+  "cardio": "Cardio 🏃",
+  "evaluacion_post_entreno": "3. Évaluation post-entraînement",
+  "como_te_sentiste": "Comment vous êtes-vous senti après l'entraînement ?",
+  "comentario_placeholder": "Décrivez votre énergie, votre humeur, etc.",
+  "estado_energetico": "Énergique ⚡",
+  "estado_normal": "Normal 🙂",
+  "estado_cansado": "Fatigué 😴",
+  "guardar_entreno": "Enregistrer l'entraînement",
+  "calendario_entrenamientos": "4. Calendrier d'entraînements",
+  
+  "progress_message": {
+    "parcial": "Vous avez complété {completados} sur {total} exercices.",
+    "completo": "Entraînement terminé ! 🌟"
+  },
+  
+  "volver_inicio": "Retour à l'accueil",
+  
+  "series": "Séries",
+  "reps": "Répétitions",
+  "peso_kg": "Poids (kg)",
 
   "footer": "© 2025 GlowMap — Tous droits réservés"
 }

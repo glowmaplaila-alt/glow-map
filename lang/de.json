@@ -150,6 +150,49 @@
   "value_title": "4. Mehrwert",
   "value_text": "Die Emotionskarte kann mit anderen GlowMap-Vorlagen (Ziele und Aufgaben) verknüpft werden. Wenn Angst in einem Projekt vorherrscht, erscheint ein Hinweis: „Beginne mit einem kleinen Schritt, die Angst nimmt ab, sobald du fortschreitest.“",
   
+  "header_title3": "GlowFitness — Trainingsverfolgung",
+  "registro_entrenamiento": "1. Trainingsprotokoll",
+  "hint": "Wähle die Übungen, die du heute machst, und fülle Sätze, Wiederholungen und Gewicht aus.",
+  "tren_superior": "Oberkörper",
+  "pecho_press_banca": "Brust – Bankdrücken",
+  "pecho_press_inclinado": "Brust – Schrägbankdrücken",
+  "espalda_dominadas": "Rücken – Klimmzüge",
+  "espalda_remo": "Rücken – Rudern",
+  "hombros_press_militar": "Schultern – Schulterdrücken",
+  "hombros_elevaciones_laterales": "Schultern – Seitliche Hebungen",
+  "biceps": "Bizeps",
+  "triceps": "Trizeps",
+  "tren_inferior": "Unterkörper",
+  "cuadriceps_sentadillas": "Quadrizeps – Kniebeugen",
+  "cuadriceps_prensa": "Quadrizeps – Beinpresse",
+  "isquiotibiales_peso_muerto": "Beinbeuger – Rumänisches Kreuzheben",
+  "isquiotibiales_curl": "Beinbeuger – Beinbeuger liegend",
+  "gluteos_hip_thrust": "Gesäß – Hip Thrust",
+  "gluteos_lunges": "Gesäß – Ausfallschritte",
+  "objetivos_mes": "2. Monatsziele",
+  "fuerza": "Kraft 💪",
+  "flexibilidad": "Flexibilität 🤸",
+  "cardio": "Cardio 🏃",
+  "evaluacion_post_entreno": "3. Nach dem Training Bewertung",
+  "como_te_sentiste": "Wie hast du dich nach dem Training gefühlt?",
+  "comentario_placeholder": "Beschreibe deine Energie, Stimmung usw.",
+  "estado_energetico": "Energiegeladen ⚡",
+  "estado_normal": "Normal 🙂",
+  "estado_cansado": "Müde 😴",
+  "guardar_entreno": "Training speichern",
+  "calendario_entrenamientos": "4. Trainingskalender",
+  
+  "progress_message": {
+    "parcial": "Du hast {completados} von {total} Übungen abgeschlossen.",
+    "completo": "Training abgeschlossen! 🌟"
+  },
+  
+  "volver_inicio": "Zurück zur Startseite",
+  
+  "series": "Sätze",
+  "reps": "Wiederholungen",
+  "peso_kg": "Gewicht (kg)",
+
 
   "footer": "© 2025 GlowMap — Alle Rechte vorbehalten"
 }

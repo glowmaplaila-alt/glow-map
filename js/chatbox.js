@@ -47,6 +47,36 @@ function addMessage(text, sender){
 function recommendTemplate(query){
   const q = query.toLowerCase();
 
+    // --- Mapa de Emociones ---
+    if (
+      userText.includes("emocion") ||        // emoción / emociones
+    userText.includes("emociones") ||
+    userText.includes("sentimiento") ||    // sentimiento / sentimientos
+    userText.includes("sentimientos") ||
+    userText.includes("animo") ||          // estado de ánimo
+    userText.includes("estado de ánimo") ||
+    userText.includes("estado de animo") ||
+    userText.includes("humor") ||          // humor / mood
+    userText.includes("mood") ||
+    userText.includes("glowmood") ||
+    userText.includes("mapa de emociones") ||
+    userText.includes("mapa emocional") ||
+    userText.includes("registro emocional") ||
+    userText.includes("diario emocional") ||
+    userText.includes("sentirse") ||
+    userText.includes("cómo me siento") ||
+    userText.includes("como me siento") ||
+    userText.includes("sentí") ||          // me sentí
+    userText.includes("sentir")  
+    ) {
+    addMessage(
+      "bot",
+      `Aquí tienes la plantilla de <strong>GlowMood — Mapa de Emociones</strong> <br>
+      <a href="paginas/glowmood.html" target="_blank">Abrir GlowMood</a><br>
+      Podrás registrar tus emociones diarias, ver el resumen semanal y mensual, y obtener consejos según tu estado.`
+    );
+  }
+
   // GlowHabit
   if(q.includes("hábito") || q.includes("habit")){
     return "Te recomiendo usar la plantilla GlowHabit Builder 📋: https://glowmaplaila-alt.github.io/glow-map/paginas/glowhabit.html";

@@ -48,43 +48,258 @@
     </select>
   
   <header>
-    <h1>GlowFitness — Seguimiento de Ejercicio</h1>
-  </header>
+  <h1 data-i18n="header_title3">GlowFitness — Seguimiento de Ejercicio</h1>
+</header>
 
-  <div class="container">
-    <h2>1. Registro del entrenamiento</h2>
-    <label for="ejercicio">Tipo de ejercicio</label>
-    <input type="text" id="ejercicio" placeholder="Ej: Yoga, correr, pesas...">
+<div class="container">
 
-    <label for="duracion">Duración (minutos)</label>
-    <input type="number" id="duracion" placeholder="Ej: 30">
+  <!-- Registro diario -->
+  <h2 data-i18n="registro_entrenamiento">1. Registro del entrenamiento</h2>
+  <p class="hint" data-i18n="hint">Elige los ejercicios que vas a realizar hoy y completa series, repeticiones y peso.</p>
 
-    <label for="repeticiones">Repeticiones (si aplica)</label>
-    <input type="number" id="repeticiones" placeholder="Ej: 10">
+  <section id="workout-tracker">
 
-    <h2>2. Objetivos del mes</h2>
-    <div class="checkboxes">
-      <label><input type="checkbox" id="objetivo-fuerza"> Fuerza 💪</label>
-      <label><input type="checkbox" id="objetivo-flexibilidad"> Flexibilidad 🤸</label>
-      <label><input type="checkbox" id="objetivo-cardio"> Cardio 🏃</label>
+    <!-- Día 1: Tren Superior -->
+    <article class="day">
+      <h3 data-i18n="tren_superior">Tren Superior</h3>
+
+      <!-- Pecho -->
+      <div class="exercise" data-muscle="pecho">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="pecho_press_banca">Pecho – Press banca</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="pecho">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="pecho_press_inclinado">Pecho – Press inclinado</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Espalda -->
+      <div class="exercise" data-muscle="espalda">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="espalda_dominadas">Espalda – Dominadas</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="espalda">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="espalda_remo">Espalda – Remo</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Hombros -->
+      <div class="exercise" data-muscle="hombros">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="hombros_press_militar">Hombros – Press militar</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="hombros">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="hombros_elevaciones_laterales">Hombros – Elevaciones laterales</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Bíceps -->
+      <div class="exercise" data-muscle="biceps">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="biceps">Bíceps</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Tríceps -->
+      <div class="exercise" data-muscle="triceps">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="triceps">Tríceps</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+    </article>
+
+    <!-- Día 2: Tren Inferior -->
+    <article class="day">
+      <h3 data-i18n="tren_inferior">Tren Inferior</h3>
+
+      <!-- Cuádriceps -->
+      <div class="exercise" data-muscle="cuadriceps">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="cuadriceps_sentadillas">Cuádriceps – Sentadillas</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="cuadriceps">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="cuadriceps_prensa">Cuádriceps – Prensa de piernas</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="Series" data-i18n-placeholder="series" >
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Isquiotibiales -->
+      <div class="exercise" data-muscle="isquios">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="isquios_peso_muerto">Isquiotibiales – Peso muerto rumano</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="isquios">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="isquios_curl_femoral">Isquiotibiales – Curl femoral tumbado</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <!-- Glúteos -->
+      <div class="exercise" data-muscle="gluteos">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="gluteos_hip_thrust">Glúteos – Hip thrust</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+      <div class="exercise" data-muscle="gluteos">
+        <div class="info">
+          <input type="checkbox" class="done">
+          <label data-i18n="gluteos_zancadas">Glúteos – Zancadas / Lunges</label>
+        </div>
+        <div class="inputs">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="series">
+          <input type="number" min="1" placeholder="" data-i18n-placeholder="reps">
+          <input type="number" min="0" step="0.5" placeholder="" data-i18n-placeholder="peso_kg">
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+
+  <!-- Objetivos del mes -->
+  <h2 data-i18n="objetivos_mes">2. Objetivos del mes</h2>
+  <div class="checkboxes">
+    <label><input type="checkbox" id="objetivo-fuerza"> <span data-i18n="fuerza">Fuerza 💪</span></label>
+    <label><input type="checkbox" id="objetivo-flexibilidad"> <span data-i18n="flexibilidad">Flexibilidad 🤸</span></label>
+    <label><input type="checkbox" id="objetivo-cardio"> <span data-i18n="cardio">Cardio 🏃</span></label>
+  </div>
+
+  <!-- Evaluación post-entreno -->
+  <h2 data-i18n="evaluacion_post_entreno">3. Evaluación post-ejercicio</h2>
+  <label for="comentario" data-i18n="como_te_sentiste">¿Cómo te sentiste después de entrenar?</label>
+  <textarea id="comentario" placeholder="" data-i18n-placeholder="comentario_placeholder"></textarea>
+
+  <div class="emotions">
+    <label><input type="radio" name="estado-ejercicio" value="energetico"> <span data-i18n="estado_energetico">Energético ⚡</span></label>
+    <label><input type="radio" name="estado-ejercicio" value="normal"> <span data-i18n="estado_normal">Normal 🙂</span></label>
+    <label><input type="radio" name="estado-ejercicio" value="cansado"> <span data-i18n="estado_cansado">Cansado 😴</span></label>
+  </div>
+
+  <button id="guardar-entreno" class="btn btn-primary" data-i18n="guardar_entreno">Guardar entrenamiento</button>
+
+  <!-- Calendario -->
+  <h2 data-i18n="calendario_entrenamientos">4. Calendario de entrenamientos</h2>
+  <div id="calendar"></div>
+
+  <!-- Recompensas y progreso -->
+  <div id="estrellas-animadas"></div>
+  <div class="progreso-horizontal">
+    <div class="recompensas-container">
+      <h3 data-i18n="your_stars">⭐ Tus Estrellas Glow</h3>
+      <div id="estrellas"></div>
+      <p id="mensaje-recompensa" data-i18n="progress_message"></p>
     </div>
 
-    <h2>3. Evaluación post-ejercicio</h2>
-    <label for="comentario">¿Cómo te sentiste después de entrenar?</label>
-    <textarea id="comentario" placeholder="Describe tu energía, estado de ánimo, etc."></textarea>
-
-    <div class="emotions">
-      <label><input type="radio" name="estado-ejercicio" value="energetico"> Energético ⚡</label>
-      <label><input type="radio" name="estado-ejercicio" value="normal"> Normal 🙂</label>
-      <label><input type="radio" name="estado-ejercicio" value="cansado"> Cansado 😴</label>
+    <div class="progreso-circular-container">
+      <h3 data-i18n="weekly_progress">📅 Progreso semanal</h3>
+      <svg class="progreso-circular" width="140" height="140">
+        <circle class="fondo" cx="70" cy="70" r="60" />
+        <circle id="progreso-circulo" class="progreso" cx="70" cy="70" r="60" />
+        <text id="progreso-circular-texto" x="50%" y="50%" text-anchor="middle" dy=".3em">0%</text>
+      </svg>
     </div>
   </div>
-  <div class="boton-centro">
-    <a href="../index.html" class="boton-volver">Volver al inicio</a>
-  </div>
-  <footer>
-    &copy; 2025 GlowMap — Todos los derechos reservados
-  </footer>
+
+</div>
+
+<div class="boton-centro">
+  <a href="../index.html" class="boton-volver" data-i18n="volver_inicio">Volver al inicio</a>
+</div>
+
+<footer data-i18n="footer">&copy; 2025 GlowMap — Todos los derechos reservados</footer>
 <script>
    document.addEventListener('DOMContentLoaded', () => {
     const openBtn = document.getElementById('open-menu');
@@ -102,6 +317,17 @@
     });
   });
 </script>
+<script>
+    document.querySelectorAll('#workout-tracker .done').forEach(box => {
+  box.addEventListener('change', e => {
+    const exercise = e.target.closest('.exercise');
+    exercise.classList.toggle('completed', e.target.checked);
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<script src="../js/lang2.js"></script>
+
   
 </body>
 </html>

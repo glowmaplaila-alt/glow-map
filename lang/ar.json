@@ -133,7 +133,7 @@
     "feeling_exhausted": "متعب",
     "quick_notes": "ملاحظات سريعة",
     "quick_notes_placeholder": "أفكار، تذكيرات، خواطر...",
-    "progress_message": "",
+    
 
     "main_title_mood": "جلو مود — خريطة المشاعر",
   "daily_title": "١. واجهة يومية (تسجيل اليوم)",
@@ -152,9 +152,51 @@
   "balance_hint": "تنوع صحي للمشاعر (٠–١٠٠)",
   "monthly_summary": "ملخص الشهر",
   "value_title": "٤. قيمة مضافة",
-  "value_text": "يمكن ربط خريطة المشاعر بقوالب GlowMap الأخرى (الأهداف والمهام). إذا تم اكتشاف أن الخوف يهيمن على مشروع ما، ستظهر نصيحة: «ابدأ بخطوة صغيرة، سيتراجع الخوف مع تقدمك.»"
+  "value_text": "يمكن ربط خريطة المشاعر بقوالب GlowMap الأخرى (الأهداف والمهام). إذا تم اكتشاف أن الخوف يهيمن على مشروع ما، ستظهر نصيحة: «ابدأ بخطوة صغيرة، سيتراجع الخوف مع تقدمك.»",
 
-
+  
+  "header_title3": "GlowFitness — متابعة التمارين",
+  "registro_entrenamiento": "1. سجل التمرين",
+  "hint": "اختر التمارين التي ستقوم بها اليوم واملأ المجموعات، التكرارات، والوزن.",
+  "tren_superior": "الجزء العلوي من الجسم",
+  "pecho_press_banca": "الصدر – تمرين الضغط على البنش",
+  "pecho_press_inclinado": "الصدر – تمرين الضغط المائل",
+  "espalda_dominadas": "الظهر – العقلة",
+  "espalda_remo": "الظهر – تجديف",
+  "hombros_press_militar": "الأكتاف – الضغط العسكري",
+  "hombros_elevaciones_laterales": "الأكتاف – الرفع الجانبي",
+  "biceps": "عضلة البايسبس",
+  "triceps": "عضلة الترايسبس",
+  "tren_inferior": "الجزء السفلي من الجسم",
+  "cuadriceps_sentadillas": "الفخذ الأمامي – القرفصاء",
+  "cuadriceps_prensa": "الفخذ الأمامي – ضغط الأرجل",
+  "isquiotibiales_peso_muerto": "أوتار الركبة – الرفعة الميتة الرومانية",
+  "isquiotibiales_curl": "أوتار الركبة – تمرين التجديف بالاستلقاء",
+  "gluteos_hip_thrust": "الأرداف – رفع الورك",
+  "gluteos_lunges": "الأرداف – الطعنات / Lunges",
+  "objetivos_mes": "2. أهداف الشهر",
+  "fuerza": "قوة 💪",
+  "flexibilidad": "مرونة 🤸",
+  "cardio": "كارديو 🏃",
+  "evaluacion_post_entreno": "3. تقييم ما بعد التمرين",
+  "como_te_sentiste": "كيف شعرت بعد التمرين؟",
+  "comentario_placeholder": "صف طاقتك، مزاجك، إلخ.",
+  "estado_energetico": "مليء بالطاقة ⚡",
+  "estado_normal": "عادي 🙂",
+  "estado_cansado": "متعب 😴",
+  "guardar_entreno": "حفظ التمرين",
+  "calendario_entrenamientos": "4. تقويم التمارين",
+  
+  "progress_message": {
+    "parcial": "لقد أكملت {completados} من {total} تمرين.",
+    "completo": "اكتملت التمرين! 🌟"
+  },
+  
+  "volver_inicio": "العودة إلى الصفحة الرئيسية",
+  
+  "series": "مجموعات",
+  "reps": "تكرارات",
+  "peso_kg": "الوزن (كغ)"
 
   
 }
