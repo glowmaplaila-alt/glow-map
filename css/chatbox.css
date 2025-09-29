@@ -142,6 +142,20 @@
   animation-delay: 5s; /* espera 5 segundos antes de empezar */
 }
 
+.message.bot a {
+  color: #fff;              /* color texto link */
+  background-color: #d48c5d; /* color GlowMap (ajústalo al de tu paleta) */
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.message.bot a:hover {
+  background-color: #b36f42; /* un tono más oscuro al pasar el ratón */
+}
+
 
 @media (max-width: 600px) {
   #chat-widget {
