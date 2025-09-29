@@ -35,64 +35,81 @@ function sendMessage(){
   }, 500);
 }
 
-function addMessage(text, sender){
+function addMessage(text, sender) {
   const div = document.createElement("div");
   div.classList.add("message", sender);
-  div.textContent = text;
+
+  if (sender === "bot") {
+    div.innerHTML = text;  // ✅ Permite HTML (links, <br>, etc.)
+  } else {
+    div.textContent = text; // ✅ El usuario se mantiene en texto plano
+  }
+
   messages.appendChild(div);
   messages.scrollTop = messages.scrollHeight;
 }
 
-// lógica básica de recomendación (placeholder)
-function recommendTemplate(query){
+// lógica básica de recomendación (corregida)
+function recommendTemplate(query) {
   const q = query.toLowerCase();
 
-    // --- Mapa de Emociones ---
-    if (
-      userText.includes("emocion") ||        // emoción / emociones
-    userText.includes("emociones") ||
-    userText.includes("sentimiento") ||    // sentimiento / sentimientos
-    userText.includes("sentimientos") ||
-    userText.includes("animo") ||          // estado de ánimo
-    userText.includes("estado de ánimo") ||
-    userText.includes("estado de animo") ||
-    userText.includes("humor") ||          // humor / mood
-    userText.includes("mood") ||
-    userText.includes("glowmood") ||
-    userText.includes("mapa de emociones") ||
-    userText.includes("mapa emocional") ||
-    userText.includes("registro emocional") ||
-    userText.includes("diario emocional") ||
-    userText.includes("sentirse") ||
-    userText.includes("cómo me siento") ||
-    userText.includes("como me siento") ||
-    userText.includes("sentí") ||          // me sentí
-    userText.includes("sentir")  
-    ) {
-    addMessage(
-      "bot",
-      `Aquí tienes la plantilla de <strong>GlowMood — Mapa de Emociones</strong> <br>
-      <a href="paginas/glowmood.html" target="_blank">Abrir GlowMood</a><br>
-      Podrás registrar tus emociones diarias, ver el resumen semanal y mensual, y obtener consejos según tu estado.`
-    );
+  // --- GlowMood Map ---
+  if (
+    q.includes("emocion") ||
+    q.includes("emociones") ||
+    q.includes("sentimiento") ||
+    q.includes("sentimientos") ||
+    q.includes("animo") ||
+    q.includes("estado de ánimo") ||
+    q.includes("estado de animo") ||
+    q.includes("humor") ||
+    q.includes("mood") ||
+    q.includes("glowmood") ||
+    q.includes("mapa de emociones") ||
+    q.includes("mapa emocional") ||
+    q.includes("registro emocional") ||
+    q.includes("diario emocional") ||
+    q.includes("sentirse") ||
+    q.includes("cómo me siento") ||
+    q.includes("como me siento") ||
+    q.includes("sentí") ||
+    q.includes("sentir")  
+  ) {
+    return `Aquí tienes la plantilla de GlowMood — Mapa de Emociones 😊<br> <br>
+      <a href="paginas/glowmood.html" target="_blank">Abrir GlowMood</a><br><br>
+      Podrás registrar tus emociones diarias, ver el resumen semanal y mensual, y obtener consejos según tu estado.`;
   }
 
-  // GlowHabit
-  if(q.includes("hábito") || q.includes("habit")){
-    return "Te recomiendo usar la plantilla GlowHabit Builder 📋: https://glowmaplaila-alt.github.io/glow-map/paginas/glowhabit.html";
-  } 
-  // GlowMood
-  else if(q.includes("estado de ánimo") || q.includes("mood")){
-    return "Parece que GlowMood Map sería ideal para ti 😊: https://glowmaplaila-alt.github.io/glow-map/paginas/glowmood.html";
-  } 
-  // GlowFocus (tareas flexibles)
-  else if(q.includes("tareas") || q.includes("prioridad") || q.includes("urgencia") ||
-          q.includes("organizar") || q.includes("planificar") || q.includes("enfoque") ||
-          q.includes("flexible") || q.includes("productividad") || q.includes("agenda")){
-    return "Te recomiendo usar la plantilla GlowFocus 📝 para organizar tus tareas según prioridad y urgencia: https://glowmaplaila-alt.github.io/glow-map/paginas/glowfocus.html";
-  } 
-  // Respuesta general
-  else {
-    return "Podrías probar GlowMap general o explorar todas las plantillas en el menú: https://glowmaplaila-alt.github.io/glow-map/";
+      // --- GlowFitness ---
+  if (
+    q.includes("ejercicio") || q.includes("ejercicios") || q.includes("deporte") || q.includes("fitness") ||
+    q.includes("entreno") || q.includes("entrenar") || q.includes("gimnasio") ||
+    q.includes("gym") || q.includes("fuerza") || q.includes("cardio") ||
+    q.includes("flexibilidad")
+  ) {
+    return `Aquí tienes la plantilla GlowFitness 🏋️‍♀️ para registrar tus entrenamientos:<br><br>
+      <a href="paginas/glowfitness.html" target="_blank">Abrir GlowFitness</a><br><br>
+      Podrás llevar un registro de tus ejercicios, progresos, objetivos y recompensas.`;
   }
+
+  // --- GlowHabit ---
+  if (q.includes("hábito") || q.includes("habit") || q.includes("habito")) {
+    return `Te recomiendo usar la plantilla GlowHabit Builder 📋:<br><br>
+      <a href="paginas/glowhabit.html" target="_blank">Abrir GlowHabit</a>`;
+  }
+
+  // --- GlowFocus ---
+  if (
+    q.includes("tareas") || q.includes("prioridad") || q.includes("urgencia") ||
+    q.includes("organizar") || q.includes("planificar") || q.includes("enfoque") ||
+    q.includes("flexible") || q.includes("productividad") || q.includes("agenda")
+  ) {
+    return `Te recomiendo usar la plantilla GlowFocus 📝:<br><br>
+      <a href="paginas/glowfocus.html" target="_blank">Abrir GlowFocus</a>`;
+  }
+
+  // --- Respuesta general ---
+  return `Podrías probar GlowMap general o explorar todas las plantillas en el menú:<br> <br>
+    <a href="https://glowmaplaila-alt.github.io/glow-map/" target="_blank">Ver todas las plantillas</a>`;
+
 }
