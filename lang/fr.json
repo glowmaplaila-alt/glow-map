@@ -194,5 +194,38 @@
   "reps": "Répétitions",
   "peso_kg": "Poids (kg)",
 
+
+  "header_title4": "GlowNutrition Tracker — Alimentation Consciente",
+
+  "registro_comidas": "1. Journal des repas",
+  "placeholder_comidas": "Décris ce que tu as mangé aujourd’hui",
+  "emocion_titulo": "2. Comment t’es-tu senti après avoir mangé ?",
+  "placeholder_emocion": "Ex. Léger, ballonné, plein d’énergie...",
+  "habitos_titulo": "3. Habitudes nutritionnelles quotidiennes",
+  "habito1": "Petit-déjeuner sain 🥕",
+  "habito2": "J’ai mangé au moins 3 fruits 🍓",
+  "habito3": "J’ai inclus des légumes 🥦",
+  "habito4": "J’ai consommé des protéines de qualité 🍗",
+  "habito5": "J’ai évité les produits ultra-transformés 🚫",
+  "habito6": "J’ai bu suffisamment d’eau 💧",
+
+  "colores_titulo": "4. Défi des couleurs de l’assiette",
+  "color_verde": "Vert (légumes)",
+  "color_rojo": "Rouge (fruits, antioxydants)",
+  "color_naranja": "Orange (vitamine A)",
+  "color_blanco": "Blanc (fibres, protéines)",
+  "color_morado": "Violet (raisins, chou rouge)",
+
+  "hidratacion_titulo": "5. Hydratation du jour",
+  "hidratacion_label": "Combien de verres d’eau as-tu bus aujourd’hui ?",
+  
+
+  "estrellas_titulo": "⭐ Tes Étoiles Glow",
+  "mensaje_recompensa": "Continue tes bonnes habitudes 🌿",
+  "progreso_titulo": "🥗 Progrès quotidien",
+  "calendario_titulo": "🗓️ Ton calendrier de nutrition",
+  "volver": "Retour à l’accueil",
+  
+
   "footer": "© 2025 GlowMap — Tous droits réservés"
 }

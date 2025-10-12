@@ -187,7 +187,39 @@
   
   "series": "Series",
   "reps": "Reps",
-  "peso_kg": "Peso (kg)"
+  "peso_kg": "Peso (kg)",
+  
+  
+  "header_title4": "GlowNutrition Tracker — Alimentación Consciente",
+
+  "registro_comidas": "1. Registro de comidas",
+  "placeholder_comidas": "Describe lo que has comido hoy",
+  "emocion_titulo": "2. ¿Cómo te sentiste después de comer?",
+  "placeholder_emocion": "Ej. Ligero, hinchado, con energía...",
+  "habitos_titulo": "3. Hábitos diarios de nutrición",
+  "habito1": "Desayuno saludable 🥕",
+  "habito2": "Comí al menos 3 frutas 🍓",
+  "habito3": "Incorporé vegetales 🥦",
+  "habito4": "Consumí proteínas de calidad 🍗",
+  "habito5": "Evité ultraprocesados 🚫",
+  "habito6": "Bebí suficiente agua 💧",
+
+  "colores_titulo": "4. Desafío de colores del plato",
+  "color_verde": "Verde (vegetales)",
+  "color_rojo": "Rojo (frutas, antioxidantes)",
+  "color_naranja": "Naranja (vitamina A)",
+  "color_blanco": "Blanco (fibra, proteínas)",
+  "color_morado": "Morado (uvas, col morada)",
+
+  "hidratacion_titulo": "5. Hidratación del día",
+  "hidratacion_label": "¿Cuántos vasos de agua has tomado hoy?",
+  
+
+  "estrellas_titulo": "⭐ Tus Estrellas Glow",
+  "mensaje_recompensa": "Sigue avanzando en tus hábitos saludables 🌿",
+  "progreso_titulo": "🥗 Progreso diario",
+  "calendario_titulo": "🗓️ Tu calendario de nutrición",
+  "volver": "Volver al inicio"  
 
   
 }

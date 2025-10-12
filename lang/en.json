@@ -187,6 +187,40 @@
   "peso_kg": "Weight (kg)",
 
 
+  
+  "header_title4": "GlowNutrition Tracker — Mindful Eating",
+
+  "registro_comidas": "1. Meal Log",
+  "placeholder_comidas": "Describe what you ate today",
+  "emocion_titulo": "2. How did you feel after eating?",
+  "placeholder_emocion": "E.g. Light, bloated, energetic...",
+  "habitos_titulo": "3. Daily Nutrition Habits",
+  "habito1": "Healthy breakfast 🥕",
+  "habito2": "Ate at least 3 fruits 🍓",
+  "habito3": "Included vegetables 🥦",
+  "habito4": "Consumed quality proteins 🍗",
+  "habito5": "Avoided processed foods 🚫",
+  "habito6": "Drank enough water 💧",
+
+  "colores_titulo": "4. Plate Color Challenge",
+  "color_verde": "Green (vegetables)",
+  "color_rojo": "Red (fruits, antioxidants)",
+  "color_naranja": "Orange (vitamin A)",
+  "color_blanco": "White (fiber, proteins)",
+  "color_morado": "Purple (grapes, red cabbage)",
+
+  "hidratacion_titulo": "5. Daily Hydration",
+  "hidratacion_label": "How many glasses of water did you drink today?",
+  
+
+  "estrellas_titulo": "⭐ Your Glow Stars",
+  "mensaje_recompensa": "Keep improving your healthy habits 🌿",
+  "progreso_titulo": "🥗 Daily Progress",
+  "calendario_titulo": "🗓️ Your Nutrition Calendar",
+  "volver": "Back to Home",
+  
+
+
 
     "footer_text": "© 2025 GlowMap — All rights reserved"
 

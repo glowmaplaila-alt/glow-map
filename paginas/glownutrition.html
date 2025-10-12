@@ -3,97 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowNutrition Tracker</title>
+  <title data-i18n="title">GlowNutrition Tracker</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/miestilo10.css">
   <link rel="stylesheet" href="../css/miestilo1.css">
-  <script src="../js/glownutrition.js"></script>
+  <script src="../js/glownutrition.js" defer></script>
 </head>
+
 <body>
-  
-    <button id="open-menu" class="menu-toggle">☰</button>
-    
-    <aside class="sidebar" id="sidebar">
-      <button id="close-menu" class="close-toggle">✖</button>
-      <a href="../index.html" data-i18n="index">Inicio</a>
-      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-      <a href="plantillas.html" data-i18n="templates" >Plantillas</a>
-      <a href="contacto.html" data-i18n="contact">Contacto</a>
-    </aside>
+  <!-- Menú lateral -->
+  <button id="open-menu" class="menu-toggle">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle">✖</button>
+    <a href="../index.html" data-i18n="index">Inicio</a>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+    <a href="contacto.html" data-i18n="contact">Contacto</a>
+  </aside>
 
+  <!-- Navegación -->
   <nav>
-  <div class="nav-wrapper">
-    <div class="nav-left"></div>
-
-    <div class="logo-container">
-      <a href="../index.html">
-        <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-      </a>
+    <div class="nav-wrapper">
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
     </div>
+  </nav>
 
-    
+  <!-- Botones y selector -->
+  <div class="cta-buttons">
+    <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+    <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
   </div>
-</nav>
-<div class="cta-buttons">
-      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-    </div>
 
-    <select id="language-selector" class="language-selector">
-      <option value="es" data-i18n="lang_es">🇪🇸</option>
-      <option value="en" data-i18n="lang_en">🇺🇸</option>
-      <option value="ar" data-i18n="lang_ar">🇲🇦</option>
-      <option value="fr" data-i18n="lang_fr">🇫🇷</option>
-      <option value="de" data-i18n="lang_de">🇩🇪</option>
-    </select>
-  
+  <select id="language-selector" class="language-selector">
+    <option value="es">🇪🇸</option>
+    <option value="en">🇺🇸</option>
+    <option value="ar">🇲🇦</option>
+    <option value="fr">🇫🇷</option>
+    <option value="de">🇩🇪</option>
+  </select>
+
+  <!-- Contenido principal -->
   <header>
-    <h1>GlowNutrition Tracker — Alimentación Consciente</h1>
+    <h1 data-i18n="header_title4">GlowNutrition Tracker — Alimentación Consciente</h1>
   </header>
 
   <div class="container">
-    <h2>1. Registro de comidas</h2>
-    <textarea id="registro-comidas" placeholder="Describe lo que has comido hoy"></textarea>
 
-    <h2>2. ¿Cómo te sentiste después de comer?</h2>
-    <textarea id="emocion-despues" placeholder="Ej. Ligero, hinchado, con energía..."></textarea>
+    <!-- Registro -->
+    <h2 data-i18n="registro_comidas">1. Registro de comidas</h2>
+    <textarea id="registro-comidas" data-i18n-placeholder="placeholder_comidas" placeholder="Describe lo que has comido hoy"></textarea>
 
-    <h2>3. Desafío de colores del plato</h2>
+    <h2 data-i18n="emocion_titulo">2. ¿Cómo te sentiste después de comer?</h2>
+    <textarea id="emocion-despues" data-i18n-placeholder="placeholder_emocion" placeholder="Ej. Ligero, hinchado, con energía..."></textarea>
+
+    <!-- Hábitos con checks -->
+    <h2 data-i18n="habitos_titulo">3. Hábitos diarios de nutrición</h2>
+    <section id="nutrition-tracker">
+
+      <div class="habitos-group">
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito1">Desayuno saludable 🥕</span></label>
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito2">Comí al menos 3 frutas 🍓</span></label>
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito3">Incorporé vegetales 🥦</span></label>
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito4">Consumí proteínas de calidad 🍗</span></label>
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito5">Evité ultraprocesados 🚫</span></label>
+        <label><input type="checkbox" class="habit"> <span data-i18n="habito6">Bebí suficiente agua 💧</span></label>
+      </div>
+    </section>
+
+    <!-- Desafío de colores -->
+    <h2 data-i18n="colores_titulo">4. Desafío de colores del plato</h2>
     <div class="checkbox-group">
-      <label><input type="checkbox" id="color-verde"> Verde (vegetales)</label>
-      <label><input type="checkbox" id="color-rojo"> Rojo (frutas, antioxidantes)</label>
-      <label><input type="checkbox" id="color-naranja"> Naranja (vitamina A)</label>
-      <label><input type="checkbox" id="color-blanco"> Blanco (fibra, proteínas)</label>
-      <label><input type="checkbox" id="color-morado"> Morado (uvas, col morada)</label>
+      <label><input type="checkbox" id="color-verde"> <span data-i18n="color_verde">Verde (vegetales)</span></label>
+      <label><input type="checkbox" id="color-rojo"> <span data-i18n="color_rojo">Rojo (frutas, antioxidantes)</span></label>
+      <label><input type="checkbox" id="color-naranja"> <span data-i18n="color_naranja">Naranja (vitamina A)</span></label>
+      <label><input type="checkbox" id="color-blanco"> <span data-i18n="color_blanco">Blanco (fibra, proteínas)</span></label>
+      <label><input type="checkbox" id="color-morado"> <span data-i18n="color_morado">Morado (uvas, col morada)</span></label>
     </div>
 
-    <h2>4. Hidratación del día</h2>
-    <label for="vasos-agua">¿Cuántos vasos de agua has tomado hoy?</label>
+    <!-- Hidratación -->
+    <h2 data-i18n="hidratacion_titulo">5. Hidratación del día</h2>
+    <label for="vasos-agua" data-i18n="hidratacion_label">¿Cuántos vasos de agua has tomado hoy?</label>
     <input type="number" id="vasos-agua" min="0" max="20">
+
+    <!-- Botón Guardar -->
+    <div class="boton-centro">
+      <button id="guardar-registro" class="cta-button" data-i18n="save_button">Guardar registro</button>
+    </div>
+
+    <!-- Progreso -->
+    <div id="estrellas-animadas"></div>
+    <div class="progreso-horizontal">
+      <div class="recompensas-container">
+        <h3 data-i18n="estrellas_titulo">⭐ Tus Estrellas Glow</h3>
+        <div id="estrellas"></div>
+        <p id="mensaje-recompensa" data-i18n="mensaje_recompensa">Sigue avanzando en tus hábitos saludables 🌿</p>
+      </div>
+
+      <div class="progreso-circular-container">
+        <h3 data-i18n="progreso_titulo">🥗 Progreso diario</h3>
+        <svg class="progreso-circular" width="140" height="140">
+          <circle class="fondo" cx="70" cy="70" r="60" />
+          <circle id="progreso-circulo" class="progreso" cx="70" cy="70" r="60" />
+          <text id="progreso-circular-texto" x="50%" y="50%" text-anchor="middle" dy=".3em">0%</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Calendario -->
+    <h2 data-i18n="calendario_titulo">🗓️ Tu calendario de nutrición</h2>
+    <div id="calendar"></div>
+
   </div>
+
   <div class="boton-centro">
-    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+    <a href="../index.html" class="boton-volver" data-i18n="volver">Volver al inicio</a>
   </div>
-  <footer>
-    &copy; 2025 GlowMap — Todos los derechos reservados
-  </footer>
-<script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const openBtn = document.getElementById('open-menu');
-    const closeBtn = document.getElementById('close-menu');
-    const sidebar = document.getElementById('sidebar');
 
-    openBtn.addEventListener('click', () => {
-      sidebar.classList.add('active');
-      openBtn.style.display = 'none';  // Oculta ☰
+  <footer data-i18n="footer_text">&copy; 2025 GlowMap — Todos los derechos reservados</footer>
+
+  <!-- FullCalendar -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+  <script src="../js/glownutrition.js"></script>
+  <script src="../js/lang2.js"></script>
+
+  <!-- Scripts -->
+  <script>
+    // Sidebar
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('open-menu');
+      const closeBtn = document.getElementById('close-menu');
+      const sidebar = document.getElementById('sidebar');
+
+      openBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        openBtn.style.display = 'none';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        openBtn.style.display = 'block';
+      });
     });
 
-    closeBtn.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      openBtn.style.display = 'block'; // Muestra ☰
+    // Efecto de check y progreso
+    const checkboxes = document.querySelectorAll('#nutrition-tracker .done');
+    const circle = document.getElementById('progreso-circulo');
+    const text = document.getElementById('progreso-circular-texto');
+    const estrellasDiv = document.getElementById('estrellas');
+
+    checkboxes.forEach(box => {
+      box.addEventListener('change', actualizarProgreso);
     });
-  });
-</script>
-  
+
+    function actualizarProgreso() {
+      const total = checkboxes.length;
+      const completadas = [...checkboxes].filter(c => c.checked).length;
+      const porcentaje = Math.round((completadas / total) * 100);
+      const offset = 377 - (377 * porcentaje) / 100;
+      circle.style.strokeDasharray = '377';
+      circle.style.strokeDashoffset = offset;
+      text.textContent = porcentaje + '%';
+
+      // Estilo completado
+      document.querySelectorAll('.habit').forEach((h, i) => {
+        h.classList.toggle('completed', checkboxes[i].checked);
+      });
+
+      // Estrellas Glow
+      estrellasDiv.innerHTML = '⭐'.repeat(Math.floor(porcentaje / 20));
+      document.getElementById('mensaje-recompensa').textContent =
+        porcentaje === 100
+          ? '¡Excelente! Has cumplido todos tus hábitos de hoy 🥇'
+          : 'Sigue avanzando en tus hábitos saludables 🌿';
+    }
+  </script>
 </body>
 </html>

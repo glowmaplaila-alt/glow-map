@@ -129,7 +129,7 @@
     "feeling_exhausted": "Erschöpft",
     "quick_notes": "Kurze Notizen",
     "quick_notes_placeholder": "Ideen, Erinnerungen, Gedanken...",
-    "progress_message": "",
+    
 
     "main_title_mood": "GlowMood — Emotionskarte",
   "daily_title": "1. Tägliche Oberfläche (Tagesprotokoll)",
@@ -192,6 +192,38 @@
   "series": "Sätze",
   "reps": "Wiederholungen",
   "peso_kg": "Gewicht (kg)",
+
+
+  "header_title4": "GlowNutrition Tracker — Bewusstes Essen",
+
+  "registro_comidas": "1. Mahlzeitenprotokoll",
+  "placeholder_comidas": "Beschreibe, was du heute gegessen hast",
+  "emocion_titulo": "2. Wie hast du dich nach dem Essen gefühlt?",
+  "placeholder_emocion": "Z.B. Leicht, aufgebläht, energiegeladen...",
+  "habitos_titulo": "3. Tägliche Ernährungsgewohnheiten",
+  "habito1": "Gesundes Frühstück 🥕",
+  "habito2": "Ich habe mindestens 3 Früchte gegessen 🍓",
+  "habito3": "Ich habe Gemüse gegessen 🥦",
+  "habito4": "Ich habe hochwertige Proteine konsumiert 🍗",
+  "habito5": "Ich habe verarbeitete Lebensmittel vermieden 🚫",
+  "habito6": "Ich habe genug Wasser getrunken 💧",
+
+  "colores_titulo": "4. Farbchallenge des Tellers",
+  "color_verde": "Grün (Gemüse)",
+  "color_rojo": "Rot (Früchte, Antioxidantien)",
+  "color_naranja": "Orange (Vitamin A)",
+  "color_blanco": "Weiß (Ballaststoffe, Proteine)",
+  "color_morado": "Violett (Trauben, Rotkohl)",
+
+  "hidratacion_titulo": "5. Tageshydration",
+  "hidratacion_label": "Wie viele Gläser Wasser hast du heute getrunken?",
+  
+  "estrellas_titulo": "⭐ Deine Glow-Sterne",
+  "mensaje_recompensa": "Bleibe dran mit deinen gesunden Gewohnheiten 🌿",
+  "progreso_titulo": "🥗 Täglicher Fortschritt",
+  "calendario_titulo": "🗓️ Dein Ernährungskalender",
+  "volver": "Zurück zur Startseite",
+  
 
 
   "footer": "© 2025 GlowMap — Alle Rechte vorbehalten"

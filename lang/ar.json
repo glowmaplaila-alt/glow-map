@@ -196,7 +196,42 @@
   
   "series": "مجموعات",
   "reps": "تكرارات",
-  "peso_kg": "الوزن (كغ)"
+  "peso_kg": "الوزن (كغ)",
+
+
 
   
+  "header_title4": "GlowNutrition — الأكل بوعي",
+
+  "registro_comidas": "1. سجل الوجبات",
+  "placeholder_comidas": "صف ما أكلته اليوم",
+  "emocion_titulo": "2. كيف شعرت بعد الأكل؟",
+  "placeholder_emocion": "مثلاً: خفيف، منتفخ، مليء بالطاقة...",
+  "habitos_titulo": "3. العادات اليومية للتغذية",
+  "habito1": "فطور صحي 🥕",
+  "habito2": "أكلت 3 فواكه على الأقل 🍓",
+  "habito3": "تناولت الخضروات 🥦",
+  "habito4": "تناولت بروتينات عالية الجودة 🍗",
+  "habito5": "تجنبت الأطعمة المصنعة 🚫",
+  "habito6": "شربت كمية كافية من الماء 💧",
+
+  "colores_titulo": "4. تحدي ألوان الطبق",
+  "color_verde": "أخضر (الخضروات)",
+  "color_rojo": "أحمر (الفواكه، مضادات الأكسدة)",
+  "color_naranja": "برتقالي (فيتامين أ)",
+  "color_blanco": "أبيض (الألياف، البروتينات)",
+  "color_morado": "بنفسجي (العنب، الكرنب الأحمر)",
+
+  "hidratacion_titulo": "5. ترطيب اليوم",
+  "hidratacion_label": "كم كوب ماء شربت اليوم؟",
+  
+
+  "estrellas_titulo": "⭐ نجومك المضيئة",
+  "mensaje_recompensa": "واصل عاداتك الصحية 🌿",
+  "progreso_titulo": "🥗 التقدم اليومي",
+  "calendario_titulo": "🗓️ تقويم التغذية الخاص بك",
+  "volver": "العودة إلى الصفحة الرئيسية"
+  
+  
+
 }
