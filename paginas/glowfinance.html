@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/miestilo1.css">
   <script src="../js/glowfinance.js" defer></script>
   <script src="../js/lang2.js"></script>
+  <script src="../js/i18n.js"></script>
 </head>
 <body>
   <button id="open-menu" class="menu-toggle">☰</button>
@@ -56,25 +57,29 @@
 <div class="container">
   <!-- Registro de gastos -->
   <h2 data-i18n="section_expenses_title">1. Registro diario de gastos</h2>
+
   <div class="gasto">
     <input type="date" id="fecha-gasto">
-    <input 
-      type="text" 
-      id="descripcion-gasto" 
-      placeholder="Descripción (ej. café, transporte)" 
+
+    <input
+      type="text"
+      id="descripcion-gasto"
+      placeholder="Descripción (ej. café, transporte)"
       data-i18n-placeholder="expense_description_placeholder"
     >
-    <input 
-      type="number" 
-      id="monto-gasto" 
-      placeholder="Monto (€)" 
-      min="0" 
-      step="0.01" 
+
+    <input
+      type="number"
+      id="monto-gasto"
+      placeholder="Monto (€)"
+      min="0"
+      step="0.01"
       data-i18n-placeholder="expense_amount_placeholder"
     >
-    <button 
-      id="agregar-gasto" 
-      style="width: 70px; height: 55px;padding: 2px;" 
+
+    <button
+      id="agregar-gasto"
+      style="width: 70px; height: 55px; padding: 2px;"
       data-i18n="btn_add_expense"
     >
       Añadir gasto
@@ -95,53 +100,78 @@
 
   <!-- Objetivo financiero -->
   <h2 data-i18n="section_goal_title">2. Objetivo financiero</h2>
-  <textarea 
-    id="objetivo-financiero" 
-    placeholder="Ej. Ahorrar para un viaje o emergencia" 
+
+  <textarea
+    id="objetivo-financiero"
+    placeholder="Ej. Ahorrar para un viaje o emergencia"
     data-i18n-placeholder="goal_placeholder"
   ></textarea>
+
   <button id="guardar-objetivo" data-i18n="btn_save_goal">Guardar objetivo</button>
 
   <!-- Seguimiento de progreso -->
   <h2 data-i18n="section_progress_title">3. Seguimiento de ahorro y progreso</h2>
+
   <div class="progreso">
-    <label data-i18n="label_savings_goal">Meta de ahorro (€): 
+    <div class="input-group">
+      <label for="meta-ahorro" data-i18n="label_savings_goal">Meta de ahorro (€):</label>
       <input type="number" id="meta-ahorro" min="0">
-    </label>
-    <label data-i18n="label_total_saved">Total ahorrado (€): 
+    </div>
+
+    <div class="input-group">
+      <label for="ahorro-actual" data-i18n="label_total_saved">Total ahorrado (€):</label>
       <input type="number" id="ahorro-actual" min="0">
-    </label>
+    </div>
+
     <button id="actualizar-progreso" data-i18n="btn_update_progress">Actualizar progreso</button>
+
     <div class="barra-progreso">
-      <div 
-        id="progreso-barra" 
-        style="height:20px;width:0;background:#6cc070;border-radius:10px;"
-      ></div>
+      <div id="progreso-barra" style="height:20px;width:0;background:#6cc070;border-radius:10px;"></div>
     </div>
   </div>
 
   <!-- Conciencia de consumo -->
   <h2 data-i18n="section_awareness_title">4. Conciencia de consumo</h2>
   <div class="checkboxes">
-    <label data-i18n="check_necessary">
-      <input type="checkbox" id="gasto-necesario"> ¿Fue necesario?
+    <label>
+      <input type="checkbox" id="gasto-necesario">
+      <span data-i18n="check_necessary">¿Fue necesario?</span>
     </label>
-    <label data-i18n="check_impulsive">
-      <input type="checkbox" id="gasto-impulsivo"> ¿Fue por impulso?
+
+    <label>
+      <input type="checkbox" id="gasto-impulsivo">
+      <span data-i18n="check_impulsive">¿Fue por impulso?</span>
     </label>
-    <label data-i18n="check_happy">
-      <input type="checkbox" id="gasto-alegria"> ¿Me dio alegría?
+
+    <label>
+      <input type="checkbox" id="gasto-alegria">
+      <span data-i18n="check_happy">¿Me dio alegría?</span>
     </label>
   </div>
 
   <!-- Hábitos financieros -->
   <h2 data-i18n="section_habits_title">5. Hábitos financieros saludables</h2>
   <ul class="habitos-financieros">
-    <li data-i18n="habit_recorded"><input type="checkbox"> Anoté todos mis gastos del día</li>
-    <li data-i18n="habit_reviewed"><input type="checkbox"> Revisé mis suscripciones y gastos fijos</li>
-    <li data-i18n="habit_saved"><input type="checkbox"> Ahorré al menos 1€ hoy</li>
-    <li data-i18n="habit_avoided"><input type="checkbox"> Evité compras impulsivas</li>
-    <li data-i18n="habit_reflected"><input type="checkbox"> Reflexioné sobre mis gastos</li>
+    <li>
+      <input type="checkbox">
+      <span data-i18n="habit_recorded">Anoté todos mis gastos del día</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span data-i18n="habit_reviewed">Revisé mis suscripciones y gastos fijos</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span data-i18n="habit_saved">Ahorré al menos 1€ hoy</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span data-i18n="habit_avoided">Evité compras impulsivas</span>
+    </li>
+    <li>
+      <input type="checkbox">
+      <span data-i18n="habit_reflected">Reflexioné sobre mis gastos</span>
+    </li>
   </ul>
 
   <!-- Gráfica de evolución mensual -->
@@ -158,7 +188,8 @@
 </div>
 
 <footer>
-  &copy; 2025 GlowMap — <span data-i18n="footer_rights">Todos los derechos reservados</span>
+  &copy; 2025 GlowMap —
+  <span data-i18n="footer_rights">Todos los derechos reservados</span>
 </footer>
 <script>
    document.addEventListener('DOMContentLoaded', () => {
