@@ -218,6 +218,99 @@
   "progreso_titulo": "🥗 Daily Progress",
   "calendario_titulo": "🗓️ Your Nutrition Calendar",
   "volver": "Back to Home",
+
+
+  "header_title5": "GlowMind Space — Mental Space",
+
+  "section1_title": "1. Intention of the Day",
+  "intencion_placeholder": "What do I wish for today?",
+
+  "section2_title": "2. Wishes / Gratitude",
+  "deseos_placeholder": "Write a prayer, a wish, or something you are grateful for.",
+
+  "section3_title": "3. Emotional State",
+  "emotion_miedo": "Fear",
+  "emotion_ansiedad": "Anxiety",
+  "emotion_calma": "Calm",
+  "emotion_gratitud": "Gratitude",
+
+  "tecnica_label": "Technique practiced today:",
+  "tecnica_option_default": "-- Choose one --",
+  "tecnica_resp": "Conscious breathing",
+  "tecnica_journaling": "Writing (journaling)",
+  "tecnica_movimiento": "Free movement",
+  "tecnica_otro": "Other",
+
+  "section4_title": "4. Emotional Journal",
+  "descarga_placeholder": "Express yourself freely...",
+
+  "section5_title": "5. Daily Recommendation 🌟",
+  "mensaje_dia": "Loading recommendation...",
+
+  "section6_title": "6. Calm Ritual",
+  "ritual_text": "Choose one minute to reconnect with yourself.",
+  "ritual_btn": "Start 1-minute breathing",
+
+  "section7_title": "7. My Mood Color",
+  "color_resultado": "Your mental color today is warm and optimistic 🌞",
+
+  "section8_title": "8. Key Thought 🌻",
+  "frase_dia": "Every thought creates your reality.",
+
+  "section9_title": "9. Guided Reflection",
+  "reflexion1_placeholder": "What did I learn today?",
+  "reflexion2_placeholder": "What would I let go of if I could?",
+  "reflexion3_placeholder": "What made me smile today?",
+
+  "section10_title": "10. Weekly Emotional Map",
+  "dia_L": "M",
+  "dia_M": "T",
+  "dia_X": "W",
+  "dia_J": "T",
+  "dia_V": "F",
+  "dia_S": "S",
+  "dia_D": "S",
+
+  "section11_title": "11. Relaxing Sound 🎧",
+  "sonido_option_default": "-- Choose an ambience --",
+  "sonido_olas": "🌊 Waves",
+  "sonido_bosque": "🌳 Forest",
+  "sonido_lluvia": "🌧️ Rain",
+  "play_sonido": "Play",
+  "stop_sonido": "Stop",
+
+  "reset_dia": "Release thoughts 💨",
+  "header_title_finance": "GlowFinance Map — Financial Awareness",
+  "section_expenses_title": "1. Daily Expense Log",
+  "expense_description_placeholder": "Description (e.g. coffee, transport)",
+  "expense_amount_placeholder": "Amount (€)",
+  "btn_add_expense": "Add Expense",
+  "table_date": "Date",
+  "table_description": "Description",
+  "table_amount": "Amount (€)",
+  "table_action": "Action",
+  "section_goal_title": "2. Financial Goal",
+  "goal_placeholder": "E.g. Save for a trip or emergency",
+  "btn_save_goal": "Save Goal",
+  "section_progress_title": "3. Savings Tracking and Progress",
+  "label_savings_goal": "Savings Goal (€):",
+  "label_total_saved": "Total Saved (€):",
+  "btn_update_progress": "Update Progress",
+  "section_awareness_title": "4. Spending Awareness",
+  "check_necessary": "Was it necessary?",
+  "check_impulsive": "Was it impulsive?",
+  "check_happy": "Did it make me happy?",
+  "section_habits_title": "5. Healthy Financial Habits",
+  "habit_recorded": "I recorded all my expenses today",
+  "habit_reviewed": "I reviewed my subscriptions and fixed costs",
+  "habit_saved": "I saved at least €1 today",
+  "habit_avoided": "I avoided impulsive purchases",
+  "habit_reflected": "I reflected on my spending",
+  "section_chart_title": "6. Monthly Expense Chart",
+  "section_calendar_title": "7. Financial Calendar",
+  "btn_back_home": "Back to Home",
+  "footer_rights": "All rights reserved",
+  
   
 
 

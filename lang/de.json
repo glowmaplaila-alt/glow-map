@@ -223,6 +223,101 @@
   "progreso_titulo": "🥗 Täglicher Fortschritt",
   "calendario_titulo": "🗓️ Dein Ernährungskalender",
   "volver": "Zurück zur Startseite",
+
+
+  "header_title5": "GlowMind Raum — Mentaler Raum",
+
+  "section1_title": "1. Tagesabsicht",
+  "intencion_placeholder": "Was wünsche ich mir heute?",
+
+  "section2_title": "2. Wünsche / Dankbarkeit",
+  "deseos_placeholder": "Schreibe ein Gebet, einen Wunsch oder etwas, wofür du dankbar bist.",
+
+  "section3_title": "3. Emotionale Verfassung",
+  "emotion_miedo": "Angst",
+  "emotion_ansiedad": "Sorge",
+  "emotion_calma": "Ruhe",
+  "emotion_gratitud": "Dankbarkeit",
+
+  "tecnica_label": "Heute angewandte Technik:",
+  "tecnica_option_default": "-- Wähle eine --",
+  "tecnica_resp": "Bewusstes Atmen",
+  "tecnica_journaling": "Schreiben (Journaling)",
+  "tecnica_movimiento": "Freie Bewegung",
+  "tecnica_otro": "Andere",
+
+  "section4_title": "4. Emotionales Tagebuch",
+  "descarga_placeholder": "Drücke dich frei aus...",
+
+  "section5_title": "5. Empfehlung des Tages 🌟",
+  "mensaje_dia": "Empfehlung wird geladen...",
+
+  "section6_title": "6. Ritual der Ruhe",
+  "ritual_text": "Wähle eine Minute, um dich wieder mit dir selbst zu verbinden.",
+  "ritual_btn": "1 Minute Atmung starten",
+
+  "section7_title": "7. Farbe meiner Stimmung",
+  "color_resultado": "Deine heutige mentale Farbe ist warm und optimistisch 🌞",
+
+  "section8_title": "8. Schlüsselgedanke 🌻",
+  "frase_dia": "Jeder Gedanke erschafft deine Realität.",
+
+  "section9_title": "9. Geführte Reflexion",
+  "reflexion1_placeholder": "Was habe ich heute gelernt?",
+  "reflexion2_placeholder": "Was würde ich loslassen, wenn ich könnte?",
+  "reflexion3_placeholder": "Was hat mich heute zum Lächeln gebracht?",
+
+  "section10_title": "10. Wöchentliche Emotionskarte",
+  "dia_L": "M",
+  "dia_M": "D",
+  "dia_X": "M",
+  "dia_J": "D",
+  "dia_V": "F",
+  "dia_S": "S",
+  "dia_D": "S",
+
+  "section11_title": "11. Entspannender Klang 🎧",
+  "sonido_option_default": "-- Wähle eine Umgebung --",
+  "sonido_olas": "🌊 Wellen",
+  "sonido_bosque": "🌳 Wald",
+  "sonido_lluvia": "🌧️ Regen",
+  "play_sonido": "Abspielen",
+  "stop_sonido": "Anhalten",
+
+
+  "header_title_finance": "GlowFinance Map — Finanzbewusstsein",
+  "section_expenses_title": "1. Tägliche Ausgabenaufzeichnung",
+  "expense_description_placeholder": "Beschreibung (z. B. Kaffee, Transport)",
+  "expense_amount_placeholder": "Betrag (€)",
+  "btn_add_expense": "Ausgabe hinzufügen",
+  "table_date": "Datum",
+  "table_description": "Beschreibung",
+  "table_amount": "Betrag (€)",
+  "table_action": "Aktion",
+  "section_goal_title": "2. Finanzziel",
+  "goal_placeholder": "Z. B. für eine Reise oder einen Notfall sparen",
+  "btn_save_goal": "Ziel speichern",
+  "section_progress_title": "3. Sparfortschritt und Entwicklung",
+  "label_savings_goal": "Sparziel (€):",
+  "label_total_saved": "Gespart insgesamt (€):",
+  "btn_update_progress": "Fortschritt aktualisieren",
+  "section_awareness_title": "4. Ausgabenbewusstsein",
+  "check_necessary": "War es notwendig?",
+  "check_impulsive": "War es impulsiv?",
+  "check_happy": "Hat es mich glücklich gemacht?",
+  "section_habits_title": "5. Gesunde Finanzgewohnheiten",
+  "habit_recorded": "Ich habe alle meine Ausgaben des Tages notiert",
+  "habit_reviewed": "Ich habe meine Abonnements und Fixkosten überprüft",
+  "habit_saved": "Ich habe heute mindestens 1 € gespart",
+  "habit_avoided": "Ich habe Impulskäufe vermieden",
+  "habit_reflected": "Ich habe über meine Ausgaben nachgedacht",
+  "section_chart_title": "6. Monatliches Ausgabendiagramm",
+  "section_calendar_title": "7. Finanzkalender",
+  "btn_back_home": "Zur Startseite",
+  "footer_rights": "Alle Rechte vorbehalten",
+
+  "reset_dia": "Gedanken loslassen 💨",
+  
   
 
 

@@ -230,7 +230,104 @@
   "mensaje_recompensa": "واصل عاداتك الصحية 🌿",
   "progreso_titulo": "🥗 التقدم اليومي",
   "calendario_titulo": "🗓️ تقويم التغذية الخاص بك",
-  "volver": "العودة إلى الصفحة الرئيسية"
+  "volver": "العودة إلى الصفحة الرئيسية",
+
+
+
+  "header_title5": "مساحة جلومايند — الفضاء الذهني",
+
+  "section1_title": "1. نية اليوم",
+  "intencion_placeholder": "ما الذي أتمناه اليوم؟",
+
+  "section2_title": "2. الأمنيات / الامتنان",
+  "deseos_placeholder": "اكتب دعاءً، أمنية، أو شيئاً تشعر بالامتنان له.",
+
+  "section3_title": "3. الحالة العاطفية",
+  "emotion_miedo": "الخوف",
+  "emotion_ansiedad": "القلق",
+  "emotion_calma": "الهدوء",
+  "emotion_gratitud": "الامتنان",
+
+  "tecnica_label": "التقنية التي استخدمتها اليوم:",
+  "tecnica_option_default": "-- اختر واحدة --",
+  "tecnica_resp": "تنفس واعٍ",
+  "tecnica_journaling": "الكتابة (تدوين اليوميات)",
+  "tecnica_movimiento": "حركة حرة",
+  "tecnica_otro": "أخرى",
+
+  "section4_title": "4. المذكرة العاطفية",
+  "descarga_placeholder": "عبّر عن نفسك بحرية...",
+
+  "section5_title": "5. توصية اليوم 🌟",
+  "mensaje_dia": "جارٍ تحميل التوصية...",
+
+  "section6_title": "6. طقس الهدوء",
+  "ritual_text": "اختر دقيقة واحدة للاتصال بنفسك من جديد.",
+  "ritual_btn": "ابدأ دقيقة واحدة من التنفس",
+
+  "section7_title": "7. لون حالتي المزاجية",
+  "color_resultado": "لونك الذهني اليوم دافئ ومتفائل 🌞",
+
+  "section8_title": "8. فكرة أساسية 🌻",
+  "frase_dia": "كل فكرة تخلق واقعك.",
+
+  "section9_title": "9. تأمل موجّه",
+  "reflexion1_placeholder": "ماذا تعلمت اليوم؟",
+  "reflexion2_placeholder": "ما الذي سأتركه لو استطعت؟",
+  "reflexion3_placeholder": "ما الذي جعلني أبتسم اليوم؟",
+
+  "section10_title": "10. خريطة المشاعر الأسبوعية",
+  "dia_L": "ن",
+  "dia_M": "ث",
+  "dia_X": "أ",
+  "dia_J": "خ",
+  "dia_V": "ج",
+  "dia_S": "س",
+  "dia_D": "ح",
+
+  "section11_title": "11. صوت مريح 🎧",
+  "sonido_option_default": "-- اختر الأجواء --",
+  "sonido_olas": "🌊 أمواج البحر",
+  "sonido_bosque": "🌳 الغابة",
+  "sonido_lluvia": "🌧️ المطر",
+  "play_sonido": "تشغيل",
+  "stop_sonido": "إيقاف",
+
+  "reset_dia": "تحرير الأفكار 💨",
+
+
+
+  "header_title_finance": "خريطة التمويل المضيئة — الوعي المالي",
+  "section_expenses_title": "1. سجل النفقات اليومية",
+  "expense_description_placeholder": "الوصف (مثل القهوة، النقل)",
+  "expense_amount_placeholder": "المبلغ (€)",
+  "btn_add_expense": "إضافة مصروف",
+  "table_date": "التاريخ",
+  "table_description": "الوصف",
+  "table_amount": "المبلغ (€)",
+  "table_action": "إجراء",
+  "section_goal_title": "2. الهدف المالي",
+  "goal_placeholder": "مثل الادخار لرحلة أو للطوارئ",
+  "btn_save_goal": "حفظ الهدف",
+  "section_progress_title": "3. متابعة الادخار والتقدم",
+  "label_savings_goal": "هدف الادخار (€):",
+  "label_total_saved": "إجمالي المبلغ المدخر (€):",
+  "btn_update_progress": "تحديث التقدم",
+  "section_awareness_title": "4. الوعي بالاستهلاك",
+  "check_necessary": "هل كان ضرورياً؟",
+  "check_impulsive": "هل كان بدافع لحظة؟",
+  "check_happy": "هل جعلني سعيداً؟",
+  "section_habits_title": "5. عادات مالية صحية",
+  "habit_recorded": "قمت بتسجيل جميع مصاريفي اليوم",
+  "habit_reviewed": "راجعت اشتراكاتي ومصاريفي الثابتة",
+  "habit_saved": "ادخرت ما لا يقل عن 1 يورو اليوم",
+  "habit_avoided": "تجنبت المشتريات العشوائية",
+  "habit_reflected": "تأملت في نفقاتي",
+  "section_chart_title": "6. مخطط النفقات الشهري",
+  "section_calendar_title": "7. التقويم المالي",
+  "btn_back_home": "العودة إلى الصفحة الرئيسية",
+  "footer_rights": "جميع الحقوق محفوظة"
+  
   
   
 

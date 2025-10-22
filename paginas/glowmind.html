@@ -1,133 +1,135 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowMind Space</title>
+  <title data-i18n="title">GlowMind Space</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/miestilo7.css">
   <link rel="stylesheet" href="../css/miestilo1.css">
   <script src="../js/glowmind.js"></script>
+  <script src="../js/lang2.js"></script>
 </head>
 <body>
-  <button id="open-menu" class="menu-toggle">☰</button>
+  <button id="open-menu" class="menu-toggle" data-i18n="menu_open">☰</button>
     
-    <aside class="sidebar" id="sidebar">
-      <button id="close-menu" class="close-toggle">✖</button>
-      <a href="../index.html" data-i18n="index">Inicio</a>
-      <a href="home.html" data-i18n="home">Sobre GlowMap</a>
-      <a href="plantillas.html" data-i18n="templates" >Plantillas</a>
-      <a href="contacto.html" data-i18n="contact" >Contacto</a>
-    </aside>
+  <aside class="sidebar" id="sidebar">
+    <button id="close-menu" class="close-toggle" data-i18n="menu_close">✖</button>
+    <a href="../index.html" data-i18n="index">Inicio</a>
+    <a href="home.html" data-i18n="home">Sobre GlowMap</a>
+    <a href="plantillas.html" data-i18n="templates">Plantillas</a>
+    <a href="contacto.html" data-i18n="contact">Contacto</a>
+  </aside>
 
   <nav>
-  <div class="nav-wrapper">
-    <div class="nav-left"></div>
-
-    <div class="logo-container">
-      <a href="../index.html">
-        <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
-      </a>
+    <div class="nav-wrapper">
+      <div class="nav-left"></div>
+      <div class="logo-container">
+        <a href="../index.html">
+          <img class="logo-nav" src="../imagenes/logo-glowmap.png" alt="Logo de GlowMap">
+        </a>
+      </div>
     </div>
+  </nav>
 
-    
+  <div class="cta-buttons">
+    <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
+    <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
   </div>
-</nav>
-<div class="cta-buttons">
-      <a href="login.html" class="cta-button" data-i18n="login">Iniciar sesión</a>
-      <a href="registro.html" class="cta-button" data-i18n="register">Registrarse</a>
-    </div>
 
-    <select id="language-selector" class="language-selector">
-      <option value="es" data-i18n="lang_es">🇪🇸</option>
-      <option value="en" data-i18n="lang_en">🇺🇸</option>
-      <option value="ar" data-i18n="lang_ar">🇲🇦</option>
-      <option value="fr" data-i18n="lang_fr">🇫🇷</option>
-      <option value="de" data-i18n="lang_de">🇩🇪</option>
-    </select>
+  <select id="language-selector" class="language-selector">
+    <option value="es" data-i18n="lang_es">🇪🇸</option>
+    <option value="en" data-i18n="lang_en">🇺🇸</option>
+    <option value="ar" data-i18n="lang_ar">🇲🇦</option>
+    <option value="fr" data-i18n="lang_fr">🇫🇷</option>
+    <option value="de" data-i18n="lang_de">🇩🇪</option>
+  </select>
   
   <header>
-    <h1>GlowMind Space — Espacio Mental</h1>
+    <h1 data-i18n="header_title5">GlowMind Space — Espacio Mental</h1>
   </header>
 
   <div class="container">
-    <h2>1. Intención del día</h2>
-    <input type="text" id="intencion" placeholder="¿Qué deseo para hoy?">
+    <h2 data-i18n="section1_title">1. Intención del día</h2>
+    <input type="text" id="intencion" placeholder="¿Qué deseo para hoy?" data-i18n-placeholder="intencion_placeholder">
 
-    <h2>2. Deseos / Agradecimiento</h2>
-    <textarea id="deseos" placeholder="Anota una oración, un deseo, o algo que agradeces."></textarea>
+    <h2 data-i18n="section2_title">2. Deseos / Agradecimiento</h2>
+    <textarea id="deseos" placeholder="Anota una oración, un deseo, o algo que agradeces." data-i18n-placeholder="deseos_placeholder"></textarea>
 
-    <h2>3. Estado emocional</h2>
+    <h2 data-i18n="section3_title">3. Estado emocional</h2>
     <div class="emotions">
-      <label><input type="checkbox" id="miedo"> Miedo</label>
-      <label><input type="checkbox" id="ansiedad"> Ansiedad</label>
-      <label><input type="checkbox" id="calma"> Calma</label>
-      <label><input type="checkbox" id="gratitud"> Gratitud</label>
+      <label><input type="checkbox" id="miedo"> <span data-i18n="emotion_miedo">Miedo</span></label>
+      <label><input type="checkbox" id="ansiedad"> <span data-i18n="emotion_ansiedad">Ansiedad</span></label>
+      <label><input type="checkbox" id="calma"> <span data-i18n="emotion_calma">Calma</span></label>
+      <label><input type="checkbox" id="gratitud"> <span data-i18n="emotion_gratitud">Gratitud</span></label>
     </div>
 
-    <label for="tecnica">Técnica aplicada hoy:</label>
+    <label for="tecnica" data-i18n="tecnica_label">Técnica aplicada hoy:</label>
     <select id="tecnica">
-      <option value="">-- Elige una --</option>
-      <option value="respiracion">Respiración consciente</option>
-      <option value="journaling">Escritura (journaling)</option>
-      <option value="movimiento">Movimiento libre</option>
-      <option value="otro">Otro</option>
+      <option value="" data-i18n="tecnica_option_default">-- Elige una --</option>
+      <option value="respiracion" data-i18n="tecnica_resp">Respiración consciente</option>
+      <option value="journaling" data-i18n="tecnica_journaling">Escritura (journaling)</option>
+      <option value="movimiento" data-i18n="tecnica_movimiento">Movimiento libre</option>
+      <option value="otro" data-i18n="tecnica_otro">Otro</option>
     </select>
 
-    <h2>4. Diario emocional</h2>
-    <textarea id="descarga" rows="5" placeholder="Exprésate libremente..."></textarea>
+    <h2 data-i18n="section4_title">4. Diario emocional</h2>
+    <textarea id="descarga" rows="5" placeholder="Exprésate libremente..." data-i18n-placeholder="descarga_placeholder"></textarea>
 
-    <h2>5. Recomendación del día 🌟</h2>
-    <div id="mensaje-dia">Cargando recomendación...</div>
+    <h2 data-i18n="section5_title">5. Recomendación del día 🌟</h2>
+    <div id="mensaje-dia" data-i18n="mensaje_dia">Cargando recomendación...</div>
 
-    <h2>6. Ritual de calma</h2>
-    <p>Elige un minuto para reconectar contigo.</p>
-    <button id="ritual-btn">Iniciar 1 minuto de respiración</button>
+    <h2 data-i18n="section6_title">6. Ritual de calma</h2>
+    <p data-i18n="ritual_text">Elige un minuto para reconectar contigo.</p>
+    <button id="ritual-btn" data-i18n="ritual_btn">Iniciar 1 minuto de respiración</button>
     <div id="ritual-anim" class="breathing-circle"></div>
 
-    <h2>7. Color de mi estado</h2>
+    <h2 data-i18n="section7_title">7. Color de mi estado</h2>
     <input type="color" id="color-animo" value="#FFD6A5">
-    <p id="color-resultado">Tu color mental de hoy es cálido y optimista 🌞</p>
+    <p id="color-resultado" data-i18n="color_resultado">Tu color mental de hoy es cálido y optimista 🌞</p>
 
-    <h2>8. Pensamiento clave 🌻</h2>
-    <div id="frase-dia">"Cada pensamiento crea tu realidad."</div>
+    <h2 data-i18n="section8_title">8. Pensamiento clave 🌻</h2>
+    <div id="frase-dia" data-i18n="frase_dia">"Cada pensamiento crea tu realidad."</div>
 
-    <h2>9. Reflexión guiada</h2>
-    <textarea placeholder="¿Qué aprendí hoy?"></textarea>
-    <textarea placeholder="¿Qué soltaría si pudiera?"></textarea>
-    <textarea placeholder="¿Qué me hizo sonreír hoy?"></textarea>
+    <h2 data-i18n="section9_title">9. Reflexión guiada</h2>
+    <textarea placeholder="¿Qué aprendí hoy?" data-i18n-placeholder="reflexion1_placeholder"></textarea>
+    <textarea placeholder="¿Qué soltaría si pudiera?" data-i18n-placeholder="reflexion2_placeholder"></textarea>
+    <textarea placeholder="¿Qué me hizo sonreír hoy?" data-i18n-placeholder="reflexion3_placeholder"></textarea>
 
-    <h2>10. Mapa emocional semanal</h2>
+    <h2 data-i18n="section10_title">10. Mapa emocional semanal</h2>
     <div class="emociones-semana">
-      <div class="dia">L</div>
-      <div class="dia">M</div>
-      <div class="dia">X</div>
-      <div class="dia">J</div>
-      <div class="dia">V</div>
-      <div class="dia">S</div>
-      <div class="dia">D</div>
+      <div class="dia" data-i18n="dia_L">L</div>
+      <div class="dia" data-i18n="dia_M">M</div>
+      <div class="dia" data-i18n="dia_X">X</div>
+      <div class="dia" data-i18n="dia_J">J</div>
+      <div class="dia" data-i18n="dia_V">V</div>
+      <div class="dia" data-i18n="dia_S">S</div>
+      <div class="dia" data-i18n="dia_D">D</div>
     </div>
 
-    <h2>11. Sonido relajante 🎧</h2>
+    <h2 data-i18n="section11_title">11. Sonido relajante 🎧</h2>
     <select id="sonido">
-      <option value="">-- Elige un ambiente --</option>
-      <option value="olas">🌊 Olas</option>
-      <option value="bosque">🌳 Bosque</option>
-      <option value="lluvia">🌧️ Lluvia</option>
+      <option value="" data-i18n="sonido_option_default">-- Elige un ambiente --</option>
+      <option value="olas" data-i18n="sonido_olas">🌊 Olas</option>
+      <option value="bosque" data-i18n="sonido_bosque">🌳 Bosque</option>
+      <option value="lluvia" data-i18n="sonido_lluvia">🌧️ Lluvia</option>
     </select>
-    <button id="play-sonido">Reproducir</button>
-
-    <button id="reset-dia" class="liberar-btn">Liberar pensamientos 💨</button>
-  </div>
-
-
-  </div>
-
     
-  <div class="boton-centro">
-    <a href="../index.html" class="boton-volver">Volver al inicio</a>
+
+      <!-- Botones de control de sonido -->
+  <div class="sonido-controles">
+    <button id="play-sonido" data-i18n="play_sonido">Reproducir</button>
+    <button id="stop-sonido" data-i18n="stop_sonido">Detener</button>
   </div>
-  <footer>
+
+    <button id="reset-dia" class="liberar-btn" data-i18n="reset_dia">Liberar pensamientos 💨</button>
+  </div>
+
+  <div class="boton-centro">
+    <a href="../index.html" class="boton-volver" data-i18n="volver_inicio">Volver al inicio</a>
+  </div>
+
+  <footer data-i18n="footer_text">
     &copy; 2025 GlowMap — Todos los derechos reservados
   </footer>
 <script>

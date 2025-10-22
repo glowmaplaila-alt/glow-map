@@ -225,6 +225,102 @@
   "progreso_titulo": "🥗 Progrès quotidien",
   "calendario_titulo": "🗓️ Ton calendrier de nutrition",
   "volver": "Retour à l’accueil",
+
+
+  "header_title5": "Espace GlowMind — Espace Mental",
+
+  "section1_title": "1. Intention du jour",
+  "intencion_placeholder": "Quel est mon souhait pour aujourd’hui ?",
+
+  "section2_title": "2. Souhaits / Gratitude",
+  "deseos_placeholder": "Écris une prière, un souhait ou quelque chose pour lequel tu es reconnaissant(e).",
+
+  "section3_title": "3. État émotionnel",
+  "emotion_miedo": "Peur",
+  "emotion_ansiedad": "Anxiété",
+  "emotion_calma": "Calme",
+  "emotion_gratitud": "Gratitude",
+
+  "tecnica_label": "Technique appliquée aujourd’hui :",
+  "tecnica_option_default": "-- Choisis-en une --",
+  "tecnica_resp": "Respiration consciente",
+  "tecnica_journaling": "Écriture (journaling)",
+  "tecnica_movimiento": "Mouvement libre",
+  "tecnica_otro": "Autre",
+
+  "section4_title": "4. Journal émotionnel",
+  "descarga_placeholder": "Exprime-toi librement...",
+
+  "section5_title": "5. Recommandation du jour 🌟",
+  "mensaje_dia": "Chargement de la recommandation...",
+
+  "section6_title": "6. Rituel de calme",
+  "ritual_text": "Choisis une minute pour te reconnecter à toi-même.",
+  "ritual_btn": "Commencer 1 minute de respiration",
+
+  "section7_title": "7. Couleur de mon humeur",
+  "color_resultado": "Ta couleur mentale d’aujourd’hui est chaleureuse et optimiste 🌞",
+
+  "section8_title": "8. Pensée clé 🌻",
+  "frase_dia": "Chaque pensée crée ta réalité.",
+
+  "section9_title": "9. Réflexion guidée",
+  "reflexion1_placeholder": "Qu’ai-je appris aujourd’hui ?",
+  "reflexion2_placeholder": "Que lâcherais-je si je le pouvais ?",
+  "reflexion3_placeholder": "Qu’est-ce qui m’a fait sourire aujourd’hui ?",
+
+  "section10_title": "10. Carte émotionnelle hebdomadaire",
+  "dia_L": "L",
+  "dia_M": "M",
+  "dia_X": "M",
+  "dia_J": "J",
+  "dia_V": "V",
+  "dia_S": "S",
+  "dia_D": "D",
+
+  "section11_title": "11. Son relaxant 🎧",
+  "sonido_option_default": "-- Choisis une ambiance --",
+  "sonido_olas": "🌊 Vagues",
+  "sonido_bosque": "🌳 Forêt",
+  "sonido_lluvia": "🌧️ Pluie",
+  "play_sonido": "Lire",
+  "stop_sonido": "Arrêter",
+
+  "reset_dia": "Libérer les pensées 💨",
+
+
+  
+  "header_title_finance": "GlowFinance Map — Conscience Financière",
+  "section_expenses_title": "1. Suivi quotidien des dépenses",
+  "expense_description_placeholder": "Description (ex. café, transport)",
+  "expense_amount_placeholder": "Montant (€)",
+  "btn_add_expense": "Ajouter une dépense",
+  "table_date": "Date",
+  "table_description": "Description",
+  "table_amount": "Montant (€)",
+  "table_action": "Action",
+  "section_goal_title": "2. Objectif financier",
+  "goal_placeholder": "Ex. Économiser pour un voyage ou une urgence",
+  "btn_save_goal": "Enregistrer l’objectif",
+  "section_progress_title": "3. Suivi de l’épargne et progrès",
+  "label_savings_goal": "Objectif d’épargne (€):",
+  "label_total_saved": "Total économisé (€):",
+  "btn_update_progress": "Mettre à jour le progrès",
+  "section_awareness_title": "4. Conscience des dépenses",
+  "check_necessary": "Était-ce nécessaire ?",
+  "check_impulsive": "Était-ce impulsif ?",
+  "check_happy": "Cela m’a-t-il rendu heureux ?",
+  "section_habits_title": "5. Bonnes habitudes financières",
+  "habit_recorded": "J’ai noté toutes mes dépenses du jour",
+  "habit_reviewed": "J’ai vérifié mes abonnements et frais fixes",
+  "habit_saved": "J’ai économisé au moins 1€ aujourd’hui",
+  "habit_avoided": "J’ai évité les achats impulsifs",
+  "habit_reflected": "J’ai réfléchi à mes dépenses",
+  "section_chart_title": "6. Graphique mensuel des dépenses",
+  "section_calendar_title": "7. Calendrier financier",
+  "btn_back_home": "Retour à l’accueil",
+  "footer_rights": "Tous droits réservés",
+  
   
 
   "footer": "© 2025 GlowMap — Tous droits réservés"

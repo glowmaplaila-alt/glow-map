@@ -115,7 +115,7 @@ body {
     .liberar-btn {
       display: block;
       margin: 20px auto;
-      background-color: #b5e48c;
+      background-color: #cf965f;
       color: #333;
       border: none;
       border-radius: 8px;
@@ -126,5 +126,5 @@ body {
     }
 
     .liberar-btn:hover {
-      background-color: #99d98c;
+      background-color: #f0ccab;
     }
